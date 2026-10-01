@@ -1,16 +1,16 @@
 ## Mensaje 1
 
 ```
-Hola Andrea, ¿cómo vas? 💗
+Hola Andrea, ¿cómo vas?
 
 Te escribo porque te he comprado y me encanta lo que haces, y como yo me dedico al desarrollo web se me ocurrió armarle a Magic H4nds una página propia, para que veas cómo quedaría tu trabajo organizado en un solo lugar.
 
-Te cuento desde ya que no te estoy cobrando nada: puedes mirarla con calma y sin ningún compromiso. Si te gusta, lo charlamos mejor; y si no, no pasa nada 😊
+Te cuento desde ya que no te estoy cobrando nada: puedes mirarla con calma y sin ningún compromiso. Si te gusta, lo charlamos mejor; y si no, no pasa nada.
 
 Ya está funcionando, aquí la puedes ver:
 https://magichands.axchisan.com
 
-Está hecha con tus fotos y tus textos de Instagram. Te paso unas capturas de cómo se ve en el celular y en el computador 👇
+Está hecha con tus fotos y tus textos de Instagram. Te paso unas capturas de cómo se ve en el celular y en el computador.
 ```
 
 ## Imágenes (en este orden)
@@ -26,19 +26,19 @@ Está hecha con tus fotos y tus textos de Instagram. Te paso unas capturas de c�
 ```
 Lo que tiene:
 
-✨ Tu catálogo completo ordenado por categorías (personalizados, mascotas, flores, ropa…), con buscador, filtros por ocasión y una ficha para cada producto.
+Tu catálogo completo ordenado por categorías (personalizados, mascotas, flores, ropa…), con buscador, filtros por ocasión y una ficha para cada producto.
 
-📲 Los encargos te llegan por WhatsApp ya organizados: qué quiere, colores, tamaño, para cuándo y desde qué ciudad, cada uno con un código de pedido.
+Los encargos te llegan por WhatsApp ya organizados: qué quiere, colores, tamaño, para cuándo y desde qué ciudad, cada uno con un código de pedido.
 
-📦 Tus clientes pueden ver en la web en qué va su pedido (cotizado, tejiendo, enviado…) y, si entran con su correo, les llega un aviso cada vez que avanza.
+Tus clientes pueden ver en la web en qué va su pedido (cotizado, tejiendo, enviado…) y, si entran con su correo, les llega un aviso cada vez que avanza.
 
-🧶 Un panel para ti, desde el celular, donde manejas los pedidos, subes fotos, agregas o editas productos y abres o cierras la agenda cuando estás llena.
+Un panel para ti, desde el celular, donde manejas los pedidos, subes fotos, agregas o editas productos y abres o cierras la agenda cuando estás llena.
 
 Puedes entrar al panel con el botón "Panel" de arriba y recorrerlo como si fuera tuyo. Por ahora es una vista previa: puedes mirarlo todo, pero los cambios del catálogo no se guardan.
 
 Los precios no aparecen: los pones tú cuando quieras y decides si mostrarlos o no.
 
-Mírala con calma y me cuentas qué te parece. Cualquier cosa que quieras cambiar (textos, fotos, colores) se ajusta 💗
+Mírala con calma y me cuentas qué te parece. Cualquier cosa que quieras cambiar (textos, fotos, colores) se ajusta
 ```
 
 ---
