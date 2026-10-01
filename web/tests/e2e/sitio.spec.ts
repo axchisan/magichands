@@ -1,6 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
 
-const PAGINAS = ["/", "/catalogo", "/catalogo/personalizados", "/p/funko-personalizado", "/encargo", "/pedido", "/como-comprar", "/sobre-mi"];
+const PAGINAS = ["/", "/catalogo", "/catalogo/personalizados", "/p/funko-personalizado", "/encargo", "/pedido", "/como-comprar", "/sobre-mi", "/privacidad", "/terminos"];
 
 /** Abre la página y espera a que React termine de hidratarse (sin peticiones pendientes) antes de interactuar. */
 async function abrir(page: Page, ruta: string) {

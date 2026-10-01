@@ -1,0 +1,24 @@
+.pagina {
+  padding-top: 3rem;
+  max-width: 44rem;
+}
+.pagina h1 {
+  font-size: var(--t-5);
+}
+.pagina h2 {
+  font-size: var(--t-3);
+  margin: 2.25rem 0 0.6rem;
+}
+.pagina p,
+.pagina ul {
+  margin: 0 0 0.9rem;
+}
+.pagina ul {
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.fecha {
+  color: var(--canela);
+  margin-top: 0.5rem !important;
+}

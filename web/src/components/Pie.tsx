@@ -36,6 +36,8 @@ export function Pie() {
             <li><Link href="/como-comprar">Cómo comprar</Link></li>
             <li><Link href="/pedido">Seguir mi pedido</Link></li>
             <li><Link href="/sobre-mi">Quién teje</Link></li>
+            <li><Link href="/privacidad">Privacidad</Link></li>
+            <li><Link href="/terminos">Condiciones</Link></li>
           </ul>
         </nav>
       </div>
