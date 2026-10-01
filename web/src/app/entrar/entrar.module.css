@@ -1,0 +1,43 @@
+.pagina {
+  padding: 3rem 0 1rem;
+  display: grid;
+  justify-items: center;
+}
+
+.tarjeta {
+  width: min(100%, 26rem);
+  display: grid;
+  gap: 1.25rem;
+}
+.tarjeta h1 {
+  font-size: var(--t-5);
+}
+
+.intro {
+  color: var(--canela);
+}
+
+.atajoPanel {
+  display: block;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--crema) 70%, transparent);
+  color: var(--cacao);
+  text-decoration: none;
+  line-height: 1.45;
+}
+.atajoPanel:hover {
+  background: var(--crema);
+}
+
+.legal {
+  font-size: 0.85rem;
+  color: var(--canela);
+  text-align: center;
+}
+
+@media (max-width: 40rem) {
+  .pagina {
+    padding-top: 2rem;
+  }
+}

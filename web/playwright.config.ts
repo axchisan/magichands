@@ -29,6 +29,8 @@ export default defineConfig({
     command: `npx next start -p ${PUERTO}`,
     url: `http://localhost:${PUERTO}`,
     reuseExistingServer: false,
+    // Usa la base de datos de .env.local (rama dev de Neon) sin enviar correos reales.
+    env: { CORREO_SIMULADO: "1", BETTER_AUTH_URL: `http://localhost:${PUERTO}` },
     timeout: 60_000,
   },
 });

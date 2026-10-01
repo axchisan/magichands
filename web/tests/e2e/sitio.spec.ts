@@ -1,6 +1,11 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { expect, test, type Page } from "@playwright/test";
 
-const PAGINAS = ["/", "/catalogo", "/catalogo/personalizados", "/p/funko-personalizado", "/encargo", "/pedido", "/como-comprar", "/sobre-mi", "/privacidad", "/terminos"];
+// Panel abierto para la presentación (NEXT_PUBLIC_PANEL_ABIERTO en web/.env).
+const PANEL_ABIERTO = /^NEXT_PUBLIC_PANEL_ABIERTO=1$/m.test(readFileSync(path.join(__dirname, "../../.env"), "utf8"));
+
+const PAGINAS = ["/", "/entrar", "/catalogo", "/catalogo/personalizados", "/p/funko-personalizado", "/encargo", "/pedido", "/como-comprar", "/sobre-mi", "/privacidad", "/terminos"];
 
 /** Abre la página y espera a que React termine de hidratarse (sin peticiones pendientes) antes de interactuar. */
 async function abrir(page: Page, ruta: string) {
@@ -122,33 +127,31 @@ test("celular: menú lateral abre, navega y se cierra", async ({ page, isMobile 
   await expect(panel).toBeHidden();
 });
 
-test("encargo: valida, arma el mensaje de WhatsApp y permite seguir el pedido", async ({ page }) => {
+test("encargo: valida, se guarda, arma el mensaje de WhatsApp y permite seguir el pedido", async ({ page }) => {
+  // Escribe en la base de datos: solo en local (rama dev), nunca contra la demo publicada.
+  test.skip(!!process.env.E2E_URL, "crea pedidos reales");
   await abrir(page, "/encargo?producto=ramo-de-tulipanes");
-  await page.evaluate(() => {
-    (window as unknown as { abiertos: string[] }).abiertos = [];
-    window.open = (u?: string | URL) => {
-      (window as unknown as { abiertos: string[] }).abiertos.push(String(u));
-      return null;
-    };
-  });
 
   // Enviar vacío: el navegador bloquea y marca los campos obligatorios.
-  await page.getByRole("button", { name: "Enviar encargo por WhatsApp" }).click();
+  await page.getByRole("button", { name: "Continuar" }).click();
   await expect(page.getByLabel(/Cuéntanos tu idea/)).toHaveAttribute("aria-invalid", "true");
   await expect(page.getByText("Escribe al menos una frase")).toBeVisible();
   await expect(page.getByLabel(/Cuéntanos tu idea/)).toBeFocused();
 
+  // Celular distinto en cada corrida para no chocar con el límite de 5 encargos por hora.
+  const celular = `310${String(Date.now()).slice(-7)}`;
   await page.getByLabel(/Cuéntanos tu idea/).fill("Un ramo de tulipanes rosados para mi mamá");
   await page.getByLabel("Colores").fill("Rosado");
-  await page.getByLabel(/Nombre/).fill("Prueba");
+  await page.getByLabel(/Nombre/).fill("Prueba automática");
   await page.getByLabel(/Ciudad/).fill("Bogotá");
-  await page.getByLabel(/Celular/).fill("3101112233");
-  await page.getByRole("button", { name: "Enviar encargo por WhatsApp" }).click();
+  await page.getByLabel(/Celular/).fill(celular);
+  await page.getByRole("button", { name: "Continuar" }).click();
 
-  await expect(page.getByRole("heading", { name: "Tu encargo está listo para enviar" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Envíalo por WhatsApp para que te cotice" })).toBeVisible();
+  await expect(page.getByText("Tu encargo quedó guardado")).toBeVisible();
   const codigo = await page.locator("strong").filter({ hasText: /^MH4-/ }).textContent();
   expect(codigo).toMatch(/^MH4-[2-9A-HJ-NP-Z]{4}$/);
-  const enlace = await page.evaluate(() => (window as unknown as { abiertos: string[] }).abiertos[0]);
+  const enlace = (await page.getByRole("link", { name: "Enviar por WhatsApp" }).getAttribute("href"))!;
   expect(enlace).toMatch(/^https:\/\/wa\.me\/573115685168\?text=/);
   const texto = decodeURIComponent(enlace.split("text=")[1]);
   expect(texto).toContain(`Pedido: ${codigo}`);
@@ -157,9 +160,73 @@ test("encargo: valida, arma el mensaje de WhatsApp y permite seguir el pedido", 
 
   await page.getByRole("link", { name: "Ver el estado del pedido" }).click();
   await expect(page.getByLabel("Código de pedido")).toHaveValue(codigo!);
-  await page.getByLabel("Últimos 4 dígitos de tu celular").fill("2233");
+  await page.getByLabel("Últimos 4 dígitos de tu celular").fill(celular.slice(-4));
   await page.getByRole("button", { name: "Ver mi pedido" }).click();
   await expect(page.getByRole("heading", { name: `${codigo}: Ramo de tulipanes` })).toBeVisible();
+  await expect(page.locator("[aria-current=step]")).toContainText("Solicitud recibida");
+});
+
+test("encargo: el campo trampa frena a los robots sin guardar nada", async ({ page }) => {
+  test.skip(!!process.env.E2E_URL, "crea pedidos reales");
+  await abrir(page, "/encargo");
+  await page.getByLabel(/Cuéntanos tu idea/).fill("Mensaje automático de un robot cualquiera");
+  await page.getByLabel(/Nombre/).fill("Robot");
+  await page.getByLabel(/Ciudad/).fill("Ninguna");
+  await page.getByLabel(/Celular/).fill("3000000000");
+  await page.locator("input[name=sitio_web]").fill("http://spam.example", { force: true });
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await expect(page.getByRole("heading", { name: "Envíalo por WhatsApp para que te cotice" })).toBeVisible();
+  // El robot ve una respuesta normal, pero el pedido no existe en la base de datos.
+  const codigo = await page.locator("strong").filter({ hasText: /^MH4-/ }).textContent();
+  await abrir(page, `/pedido?codigo=${codigo}`);
+  await page.getByLabel("Últimos 4 dígitos de tu celular").fill("0000");
+  await page.getByRole("button", { name: "Ver mi pedido" }).click();
+  await expect(page.getByText(/No encontramos un pedido/)).toBeVisible();
+});
+
+test("entrar: Google o código al correo, y las zonas privadas piden sesión", async ({ page, isMobile }) => {
+  await abrir(page, "/mi-cuenta");
+  await expect(page).toHaveURL(/\/entrar\?volver=(%2F|\/)mi-cuenta/);
+  await expect(page.getByRole("heading", { name: "Entrar", level: 1 })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Continuar con Google" })).toBeVisible();
+
+  if (!PANEL_ABIERTO) {
+    await abrir(page, "/admin/pedidos");
+    await expect(page).toHaveURL(/\/entrar\?volver=(%2F|\/)admin/);
+  }
+
+  // Un destino externo en ?volver se ignora (sin redirecciones abiertas).
+  await abrir(page, "/entrar?volver=//evil.example");
+  await expect(page.getByRole("button", { name: "Continuar con Google" })).toBeVisible();
+
+  // Pedir el código cuenta para el límite de 3 por minuto: solo en escritorio y en local.
+  if (!process.env.E2E_URL && !isMobile) {
+    await page.getByRole("button", { name: /entrar con mi correo/ }).click();
+    await expect(page.getByLabel("Correo electrónico")).toBeFocused();
+    await page.getByLabel("Correo electrónico").fill(`prueba+${Date.now()}@example.com`);
+    await page.getByRole("button", { name: "Enviarme un código" }).click();
+    await expect(page.getByLabel("Código de 6 números")).toBeFocused();
+    await page.getByLabel("Código de 6 números").fill("000000");
+    await page.getByRole("button", { name: "Entrar", exact: true }).click();
+    await expect(page.getByText(/no es correcto o ya venció/)).toBeVisible();
+  }
+});
+
+test("panel de presentación: botón visible, sin login y con los celulares ocultos", async ({ page, isMobile }) => {
+  test.skip(!PANEL_ABIERTO, "el panel está cerrado (solo administradores)");
+  await abrir(page, "/");
+  await page.getByRole("banner").getByRole("link", { name: "Panel" }).click();
+  await expect(page).toHaveURL(/\/admin\/pedidos/);
+  await expect(page.getByRole("heading", { name: "Pedidos", level: 1 })).toBeVisible();
+  await expect(page.getByText("Vista previa del panel.")).toBeVisible();
+  if (isMobile) await expect(page.getByRole("banner").getByRole("link", { name: "Panel" })).toBeInViewport();
+
+  const pedido = page.locator("a[href^='/admin/pedidos/MH4-']").first();
+  if (await pedido.count()) {
+    await pedido.click();
+    await expect(page.getByText(/^••• ••• \d{4}$/)).toBeVisible();
+    await expect(page.getByRole("link", { name: "Escribirle por WhatsApp" })).toHaveCount(0);
+  }
 });
 
 test("seguimiento: pedido de ejemplo y error de teléfono", async ({ page }) => {

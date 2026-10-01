@@ -53,6 +53,76 @@
   gap: 0.5rem;
 }
 
+.entrar {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  color: var(--cacao);
+  font-weight: 600;
+  text-decoration: none;
+}
+.entrar:hover {
+  background: color-mix(in srgb, var(--crema) 60%, transparent);
+}
+.avatar,
+.cuentaVacia {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.avatar {
+  background: var(--crema);
+  color: var(--cacao);
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+}
+.avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.menuCuenta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in srgb, var(--cacao) 25%, transparent);
+  color: var(--cacao);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.botonPanel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0 0.95rem;
+  border-radius: 999px;
+  background: var(--cacao);
+  color: var(--lino);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.botonPanel:hover {
+  background: color-mix(in srgb, var(--cacao) 85%, #000);
+}
+.botonPanel svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
 .wa {
   min-height: 44px;
   padding-block: 0.5rem;
@@ -179,6 +249,11 @@
   .nav {
     display: none;
   }
+  /* En celular la cuenta va dentro del menú */
+  .acciones > .entrar,
+  .acciones > .cuentaVacia {
+    display: none;
+  }
   .botonMenu {
     display: inline-flex;
   }
@@ -200,5 +275,22 @@
   }
   .logo img {
     height: 2.1rem;
+  }
+  .botonPanel {
+    padding: 0 0.8rem;
+  }
+}
+/* Celulares muy angostos: el botón Panel queda solo con su icono */
+@media (max-width: 23rem) {
+  .botonPanel {
+    font-size: 0;
+    gap: 0;
+    width: 44px;
+    justify-content: center;
+    padding: 0;
+  }
+  .botonPanel svg {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }

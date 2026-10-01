@@ -17,7 +17,7 @@ export default function Pedido() {
       {esDemo && (
         <p style={{ maxWidth: "38rem", color: "var(--canela)" }}>
           Para probar la demo: código <strong>MH4-7K2P</strong> con <strong>1234</strong>, o <strong>MH4-3RQT</strong>{" "}
-          con <strong>5678</strong>. Los encargos que hagas en este navegador también aparecen aquí.
+          con <strong>5678</strong>. Los encargos que hagas también aparecen aquí con su código.
         </p>
       )}
       <Seguimiento />

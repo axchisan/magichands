@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Producto } from "@/lib/catalogo";
 import { negocio } from "@/lib/config";
 import { enlaceWhatsApp, mensajeEncargo, nuevoCodigo, type Encargo } from "@/lib/whatsapp";
-import { guardarEncargoLocal } from "@/lib/pedidos";
+import { crearEncargo } from "@/app/acciones/pedidos";
 import { IconoWhatsApp } from "./Iconos";
 import estilos from "./FormularioEncargo.module.css";
 
@@ -13,7 +13,9 @@ type Opcion = Pick<Producto, "slug" | "nombre" | "categoria">;
 
 export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
   const formulario = useRef<HTMLFormElement>(null);
-  const [enviado, setEnviado] = useState<{ codigo: string; enlace: string } | null>(null);
+  const [enviado, setEnviado] = useState<{ codigo: string; enlace: string; guardado: boolean } | null>(null);
+  const [enviando, setEnviando] = useState(false);
+  const [aviso, setAviso] = useState("");
 
   // Producto preseleccionado desde la ficha (/encargo?producto=slug). Se lee al montar para que el
   // formulario se pinte completo en el servidor (sin salto de diseño al hidratar).
@@ -41,14 +43,32 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
     };
   }, [enviado]);
 
-  function enviar(e: React.FormEvent<HTMLFormElement>) {
+  async function enviar(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // Solo llega aquí si el formulario es válido: el navegador bloquea el envío y marca los campos
-    // con error (:user-invalid) en caso contrario.
+    // con error (:user-invalid) en caso contrario. El servidor vuelve a validar.
+    if (enviando) return;
     const d = new FormData(e.currentTarget);
+    setEnviando(true);
+    setAviso("");
+    let codigo = "";
+    let guardado = false;
+    try {
+      const r = await crearEncargo(d);
+      if (!r.ok) {
+        setAviso(r.errores ? Object.values(r.errores).join(" ") : r.mensaje);
+        setEnviando(false);
+        return;
+      }
+      codigo = r.codigo;
+      guardado = true;
+    } catch {
+      // Sin conexión con el servidor: el encargo igual puede salir por WhatsApp.
+      codigo = nuevoCodigo();
+    }
     const slug = String(d.get("producto") ?? "");
     const encargo: Encargo = {
-      codigo: nuevoCodigo(),
+      codigo,
       producto: productos.find((p) => p.slug === slug)?.nombre,
       detalle: String(d.get("detalle")),
       colores: String(d.get("colores") ?? ""),
@@ -58,31 +78,33 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
       nombre: String(d.get("nombre")),
       ciudad: String(d.get("ciudad")),
     };
-    const enlace = enlaceWhatsApp(mensajeEncargo(encargo), negocio.whatsapp);
-    guardarEncargoLocal(encargo, String(d.get("telefono") ?? ""));
-    setEnviado({ codigo: encargo.codigo, enlace });
-    window.open(enlace, "_blank", "noopener");
+    setEnviado({ codigo, enlace: enlaceWhatsApp(mensajeEncargo(encargo), negocio.whatsapp), guardado });
+    setEnviando(false);
   }
 
   if (enviado) {
     return (
       <div className={estilos.listo} role="status" tabIndex={-1} ref={(el) => el?.focus()}>
-        <h2>Tu encargo está listo para enviar</h2>
+        <p className={estilos.paso}>Último paso</p>
+        <h2>Envíalo por WhatsApp para que te cotice</h2>
         <p>
-          Tu código de pedido es <strong className={estilos.codigo}>{enviado.codigo}</strong>. Se abrió WhatsApp con
-          todos los detalles: solo toca enviar y adjunta tus fotos de referencia en el chat.
+          {enviado.guardado ? "Tu encargo quedó guardado con el código " : "Tu código de pedido es "}
+          <strong className={estilos.codigo}>{enviado.codigo}</strong>. Al tocar el botón se abre WhatsApp con todos
+          los detalles: envía el mensaje y adjunta tus fotos de referencia en el chat.
         </p>
+        <a className={`boton boton-whatsapp ${estilos.grande}`} href={enviado.enlace} target="_blank" rel="noopener noreferrer">
+          <IconoWhatsApp /> Enviar por WhatsApp
+        </a>
         <div className={estilos.acciones}>
-          <a className="boton boton-whatsapp" href={enviado.enlace} target="_blank" rel="noopener noreferrer">
-            <IconoWhatsApp /> Abrir WhatsApp otra vez
-          </a>
-          <Link className="boton boton-borde" href={`/pedido?codigo=${enviado.codigo}`}>
-            Ver el estado del pedido
-          </Link>
+          {enviado.guardado && (
+            <Link className="boton boton-borde" href={`/pedido?codigo=${enviado.codigo}`}>
+              Ver el estado del pedido
+            </Link>
+          )}
+          <button type="button" className={estilos.otro} onClick={() => setEnviado(null)}>
+            Hacer otro encargo
+          </button>
         </div>
-        <button type="button" className={estilos.otro} onClick={() => setEnviado(null)}>
-          Hacer otro encargo
-        </button>
       </div>
     );
   }
@@ -219,12 +241,23 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
         </div>
       </fieldset>
 
+      {/* Trampa para bots: oculta para personas y lectores de pantalla */}
+      <div className={estilos.trampa} aria-hidden="true">
+        <label htmlFor="sitio_web">Sitio web</label>
+        <input id="sitio_web" name="sitio_web" tabIndex={-1} autoComplete="off" />
+      </div>
+
+      {aviso && (
+        <p className={estilos.aviso} role="alert">
+          {aviso}
+        </p>
+      )}
       <div className={estilos.enviar}>
-        <button type="submit" className="boton boton-whatsapp">
-          <IconoWhatsApp /> Enviar encargo por WhatsApp
+        <button type="submit" className="boton boton-principal" disabled={enviando} aria-busy={enviando}>
+          {enviando ? "Guardando tu encargo…" : "Continuar"}
         </button>
         <p className="pista">
-          Las fotos de referencia las adjuntas en el chat. Nada se cobra hasta que confirmes la cotización.
+          En el siguiente paso lo envías por WhatsApp, con tus fotos de referencia. Nada se cobra hasta que confirmes la cotización.
         </p>
       </div>
     </form>

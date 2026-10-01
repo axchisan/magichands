@@ -102,3 +102,38 @@
     grid-template-columns: 1fr;
   }
 }
+
+.paso {
+  font-weight: 700;
+  color: var(--rosa-profundo);
+}
+.grande {
+  justify-self: start;
+  font-size: 1.1rem;
+  min-height: 56px;
+  padding-inline: 1.6rem;
+}
+.trampa {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.aviso {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  background: #fdf0f0;
+  color: var(--error);
+  font-weight: 600;
+}
+.enviar :global(.boton[disabled]) {
+  opacity: 0.7;
+  cursor: progress;
+}
+@media (max-width: 40rem) {
+  .grande,
+  .enviar :global(.boton) {
+    width: 100%;
+  }
+}
