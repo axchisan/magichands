@@ -8,6 +8,7 @@
 | Web | Vercel, proyecto `magichands` (equipo `axchisan923-2669s-projects`, plan Hobby) | Directorio raíz `web`, Node 24, Next.js |
 | Despliegue | Automático: cada `push` a `main` → producción; cada rama o PR → vista previa | Sin pasos manuales |
 | Dominio | `magichands.axchisan.com` (CNAME en Hostinger → `cname.vercel-dns.com`) | También responde en `magichands-iota.vercel.app` |
+| Google OAuth | Google Cloud, proyecto `magic-h4nds` (sin organización), app publicada | Cliente "Web Magic H4nds" |
 | Base de datos, login, fotos subidas, correos | Pendientes (ver `08-plan-de-desarrollo.md`) | Neon, Better Auth, R2, Resend |
 
 Las URLs de vista previa de ramas (`magichands-git-…vercel.app`) quedan protegidas por la protección de

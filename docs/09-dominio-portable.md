@@ -20,13 +20,17 @@ La web se construye para que el dominio sea una configuración, no código. Hoy:
 
 1. **Dominio**: ella lo compra a su nombre (recomendado Cloudflare Registrar, a precio de costo).
 2. **Hosting**: añadir el dominio al proyecto (Vercel o Cloudflare, según la decisión de producción en `06`).
-3. **Google OAuth**: añadir `https://<su-dominio>/api/auth/callback/google` y el origen
+3. **Google OAuth** (proyecto `magic-h4nds` → Google Auth Platform → Clientes → "Web Magic H4nds"; y en
+   "Información de marca" cambiar página principal, privacidad, condiciones y dominio autorizado): añadir `https://<su-dominio>/api/auth/callback/google` y el origen
    `https://<su-dominio>`. Mantener el subdominio viejo unas semanas para que no se rompa nada.
 4. **Resend**: verificar su dominio (registros SPF/DKIM) y cambiar `EMAIL_FROM`.
 5. **Variables**: actualizar `NEXT_PUBLIC_SITE_URL`, `BETTER_AUTH_URL` y añadir el dominio nuevo a
    `BETTER_AUTH_TRUSTED_ORIGINS`. Las `NEXT_PUBLIC_*` se fijan al compilar: hay que volver a desplegar.
 6. **Redirección**: `magichands.axchisan.com` → dominio nuevo (301), para no perder enlaces compartidos.
-7. **Demo → producción**: `NEXT_PUBLIC_DEMO=0`, enviar el sitemap a Google Search Console.
+7. **Demo → producción**: `NEXT_PUBLIC_DEMO=0` (las páginas legales pasan a declarar a Magic H4nds como
+   responsable; poner su correo en `NEXT_PUBLIC_CONTACTO_DATOS`), enviar el sitemap a Google Search Console.
+   Si se quiere que Google muestre "Magic H4nds" y su logo al iniciar sesión, pedir la verificación de marca.
+   El proyecto de Google Cloud se puede transferir a una cuenta de ella (no tiene organización).
 8. **Comprobar**: login con Google y con código en el dominio nuevo, un encargo de prueba, el panel.
    Las pruebas de extremo a extremo se pueden lanzar contra él con `E2E_URL=https://<su-dominio>`.
 
