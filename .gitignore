@@ -19,3 +19,6 @@ __pycache__/
 # Vercel (enlace local y token OIDC)
 .vercel
 .env*.local
+
+# Capturas sin marco (se regeneran)
+presentacion/crudas/

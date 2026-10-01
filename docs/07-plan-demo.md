@@ -37,8 +37,8 @@ Publicada en **https://magichands.axchisan.com** (Vercel; se actualiza con cada 
 
 ## Contacto (fase 5)
 
-Por mensaje directo de Instagram, que es el canal que ella usa. Corto, concreto y sin presión.
-Borrador (tú lo ajustas a tu voz):
+**Versión final (1 oct 2026): `presentacion/mensaje-para-andrea.md`**, por WhatsApp, con las 5 capturas de
+`presentacion/` (iPhone y Mac). Borrador anterior, por Instagram:
 
 > Hola Yuliana, me encanta tu trabajo, sobre todo los funkos personalizados con la base grabada 💗
 > Soy desarrollador web y me puse a revisar tu perfil: vi que el enlace de tu bio (linkr.bio) no
