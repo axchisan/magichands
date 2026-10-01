@@ -4,6 +4,7 @@ import { Cabecera } from "@/components/Cabecera";
 import { Pie } from "@/components/Pie";
 import { AvisoAgenda } from "@/components/AvisoAgenda";
 import { esDemo } from "@/lib/config";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // "optional": si la fuente de títulos no llega a tiempo en la primera visita, se usa la de respaldo
@@ -21,12 +22,16 @@ export const metadata: Metadata = {
     "Amigurumis personalizados, flores que no se marchitan, ropa y accesorios tejidos a mano en Vélez, Santander. Bajo pedido y con envíos a todo Colombia.",
   // La demo no se indexa: es una propuesta privada (docs/07-plan-demo.md).
   robots: esDemo ? { index: false, follow: false } : undefined,
+  // La imagen para compartir es app/opengraph-image.jpg (scripts/og_imagen.py).
   openGraph: {
-    title: "Magic H4nds",
-    description: "Lo que imaginas, tejido punto por punto. Hecho a mano en Vélez, Santander.",
+    title: "Magic H4nds · Tejido a mano en Vélez, Santander",
+    description:
+      "Lo que imaginas, tejido punto por punto: amigurumis personalizados, flores que no se marchitan y ropa tejida a mano. Encárgalo por WhatsApp.",
+    siteName: "Magic H4nds",
     locale: "es_CO",
     type: "website",
   },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
@@ -44,6 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Cabecera />
         <main id="contenido">{children}</main>
         <Pie />
+        <Analytics />
       </body>
     </html>
   );

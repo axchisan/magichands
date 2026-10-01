@@ -55,7 +55,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/funko-personalizado/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/014.jpg",
@@ -67,7 +71,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/03.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/03.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/funko-personalizado/03.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/022.jpg",
@@ -160,7 +168,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/funko-en-cupula/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-en-cupula/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/funko-en-cupula/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -206,7 +218,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/parejas-y-familias/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/040.jpg",
@@ -218,7 +234,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/03.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/03.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/parejas-y-familias/03.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/005.jpg",
@@ -229,7 +249,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/04.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/04.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/parejas-y-familias/04.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/008.jpg",
@@ -240,7 +264,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/05.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/05.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/parejas-y-familias/05.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/026.jpg",
@@ -251,7 +279,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/06.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/06.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/parejas-y-familias/06.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -297,7 +329,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/profesiones/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/017.jpg",
@@ -309,7 +345,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/03.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/03.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/profesiones/03.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/006.jpg",
@@ -321,7 +361,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/04.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/04.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/profesiones/04.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/018.jpg",
@@ -333,7 +377,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/05.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/05.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/profesiones/05.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/022.jpg",
@@ -345,7 +393,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/06.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/06.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/profesiones/06.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -390,7 +442,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/graduados/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/graduados/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/graduados/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/019.jpg",
@@ -401,7 +457,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/graduados/03.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/graduados/03.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/graduados/03.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -452,7 +512,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/figuras-religiosas/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/027.jpg",
@@ -464,7 +528,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/03.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/03.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/figuras-religiosas/03.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/054.jpg",
@@ -476,7 +544,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/04.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/04.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/figuras-religiosas/04.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/016.jpg",
@@ -487,7 +559,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/05.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/05.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/figuras-religiosas/05.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/043.jpg",
@@ -498,7 +574,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/06.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/06.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/figuras-religiosas/06.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -542,7 +622,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/personalizados/llaveros-personalizados/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/personalizados/llaveros-personalizados/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/llaveros-personalizados/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/historias-destacadas/01_amigurumis/033.jpg",
@@ -790,7 +874,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/personajes/harry-potter/03.jpg"
+          "archivo": "recursos/catalogo/seleccion/personajes/harry-potter/03.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personajes/harry-potter/03.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -2946,7 +3034,11 @@
             "revisar-texto",
             "escalar"
           ],
-          "archivo": "recursos/catalogo/seleccion/ropa/tops-sencillos/05.jpg"
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-sencillos/05.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/ropa/tops-sencillos/05.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -3119,7 +3211,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestido-de-bano-girasoles/02.jpg"
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestido-de-bano-girasoles/02.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/vestidos-de-bano/vestido-de-bano-girasoles/02.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         }
       ]
     },
@@ -3751,7 +3847,11 @@
           "mejoras": [
             "revisar-texto"
           ],
-          "archivo": "recursos/catalogo/seleccion/llaveros/mini-amigurumis-llavero/03.jpg"
+          "archivo": "recursos/catalogo/seleccion/llaveros/mini-amigurumis-llavero/03.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/llaveros/mini-amigurumis-llavero/03.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini, lote 2)"
+          ]
         },
         {
           "origen": "recursos/instagram/carruseles/112_CRXPc2BjTfN/01.jpg",

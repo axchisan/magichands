@@ -20,8 +20,24 @@ export async function generateMetadata({ params }: PageProps<"/p/[slug]">): Prom
   return {
     title: p.nombre,
     description: p.descripcion,
-    openGraph: { images: [`${p.fotos[0].src}-960.webp`] },
+    openGraph: {
+      title: `${p.nombre} · Magic H4nds`,
+      description: p.descripcion,
+      siteName: "Magic H4nds",
+      locale: "es_CO",
+      type: "website",
+      images: [imagenParaCompartir(p)],
+    },
+    twitter: { card: "summary_large_image", images: [imagenParaCompartir(p).url] },
   };
+}
+
+/** Productos del catálogo inicial: tarjeta 1200x630 en JPG (scripts/og_imagen.py). Los creados en el
+ *  panel usan su foto de portada (JPEG si se subió desde iPhone, si no WebP). */
+function imagenParaCompartir(p: { slug: string; nombre: string; fotos: { src: string }[] }) {
+  const src = p.fotos[0].src;
+  if (src.startsWith("/img/p/")) return { url: `/img/p/${p.slug}/og.jpg`, width: 1200, height: 630, alt: p.nombre };
+  return { url: src.endsWith("~jpg") ? `${src.slice(0, -4)}-960.jpg` : `${src}-960.webp`, alt: p.nombre };
 }
 
 const precio = new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 });

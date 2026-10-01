@@ -27,20 +27,23 @@ export default function Privacidad() {
       <h2>Qué datos se recogen</h2>
       <ul>
         <li>
-          <strong>Al hacer un encargo:</strong> nombre, ciudad, celular y la descripción de lo que quieres. Estos datos
-          se usan para armar el mensaje que tú mismo envías por WhatsApp; la web no los envía a ningún otro lugar.
+          <strong>Al hacer un encargo:</strong> nombre, ciudad, celular y la descripción de lo que quieres. Se guardan
+          en la base de datos del sitio para gestionar tu pedido, a Magic H4nds le llega un aviso por correo y con ellos
+          se arma el mensaje que tú mismo envías por WhatsApp.
         </li>
         <li>
-          <strong>En tu navegador:</strong> el código y el estado de tus encargos se guardan en el almacenamiento local de
-          tu navegador para que puedas consultarlos en “Seguir mi pedido”. Puedes borrarlos limpiando los datos del sitio.
+          <strong>Seguimiento:</strong> para ver el estado de un pedido en “Seguir mi pedido” se piden su código y los
+          últimos 4 dígitos del celular con el que se hizo.
         </li>
         <li>
           <strong>Si inicias sesión con Google o con un código por correo:</strong> tu nombre, correo electrónico y foto de
-          perfil, para identificarte, mostrarte tus pedidos y avisarte de su estado.
+          perfil, para identificarte, mostrarte tus pedidos y avisarte por correo de su
+          estado.
         </li>
         <li>
           <strong>Datos técnicos:</strong> el proveedor de alojamiento registra datos básicos de las visitas (dirección IP,
-          navegador, páginas vistas) para el funcionamiento y la seguridad del sitio.
+          navegador, páginas vistas) para el funcionamiento y la seguridad del sitio. Además se miden las visitas de forma
+          anónima y agregada (Vercel Web Analytics), sin cookies y sin identificarte.
         </li>
       </ul>
 
