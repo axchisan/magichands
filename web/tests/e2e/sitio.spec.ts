@@ -226,6 +226,18 @@ test("panel de presentación: botón visible, sin login y con los celulares ocul
     await pedido.click();
     await expect(page.getByText(/^••• ••• \d{4}$/)).toBeVisible();
     await expect(page.getByRole("link", { name: "Escribirle por WhatsApp" })).toHaveCount(0);
+
+    // Guardar un cambio de estado se refleja al instante (sin recargar). Solo en local: escribe en la base.
+    if (!process.env.E2E_URL && !isMobile) {
+      const nuevo = (await page.locator("#estado").inputValue()) === "en_proceso" ? "listo" : "en_proceso";
+      const nombre = nuevo === "listo" ? "Listo" : "Tejiendo";
+      await page.locator("#estado").selectOption(nuevo);
+      await page.getByRole("button", { name: "Guardar cambios" }).click();
+      await expect(page.getByRole("status").filter({ hasText: "Cambios guardados" })).toBeVisible();
+      await expect(page.locator("#estado")).toHaveValue(nuevo);
+      await expect(page.locator("header span[data-estado]")).toHaveText(nombre);
+      await expect(page.locator("ol li").last()).toContainText(nombre);
+    }
   }
 });
 

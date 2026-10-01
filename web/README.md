@@ -30,6 +30,7 @@ secretos irán en `.env.local` (ignorado por git) y en las variables de Vercel.
 | `npm run db:generate` | Genera una migración de Drizzle a partir de `src/db/schema.ts` |
 | `npm run db:migrate` | Aplica las migraciones (rama `dev`, o la de `DATABASE_URL` si se pasa) |
 | `npm run db:semilla` | Carga o actualiza el catálogo en la base de datos (idempotente) |
+| `npm run correos:vista` | Genera los correos del sistema como HTML en `test-results/correos/` para revisarlos |
 | `npm run deploy:cloudflare` | Alternativa: compila con OpenNext y despliega en Cloudflare Workers |
 
 Pruebas de extremo a extremo contra un sitio publicado:
@@ -96,6 +97,9 @@ pregeneradas; no hay optimización en tiempo de ejecución (sin coste en Vercel 
   (presentación) cualquiera ve el panel en vista previa, con celulares ocultos; con `0`, solo los
   correos de `ADMIN_EMAILS`.
 - Las pruebas e2e escriben en la rama `dev` y no envían correos (`CORREO_SIMULADO=1`).
+- **Correos** (`src/lib/correos/`, plantilla común con la marca en `plantilla.ts`): código de acceso;
+  encargo nuevo (a `ADMIN_EMAILS`); encargo recibido y cambios de estado (al cliente, solo si hizo el
+  encargo con su cuenta: sin cuenta no tenemos su correo). Logos en `public/img/correo/` (PNG).
 
 ## Configuración del negocio
 

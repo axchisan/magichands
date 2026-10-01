@@ -5,6 +5,7 @@ import { and, desc, eq, gt, sql } from "drizzle-orm";
 import { db, schema } from "@/db";
 import { esAdmin, sesionActual } from "@/lib/auth";
 import { enviarCorreo } from "@/lib/correo";
+import { correoEncargoRecibido, correoNuevoEncargo } from "@/lib/correos/pedido";
 import { nuevoCodigo } from "@/lib/whatsapp";
 import { validarEncargo } from "@/lib/validacion";
 import { buscarPedido as buscarEjemplo, type Pedido } from "@/lib/pedidos";
@@ -69,21 +70,27 @@ export async function crearEncargo(formulario: FormData): Promise<RespuestaEncar
   if (!pedidoId) return { ok: false, mensaje: "No pudimos guardar el encargo. Inténtalo de nuevo." };
   await db.insert(pedidoEvento).values({ pedidoId, estado: "solicitud" });
 
-  // Aviso a los administradores, sin hacer esperar al cliente.
+  // Correos sin hacer esperar al cliente: aviso a los administradores y, si entró con su cuenta,
+  // confirmación al cliente.
+  const datosCorreo = {
+    codigo,
+    producto: prod?.nombre ?? null,
+    detalle: d.detalle,
+    colores: d.colores,
+    tamano: d.tamano,
+    fechaDeseada: d.fecha || null,
+    urgente: d.urgente,
+    nombre: d.nombre,
+    ciudad: d.ciudad,
+    whatsapp: d.telefono,
+  };
+  const correoCliente = sesion?.user.email;
   after(async () => {
     const admins = (process.env.ADMIN_EMAILS ?? "").split(",").map((e) => e.trim()).filter(Boolean);
-    const texto = [
-      `Nuevo encargo ${codigo}`,
-      `Producto: ${prod?.nombre ?? "Otro diseño"}`,
-      `Cliente: ${d.nombre} (${d.ciudad}) · WhatsApp ${d.telefono}`,
-      `Idea: ${d.detalle}`,
-      d.urgente ? "Urgente" : "",
-    ].filter(Boolean).join("\n");
-    await Promise.allSettled(
-      admins.map((para) =>
-        enviarCorreo({ para, asunto: `Nuevo encargo ${codigo}: ${prod?.nombre ?? "Otro diseño"}`, texto, html: `<pre style="font:15px/1.5 Arial,sans-serif;white-space:pre-wrap">${texto.replace(/[&<>]/g, (c) => `&#${c.charCodeAt(0)};`)}</pre>` }),
-      ),
-    );
+    const envios = admins.map((para) => enviarCorreo({ para, ...correoNuevoEncargo(datosCorreo) }));
+    if (correoCliente) envios.push(enviarCorreo({ para: correoCliente, ...correoEncargoRecibido(datosCorreo) }));
+    const r = await Promise.allSettled(envios);
+    for (const x of r) if (x.status === "rejected") console.error(`[correo] encargo ${codigo}:`, x.reason);
   });
 
   return { ok: true, codigo };
