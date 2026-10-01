@@ -1,0 +1,96 @@
+.contenedor {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 40rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: end;
+}
+.form button {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.aviso {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: #fdf0f0;
+  color: var(--error);
+  font-weight: 600;
+}
+
+.pedido {
+  display: grid;
+  gap: 0.6rem;
+}
+.pedido h2 {
+  font-size: var(--t-4);
+}
+.ejemplo {
+  font-size: var(--t-0);
+  color: var(--canela);
+}
+
+.linea {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.linea li {
+  position: relative;
+  display: grid;
+  padding: 0 0 1.25rem 2rem;
+}
+/* Punto y línea vertical de cada estado */
+.linea li::before {
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  top: 0.35rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  border: 2px solid var(--cacao);
+  background: var(--lino);
+}
+.linea li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.71rem;
+  top: 1.3rem;
+  bottom: 0;
+  width: 2px;
+  background: var(--linea);
+}
+.hecho::before {
+  background: var(--cacao) !important;
+}
+.actual::before {
+  background: var(--rosa-profundo) !important;
+  border-color: var(--rosa-profundo) !important;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--rosa-profundo) 25%, transparent);
+}
+.pendiente {
+  color: color-mix(in srgb, var(--cacao) 55%, transparent);
+}
+
+.nombreEstado {
+  font-weight: 600;
+}
+.fecha {
+  font-size: var(--t-0);
+  color: var(--canela);
+}
+.texto {
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 30rem) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}

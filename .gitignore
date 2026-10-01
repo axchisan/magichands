@@ -1,0 +1,17 @@
+# Sistema
+.DS_Store
+
+# Descargas crudas de Instagram: pesadas y con datos personales de terceros
+# (incluye una historia con datos bancarios). Solo en local. Ver recursos/README.md
+recursos/instagram/
+# Copias de trabajo regenerables con scripts/seleccion_catalogo.py (a partir de recursos/instagram)
+recursos/catalogo/seleccion/
+recursos/catalogo/revision.html
+
+# Python
+__pycache__/
+*.pyc
+
+# Editores
+.idea/
+.vscode/

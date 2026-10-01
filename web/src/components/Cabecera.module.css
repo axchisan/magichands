@@ -1,0 +1,86 @@
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--lino) 94%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--linea);
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 4.25rem;
+}
+
+.logo {
+  display: block;
+  border-radius: 6px;
+}
+.logo img {
+  height: 2.4rem;
+  width: auto;
+}
+
+.nav ul {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav a {
+  display: block;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  color: var(--cacao);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.nav a:hover {
+  background: color-mix(in srgb, var(--crema) 60%, transparent);
+}
+.nav a[aria-current="page"] {
+  background: var(--crema);
+}
+
+.wa {
+  min-height: 42px;
+  padding-block: 0.5rem;
+}
+
+/* Móvil: logo y WhatsApp arriba; la navegación pasa a una fila desplazable */
+@media (max-width: 62rem) {
+  .fila {
+    grid-template-columns: 1fr auto;
+    gap: 0.25rem 1rem;
+    padding-top: 0.5rem;
+  }
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 0 var(--gutter) 0.5rem;
+  }
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 26rem) {
+  .waTexto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .wa {
+    padding-inline: 0.85rem;
+  }
+}

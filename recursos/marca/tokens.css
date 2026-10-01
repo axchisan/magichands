@@ -1,0 +1,18 @@
+/* Magic H4nds — tokens de marca. Origen y usos en tokens.json */
+:root {
+  --mh-carbon: #0E0C0B;
+  --mh-cacao: #3B2A24;
+  --mh-canela: #8A5A47;
+  --mh-canela-suave: #A3715D;
+  --mh-crema: #F2D2B6;
+  --mh-durazno: #F5B596;
+  --mh-lino: #FBF6F1;
+  --mh-gris-sombra: #979493;
+  --mh-rosa: #E28180;
+  --mh-rosa-profundo: #A33C4E;
+  --mh-cielo: #2D578F;
+  --mh-whatsapp: #0F7A40;
+
+  --mh-font-display: "Gloock", "Georgia", serif;
+  --mh-font-texto: "Figtree", system-ui, sans-serif;
+}

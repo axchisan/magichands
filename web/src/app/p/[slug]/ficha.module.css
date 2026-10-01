@@ -1,0 +1,117 @@
+.migas {
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+.migas ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+.migas li + li::before {
+  content: "/";
+  margin-right: 0.5rem;
+  color: var(--canela);
+}
+
+.ficha {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.info {
+  position: sticky;
+  top: 6rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.nombre {
+  font-size: var(--t-5);
+}
+
+.descripcion {
+  font-size: var(--t-2);
+  line-height: 1.5;
+}
+
+.datos {
+  margin: 0;
+  display: grid;
+  border-top: 1px solid var(--linea);
+}
+.datos > div {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--linea);
+}
+.datos dt {
+  color: var(--canela);
+}
+.datos dd {
+  margin: 0;
+  font-weight: 600;
+}
+.nota {
+  display: block;
+  font-weight: 400;
+  font-size: var(--t-0);
+  color: var(--canela);
+}
+
+.personalizacion h2 {
+  font-size: var(--t-3);
+  margin-bottom: 0.6rem;
+}
+.personalizacion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.personalizacion li {
+  background: var(--crema);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pagos {
+  font-size: 0.95rem;
+  color: var(--canela);
+}
+
+.relacionados {
+  margin-top: 5rem;
+}
+.relacionados h2 {
+  font-size: var(--t-4);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 52rem) {
+  .ficha {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    position: static;
+  }
+  .datos > div {
+    grid-template-columns: 9rem 1fr;
+  }
+}
