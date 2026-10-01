@@ -1,0 +1,71 @@
+.pie {
+  background: var(--carbon);
+  color: var(--crema);
+  margin-top: 6rem;
+  padding: 4rem 0 2rem;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.marca img {
+  width: 9rem;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.marca p {
+  color: var(--lino);
+  opacity: 0.85;
+}
+
+.ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--crema);
+}
+.ig svg {
+  width: 1.2rem;
+}
+
+.titulo {
+  font-size: var(--t-2);
+  margin-bottom: 0.75rem;
+}
+
+.pie ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.pie nav a {
+  color: var(--lino);
+  text-decoration: none;
+}
+.pie nav a:hover {
+  text-decoration: underline;
+}
+
+.demo {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--crema) 20%, transparent);
+  font-size: var(--t-0);
+  color: var(--gris-sombra);
+}
+
+@media (max-width: 48rem) {
+  .rejilla {
+    grid-template-columns: 1fr 1fr;
+  }
+  .marca {
+    grid-column: 1 / -1;
+  }
+}

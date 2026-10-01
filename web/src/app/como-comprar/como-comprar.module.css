@@ -1,0 +1,68 @@
+.pagina {
+  padding-top: 3rem;
+  max-width: 60rem;
+}
+.pagina h1 {
+  font-size: var(--t-6);
+}
+.intro {
+  margin-top: 0.75rem;
+  font-size: var(--t-2);
+}
+
+.bloque {
+  margin-top: 4rem;
+}
+.bloque h2 {
+  font-size: var(--t-4);
+  margin-bottom: 1.25rem;
+}
+
+.condiciones {
+  margin: 0;
+  display: grid;
+  border-top: 1px solid var(--linea);
+}
+.condiciones > div {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--linea);
+}
+.condiciones dt {
+  font-weight: 600;
+}
+.condiciones dd {
+  margin: 0;
+  max-width: 38rem;
+}
+
+.preguntas details {
+  border-bottom: 1px solid var(--linea);
+  padding: 1rem 0;
+}
+.preguntas summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--t-2);
+  list-style-position: outside;
+}
+.preguntas details p {
+  margin-top: 0.6rem;
+  max-width: 40rem;
+}
+
+.cta {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 40rem) {
+  .condiciones > div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

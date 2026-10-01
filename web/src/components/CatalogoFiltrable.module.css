@@ -1,0 +1,101 @@
+.contenedor {
+  margin-top: 2rem;
+}
+
+.filtros {
+  display: grid;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--linea);
+}
+
+.buscar {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 28rem;
+}
+.buscar label {
+  font-weight: 600;
+}
+.buscar input {
+  font: inherit;
+  min-height: 48px;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in srgb, var(--cacao) 30%, transparent);
+  background: #fff;
+  color: var(--cacao);
+}
+
+.grupo {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.grupo legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  font: inherit;
+  font-size: 0.95rem;
+  min-height: 40px;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in srgb, var(--cacao) 25%, transparent);
+  background: transparent;
+  color: var(--cacao);
+  cursor: pointer;
+}
+.chip:hover {
+  border-color: var(--cacao);
+}
+.chip[aria-pressed="true"] {
+  background: var(--cacao);
+  border-color: var(--cacao);
+  color: var(--lino);
+}
+
+.resultado {
+  margin: 1.25rem 0 1.5rem;
+  color: var(--canela);
+  font-weight: 600;
+}
+
+.vacio {
+  display: grid;
+  gap: 0.5rem;
+  padding: 3rem 0;
+}
+.vacio button {
+  font: inherit;
+  color: var(--cielo);
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* En móvil, las categorías se desplazan en una fila para no ocupar media pantalla */
+@media (max-width: 40rem) {
+  .chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 0.15rem var(--gutter);
+    scrollbar-width: none;
+  }
+  .chip {
+    flex: none;
+  }
+}

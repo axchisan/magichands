@@ -1,0 +1,217 @@
+/* Magic H4nds — estilos base. Tokens de marca: recursos/marca/tokens.json (docs/03-identidad-de-marca.md) */
+
+:root {
+  --carbon: #0e0c0b;
+  --cacao: #3b2a24;
+  --canela: #8a5a47;
+  --canela-suave: #a3715d;
+  --crema: #f2d2b6;
+  --durazno: #f5b596;
+  --lino: #fbf6f1;
+  --gris-sombra: #979493;
+  --rosa: #e28180;
+  --rosa-profundo: #a33c4e;
+  --cielo: #2d578f;
+  --whatsapp: #0f7a40;
+  --error: #a3262e;
+
+  --linea: color-mix(in srgb, var(--cacao) 14%, transparent);
+
+  /* Escala tipográfica (razón 1.25, base 17px) */
+  --t-0: 0.8rem;
+  --t-1: 1rem;
+  --t-2: 1.25rem;
+  --t-3: 1.56rem;
+  --t-4: 1.95rem;
+  --t-5: clamp(2.2rem, 5vw, 3.05rem);
+  --t-6: clamp(2.6rem, 7vw, 4.75rem);
+
+  --ancho: 72rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --radio: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 106.25%; /* 17px */
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--lino);
+  color: var(--cacao);
+  font-family: var(--font-texto), system-ui, sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--cielo);
+  text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cielo);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.envoltura {
+  width: min(100% - 2 * var(--gutter), var(--ancho));
+  margin-inline: auto;
+}
+
+.saltar {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--carbon);
+  color: var(--lino);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  z-index: 100;
+}
+.saltar:focus {
+  top: 1rem;
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Botones */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0.7rem 1.35rem;
+  border: 0;
+  border-radius: 999px;
+  font: 600 var(--t-1) / 1.2 var(--font-texto), system-ui, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.15s;
+}
+.boton:active {
+  transform: translateY(1px);
+}
+.boton-whatsapp {
+  background: var(--whatsapp);
+  color: #fff;
+}
+.boton-whatsapp:hover {
+  background: #0b6334;
+}
+.boton-principal {
+  background: var(--rosa-profundo);
+  color: #fff;
+}
+.boton-principal:hover {
+  background: #8a3141;
+}
+.boton-borde {
+  background: transparent;
+  color: inherit;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+.boton-borde:hover {
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+.boton svg {
+  width: 1.2em;
+  height: 1.2em;
+  flex: none;
+}
+
+/* Formularios (validación tras interacción: :user-invalid) */
+.campo {
+  display: grid;
+  gap: 0.35rem;
+}
+.campo label {
+  font-weight: 600;
+}
+.campo .pista {
+  font-size: var(--t-0);
+  color: var(--canela);
+}
+.campo input,
+.campo select,
+.campo textarea {
+  font: inherit;
+  color: var(--cacao);
+  background: #fff;
+  border: 1.5px solid color-mix(in srgb, var(--cacao) 30%, transparent);
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  min-height: 48px;
+  width: 100%;
+}
+.campo textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+.campo input:user-invalid,
+.campo select:user-invalid,
+.campo textarea:user-invalid {
+  border-color: var(--error);
+  background: #fdf0f0;
+}
+.campo .error {
+  display: none;
+  color: var(--error);
+  font-size: var(--t-0);
+  font-weight: 600;
+}
+.campo :user-invalid ~ .error {
+  display: block;
+}
+.requerido {
+  color: var(--rosa-profundo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

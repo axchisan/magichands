@@ -1,0 +1,56 @@
+.rejilla {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(15rem, 44vw), 1fr));
+  gap: 2.25rem 1.25rem;
+}
+
+.enlace {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  border-radius: var(--radio);
+}
+
+.foto {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radio);
+  overflow: hidden;
+  background: var(--crema);
+}
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.35s ease;
+}
+.enlace:hover .foto img {
+  scale: 1.03;
+}
+
+.nombre {
+  font-size: var(--t-2);
+  margin-top: 0.7rem;
+}
+.enlace:hover .nombre {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.detalle {
+  margin-top: 0.2rem;
+  color: var(--canela);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 40rem) {
+  .rejilla {
+    gap: 1.75rem 0.85rem;
+  }
+  .nombre {
+    font-size: 1.1rem;
+  }
+}

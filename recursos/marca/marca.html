@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marca Magic H4nds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&family=Gloock&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--mh-lino); color: var(--mh-cacao); font: 16px/1.55 var(--mh-font-texto); }
+  main { max-width: 1100px; margin: auto; padding: 32px 16px 64px; }
+  h1, h2 { font-family: var(--mh-font-display); font-weight: 400; margin: 0; }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.05; }
+  h2 { font-size: 1.7rem; margin: 56px 0 16px; }
+  .eti { font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; color: var(--mh-canela); }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .panel { border-radius: 14px; padding: 20px; display: grid; place-items: center; min-height: 220px; }
+  .panel img { max-width: 100%; max-height: 190px; }
+  .panel small { display: block; margin-top: 10px; font-size: .78rem; }
+  .sw { border-radius: 12px; overflow: hidden; border: 1px solid #0001; background: #fff; }
+  .sw div { height: 86px; }
+  .sw p { margin: 0; padding: 10px 12px; font-size: .82rem; line-height: 1.35; }
+  .sw b { display: block; font-size: .95rem; }
+  .tipo { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .tipo .muestra-d { font-family: var(--mh-font-display); font-size: 2.6rem; line-height: 1.1; }
+  .tipo .muestra-t { font-size: 1.05rem; }
+  .card { background: #fff; border-radius: 18px; overflow: hidden; max-width: 340px; box-shadow: 0 10px 30px #3b2a2418; }
+  .card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; background: var(--mh-crema); }
+  .card .c { padding: 16px 18px 20px; }
+  .card h3 { font-family: var(--mh-font-display); font-weight: 400; font-size: 1.5rem; margin: 4px 0 6px; }
+  .card p { margin: 0 0 14px; font-size: .95rem; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; padding: 12px 18px; font: 600 .95rem var(--mh-font-texto); color: #fff; text-decoration: none; }
+  .btn.wa { background: var(--mh-whatsapp); }
+  .btn.pri { background: var(--mh-rosa-profundo); }
+  .fila { display: flex; gap: 10px; flex-wrap: wrap; }
+  .heroish { background: var(--mh-carbon); color: var(--mh-crema); border-radius: 20px; padding: 32px; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: center; }
+  .heroish h1 { color: var(--mh-crema); }
+  .heroish p { color: var(--mh-lino); opacity: .85; }
+  .heroish .eti { color: var(--mh-rosa); }
+  .heroish .card { color: var(--mh-cacao); }
+  .heroish .card .eti { color: var(--mh-canela); }
+  .notas li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eti">Hoja de marca · propuesta</p>
+  <h1>Magic H4nds</h1>
+  <p>Identidad extraída de su propio logo y de su diseño de “Información”, sin inventar una marca nueva: se ordena lo que ya es suyo.</p>
+
+  <h2>Logo</h2>
+  <div class="grid">
+    <div class="panel" style="background:var(--mh-carbon)"><div style="text-align:center"><img src="logo-completo.png" alt="Logo completo"><small style="color:var(--mh-crema)">logo-completo.svg</small></div></div>
+    <div class="panel" style="background:var(--mh-lino);border:1px solid #0001"><div style="text-align:center"><img src="monograma-mh4-oscuro.png" alt="Monograma oscuro"><small>monograma-mh4-oscuro.svg · fondos claros</small></div></div>
+    <div class="panel" style="background:var(--mh-rosa-profundo)"><div style="text-align:center"><img src="monograma-mh4-sin-fondo.png" alt="Monograma claro"><small style="color:#fff">monograma-mh4-sin-fondo.svg · fondos oscuros o de color</small></div></div>
+    <div class="panel" style="background:var(--mh-crema)"><div style="text-align:center"><img src="mh4-oscuro.png" alt="MH4" style="max-height:110px"><br><img src="favicon-180.png" alt="Favicon" style="width:64px;border-radius:14px;margin-top:12px"><small>mh4-oscuro.svg · favicon</small></div></div>
+  </div>
+
+  <h2>Color</h2>
+  <div class="grid" id="paleta"></div>
+
+  <h2>Tipografía</h2>
+  <div class="tipo">
+    <div><p class="eti">Títulos · Gloock</p><p class="muestra-d">Tejido a mano en Vélez, Santander</p><p>Serif de alto contraste, pariente del “MH4” del logo.</p></div>
+    <div><p class="eti">Texto · Figtree</p><p class="muestra-t">Tu persona favorita convertida en amigurumi, con su ropa, su profesión y sus detalles, sobre base de madera grabada. Listo en 15 a 20 días hábiles y con envío a todo el país.</p><p class="eti">Etiqueta · Figtree 800 · mayúsculas</p></div>
+  </div>
+
+  <h2>En uso</h2>
+  <div class="heroish">
+    <div>
+      <p class="eti">Hecho a mano · bajo pedido · envíos nacionales</p>
+      <h1>Lo que imaginas, tejido punto por punto</h1>
+      <p>Amigurumis personalizados, flores que no se marchitan y ropa tejida en Vélez, Santander.</p>
+      <div class="fila"><a class="btn wa" href="#">Pedir por WhatsApp</a><a class="btn pri" href="#">Ver catálogo</a></div>
+    </div>
+    <div class="card">
+      <img src="../catalogo/mejoradas-ia/personalizados/funko-personalizado/01-principal.jpg" alt="Funko personalizado de policía sobre base grabada Magic Hands">
+      <div class="c">
+        <p class="eti">Personalizados · 15–25 cm</p>
+        <h3>Funko personalizado</h3>
+        <p style="color:var(--mh-canela)">Tu persona favorita, con su uniforme y detalles, sobre base de madera grabada.</p>
+        <a class="btn wa" href="#">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Reglas de uso</h2>
+  <ul class="notas">
+    <li>El fondo de página es <b>lino</b>; el <b>crema</b> se reserva para superficies de marca (es el color de su diseño de Información).</li>
+    <li>El <b>rosa</b> original (#E28180) es decorativo: con texto blanco no alcanza contraste. Para botones, <b>rosa profundo</b>.</li>
+    <li>El logo completo, con las manos, va siempre sobre <b>carbón</b>; en cabeceras pequeñas se usa el monograma.</li>
+    <li>Las fotos de producto llevan el protagonismo; la marca las enmarca, no compite con ellas.</li>
+  </ul>
+</main>
+<script>
+  const paleta = [
+    ["carbon","#0E0C0B","Fondo del logo, secciones oscuras"],
+    ["cacao","#3B2A24","Texto principal · 12.7:1 sobre lino"],
+    ["canela","#8A5A47","Texto secundario · 5.4:1"],
+    ["crema","#F2D2B6","Superficies de marca (MH4)"],
+    ["durazno","#F5B596","Acentos suaves (manos)"],
+    ["lino","#FBF6F1","Fondo de página"],
+    ["gris-sombra","#979493","Sombra del monograma"],
+    ["rosa","#E28180","Acento decorativo"],
+    ["rosa-profundo","#A33C4E","Botones · 6.3:1 con blanco"],
+    ["cielo","#2D578F","Enlaces · cielo de Vélez"],
+    ["whatsapp","#0F7A40","Botón de WhatsApp"],
+  ];
+  document.getElementById("paleta").innerHTML = paleta.map(([n, h, u]) =>
+    `<div class="sw"><div style="background:${h}"></div><p><b>${n}</b>${h}<br>${u}</p></div>`).join("");
+</script>
+</body>
+</html>

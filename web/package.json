@@ -1,0 +1,41 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "lint": "eslint",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "next build && playwright test",
+    "check": "npm run lint && npm run typecheck && npm test && npm run test:e2e",
+    "deploy:cloudflare": "opennextjs-cloudflare build && wrangler deploy",
+    "preview:cloudflare": "opennextjs-cloudflare build && wrangler dev"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.7",
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.19.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "esbuild": "^0.28.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "typescript": "^5",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.145.0"
+  },
+  "allowScripts": {
+    "workerd@1.20260930.2": true,
+    "esbuild@0.28.1": true,
+    "esbuild@0.25.4": true
+  }
+}

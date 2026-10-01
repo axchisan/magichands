@@ -1,0 +1,3949 @@
+{
+  "categorias": {
+    "personalizados": "Personalizados",
+    "mascotas": "Tu mascota en amigurumi",
+    "personajes": "Personajes",
+    "amigurumis": "Amigurumis",
+    "flores": "Flores y ramos",
+    "ropa": "Ropa tejida",
+    "vestidos-de-bano": "Vestidos de baño",
+    "bolsos": "Bolsos y accesorios",
+    "accesorios-mascotas": "Accesorios para mascotas",
+    "llaveros": "Llaveros",
+    "hogar": "Hogar y navidad"
+  },
+  "productos": [
+    {
+      "slug": "funko-personalizado",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Funko personalizado",
+      "descripcion": "Tu persona favorita convertida en amigurumi estilo funko, con su ropa, profesión y detalles, sobre base de madera grabada con Magic Hands.",
+      "personalizacion": [
+        "persona a partir de fotos",
+        "ropa y accesorios",
+        "profesión",
+        "base de madera grabada"
+      ],
+      "tamano": "15–25 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/024.jpg",
+          "ref": "H/04/024",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/funko-personalizado/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/006.jpg",
+          "ref": "H/04/006",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/014.jpg",
+          "ref": "H/04/014",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/022.jpg",
+          "ref": "H/04/022",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/013.jpg",
+          "ref": "H/04/013",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/05.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/053.jpg",
+          "ref": "H/01/053",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/06.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/049.jpg",
+          "ref": "H/01/049",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-personalizado/07.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "funko-en-cupula",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Funko en cúpula de vidrio",
+      "descripcion": "Tu funko personalizado protegido del polvo en una cúpula de vidrio con base de madera.",
+      "personalizacion": [
+        "persona a partir de fotos",
+        "cúpula de vidrio"
+      ],
+      "tamano": "hasta 25 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/021.jpg",
+          "ref": "H/04/021",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-en-cupula/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/funko-en-cupula/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/020.jpg",
+          "ref": "H/04/020",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/funko-en-cupula/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "parejas-y-familias",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Parejas y familias",
+      "descripcion": "Parejas, papá e hija, familias completas: todos juntos en una misma base.",
+      "personalizacion": [
+        "número de personas",
+        "ropa",
+        "base (redonda o de corazón)"
+      ],
+      "tamano": "15–20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/042.jpg",
+          "ref": "H/01/042",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/parejas-y-familias/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/055.jpg",
+          "ref": "H/01/055",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/040.jpg",
+          "ref": "H/01/040",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/005.jpg",
+          "ref": "H/04/005",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/008.jpg",
+          "ref": "H/04/008",
+          "ancho": 1200,
+          "alto": 2133,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/05.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/026.jpg",
+          "ref": "H/10/026",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/parejas-y-familias/06.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "profesiones",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Profesiones y uniformes",
+      "descripcion": "Enfermeras, ingenieros, militares, policías: el regalo perfecto para celebrar un logro.",
+      "personalizacion": [
+        "uniforme",
+        "accesorios",
+        "nombre en la ropa"
+      ],
+      "tamano": "15–20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/048.jpg",
+          "ref": "H/01/048",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/profesiones/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/050.jpg",
+          "ref": "H/01/050",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/017.jpg",
+          "ref": "H/01/017",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/006.jpg",
+          "ref": "H/01/006",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/018.jpg",
+          "ref": "H/01/018",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/05.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/022.jpg",
+          "ref": "H/01/022",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/profesiones/06.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "graduados",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Graduados",
+      "descripcion": "El recuerdo de un grado con toga, birrete y el estilo de quien se gradúa.",
+      "personalizacion": [
+        "toga y colores",
+        "persona a partir de fotos"
+      ],
+      "tamano": "15–20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/023.jpg",
+          "ref": "H/04/023",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/graduados/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/graduados/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/015.jpg",
+          "ref": "H/04/015",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/graduados/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/019.jpg",
+          "ref": "H/10/019",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/graduados/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "figuras-religiosas",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Vírgenes y figuras religiosas",
+      "descripcion": "Virgen de Guadalupe, del Carmen, de Fátima, angelitos y más, tejidos con todo el detalle.",
+      "personalizacion": [
+        "advocación",
+        "colores"
+      ],
+      "tamano": "16–20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": {
+        "valor": 75000,
+        "texto": "$75.000",
+        "producto": "Virgencita con denario 20 cm",
+        "fuente": "H/10/016",
+        "anio": "2023–2024"
+      },
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/012.jpg",
+          "ref": "H/01/012",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/figuras-religiosas/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/013.jpg",
+          "ref": "H/01/013",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/027.jpg",
+          "ref": "H/01/027",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/054.jpg",
+          "ref": "H/01/054",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/016.jpg",
+          "ref": "H/10/016",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/05.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/043.jpg",
+          "ref": "H/10/043",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/figuras-religiosas/06.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "llaveros-personalizados",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Llaveros personalizados",
+      "descripcion": "Tu persona favorita en versión mini para llevarla siempre contigo.",
+      "personalizacion": [
+        "persona a partir de fotos"
+      ],
+      "tamano": "mini",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/005.jpg",
+          "ref": "H/01/005",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/llaveros-personalizados/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personalizados/llaveros-personalizados/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/052.jpg",
+          "ref": "H/01/052",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/llaveros-personalizados/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/033.jpg",
+          "ref": "H/01/033",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/llaveros-personalizados/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/001.jpg",
+          "ref": "H/01/001",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/llaveros-personalizados/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "campesina-velena",
+      "categoria": "personalizados",
+      "categoria_nombre": "Personalizados",
+      "nombre": "Campesina veleña",
+      "descripcion": "Homenaje a la cultura y el folclor de Vélez, Santander, con su traje típico.",
+      "personalizacion": [
+        "colores del traje"
+      ],
+      "tamano": "30 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/064_Cg2mOwJJJZY/01.jpg",
+          "ref": "C/064/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personalizados/campesina-velena/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/001.jpg",
+          "ref": "H/10/001",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/campesina-velena/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/002.jpg",
+          "ref": "H/10/002",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personalizados/campesina-velena/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/064_Cg2mOwJJJZY/03.jpg",
+          "ref": "C/064/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personalizados/campesina-velena/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tu-mascota-en-amigurumi",
+      "categoria": "mascotas",
+      "categoria_nombre": "Tu mascota en amigurumi",
+      "nombre": "Tu mascota en amigurumi",
+      "descripcion": "Envíanos fotos de tu perro o gato y lo tejemos con sus colores, orejas y detalles.",
+      "personalizacion": [
+        "a partir de fotos de tu mascota",
+        "base de madera opcional"
+      ],
+      "tamano": "8–10 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": {
+        "valor": 25000,
+        "texto": "$25.000",
+        "producto": "Amigurumi mascota 8–10 cm (varía según detalles y colores)",
+        "fuente": "C/061",
+        "anio": "2023"
+      },
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/02_mascotas/007.jpg",
+          "ref": "H/02/007",
+          "ancho": 1170,
+          "alto": 2080,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/mascotas/tu-mascota-en-amigurumi/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/02_mascotas/006.jpg",
+          "ref": "H/02/006",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/02_mascotas/004.jpg",
+          "ref": "H/02/004",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/02_mascotas/005.jpg",
+          "ref": "H/02/005",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/02_mascotas/001.jpg",
+          "ref": "H/02/001",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/05.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/02_mascotas/003.jpg",
+          "ref": "H/02/003",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/06.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/062_ChVbIMJpNkf/01.jpg",
+          "ref": "C/062/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/07.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/061_ChVbQ1mJU7n/01.jpg",
+          "ref": "C/061/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/mascotas/tu-mascota-en-amigurumi/08.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "harry-potter",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Harry Potter",
+      "descripcion": "Harry con su varita y bufanda de Gryffindor; también en mini.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "10–20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/023.jpg",
+          "ref": "H/01/023",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/harry-potter/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personajes/harry-potter/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/020.jpg",
+          "ref": "H/01/020",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/harry-potter/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/004.jpg",
+          "ref": "H/10/004",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/harry-potter/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "dumbledore",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Albus Dumbledore",
+      "descripcion": "El director de Hogwarts, con el color de traje que elijas.",
+      "personalizacion": [
+        "color del traje"
+      ],
+      "tamano": "18–20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/022_C8fv6xxRCNA/01.jpg",
+          "ref": "C/022/01",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/dumbledore/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/022_C8fv6xxRCNA/02.jpg",
+          "ref": "C/022/02",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/dumbledore/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/038.jpg",
+          "ref": "H/10/038",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/dumbledore/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "gandalf",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Gandalf",
+      "descripcion": "El mago gris de El Señor de los Anillos.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "20 cm aprox.",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/010.jpg",
+          "ref": "H/01/010",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/gandalf/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personajes/gandalf/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/036.jpg",
+          "ref": "H/01/036",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/gandalf/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "coraline",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Coraline",
+      "descripcion": "Coraline con su impermeable amarillo.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/024_C8LDdfUxFw2/01.jpg",
+          "ref": "C/024/01",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/coraline/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/024_C8LDdfUxFw2/02.jpg",
+          "ref": "C/024/02",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/coraline/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/024_C8LDdfUxFw2/03.jpg",
+          "ref": "C/024/03",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/coraline/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/044.jpg",
+          "ref": "H/10/044",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/coraline/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "selena",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Selena Quintanilla",
+      "descripcion": "La reina del tex-mex con su traje morado.",
+      "personalizacion": [
+        "tamaño 10–30 cm"
+      ],
+      "tamano": "10–30 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/028_C59HgmaR7gT/01.jpg",
+          "ref": "C/028/01",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/selena/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/028_C59HgmaR7gT/02.jpg",
+          "ref": "C/028/02",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/selena/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/030.jpg",
+          "ref": "H/10/030",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/selena/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mirabel",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Mirabel Madrigal",
+      "descripcion": "Porque Vélez es un encanto.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "30 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/066_Cg2k29OJPzn/01.jpg",
+          "ref": "C/066/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/mirabel/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/066_Cg2k29OJPzn/02.jpg",
+          "ref": "C/066/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/mirabel/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/005.jpg",
+          "ref": "H/10/005",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/mirabel/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "one-piece",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Zoro y Luffy (One Piece)",
+      "descripcion": "Los piratas de One Piece, juntos o por separado.",
+      "personalizacion": [
+        "tamaño 10–30 cm"
+      ],
+      "tamano": "10–30 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/030_C567YBErtjM/01.jpg",
+          "ref": "C/030/01",
+          "ancho": 1440,
+          "alto": 1051,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/one-piece/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/030_C567YBErtjM/03.jpg",
+          "ref": "C/030/03",
+          "ancho": 1440,
+          "alto": 1052,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/one-piece/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/030_C567YBErtjM/02.jpg",
+          "ref": "C/030/02",
+          "ancho": 1440,
+          "alto": 1052,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/one-piece/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/024.jpg",
+          "ref": "H/10/024",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/one-piece/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/033.jpg",
+          "ref": "H/10/033",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/one-piece/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "futbolistas",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Futbolistas",
+      "descripcion": "Messi, Cristiano o tu jugador favorito con su camiseta.",
+      "personalizacion": [
+        "jugador",
+        "camiseta"
+      ],
+      "tamano": "20 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/038_CnS3b9JrZsz/01.jpg",
+          "ref": "C/038/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/futbolistas/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/001.jpg",
+          "ref": "H/04/001",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/futbolistas/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/038_CnS3b9JrZsz/02.jpg",
+          "ref": "C/038/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/futbolistas/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/007.jpg",
+          "ref": "H/04/007",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/futbolistas/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/019.jpg",
+          "ref": "H/04/019",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/futbolistas/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "goku",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Goku",
+      "descripcion": "El guerrero de Dragon Ball.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "15 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/090_CbqpAZBLUpl/01.jpg",
+          "ref": "C/090/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/goku/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/090_CbqpAZBLUpl/02.jpg",
+          "ref": "C/090/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/goku/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "naruto-kurama",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Naruto y Kurama",
+      "descripcion": "Naruto y el zorro de nueve colas.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "15 cm aprox.",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/080_CbqtjP6L6OS/01.jpg",
+          "ref": "C/080/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/naruto-kurama/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/081_CbqtcQ9rMpU/02.jpg",
+          "ref": "C/081/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/naruto-kurama/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/081_CbqtcQ9rMpU/01.jpg",
+          "ref": "C/081/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/naruto-kurama/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/081_CbqtcQ9rMpU/03.jpg",
+          "ref": "C/081/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/naruto-kurama/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sasuke",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Sasuke Uchiha",
+      "descripcion": "Sasuke de Naruto.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "15 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/031.jpg",
+          "ref": "H/01/031",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/sasuke/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personajes/sasuke/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/030.jpg",
+          "ref": "H/01/030",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/sasuke/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mandalorian-grogu",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Mandalorian y Grogu",
+      "descripcion": "Este es el camino.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/034_CrRl_XCrD1M/01.jpg",
+          "ref": "C/034/01",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/mandalorian-grogu/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/034_CrRl_XCrD1M/02.jpg",
+          "ref": "C/034/02",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/mandalorian-grogu/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/034_CrRl_XCrD1M/03.jpg",
+          "ref": "C/034/03",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/mandalorian-grogu/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/012.jpg",
+          "ref": "H/10/012",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/mandalorian-grogu/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "appa",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Appa (Avatar)",
+      "descripcion": "El bisonte volador de Avatar.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "24 × 17 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/026_C6Hw1KLLoGE/01.jpg",
+          "ref": "C/026/01",
+          "ancho": 1440,
+          "alto": 1100,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/appa/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/026_C6Hw1KLLoGE/02.jpg",
+          "ref": "C/026/02",
+          "ancho": 1440,
+          "alto": 1101,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/appa/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/026_C6Hw1KLLoGE/03.jpg",
+          "ref": "C/026/03",
+          "ancho": 1440,
+          "alto": 1101,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/appa/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/036.jpg",
+          "ref": "H/10/036",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/appa/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "shrek",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Shrek",
+      "descripcion": "Shrek, con o sin flor.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/028.jpg",
+          "ref": "H/01/028",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/shrek/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personajes/shrek/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/029.jpg",
+          "ref": "H/01/029",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/shrek/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "personajes-tiernos",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Snoopy, Baymax, Sullivan y más",
+      "descripcion": "Personajes de caricatura súper suaves.",
+      "personalizacion": [
+        "personaje"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/032.jpg",
+          "ref": "H/01/032",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/personajes-tiernos/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personajes/personajes-tiernos/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/024.jpg",
+          "ref": "H/01/024",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/personajes-tiernos/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/035.jpg",
+          "ref": "H/10/035",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/personajes-tiernos/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/025.jpg",
+          "ref": "H/10/025",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/personajes-tiernos/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/01_amigurumis/034.jpg",
+          "ref": "H/01/034",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/personajes-tiernos/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "stitch",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Stitch y Angel",
+      "descripcion": "La pareja de Lilo & Stitch, también como llaveros.",
+      "personalizacion": [
+        "llavero o amigurumi"
+      ],
+      "tamano": "mini",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/087_CbqsCdir4lJ/02.jpg",
+          "ref": "C/087/02",
+          "ancho": 1300,
+          "alto": 1300,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/stitch/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/087_CbqsCdir4lJ/01.jpg",
+          "ref": "C/087/01",
+          "ancho": 1300,
+          "alto": 1300,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/stitch/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/12_llaveros/004.jpg",
+          "ref": "H/12/004",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/stitch/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pochita",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Pochita",
+      "descripcion": "El perrito motosierra de Chainsaw Man.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "6 × 11 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/039_CnS1LOSrcZM/01.jpg",
+          "ref": "C/039/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/pochita/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/039_CnS1LOSrcZM/02.jpg",
+          "ref": "C/039/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/pochita/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/041.jpg",
+          "ref": "H/10/041",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/pochita/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "frailejon-ernesto-perez",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Frailejón Ernesto Pérez",
+      "descripcion": "El frailejón más querido de Colombia.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "15 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/073_CcwHjiOrrn-/01.jpg",
+          "ref": "C/073/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/frailejon-ernesto-perez/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/074_CcwHhBVrEBK/01.jpg",
+          "ref": "C/074/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/frailejon-ernesto-perez/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/075_CcwHbjSLdUi/01.jpg",
+          "ref": "C/075/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/personajes/frailejon-ernesto-perez/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/032.jpg",
+          "ref": "H/10/032",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/frailejon-ernesto-perez/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "totoro",
+      "categoria": "personajes",
+      "categoria_nombre": "Personajes",
+      "nombre": "Totoro",
+      "descripcion": "Totoro súper suave.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/014.jpg",
+          "ref": "H/10/014",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/personajes/totoro/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/personajes/totoro/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "abejita",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Abejita",
+      "descripcion": "Nuestra clásica: suave, redondita y en tres tamaños, hasta gigante.",
+      "personalizacion": [
+        "tamaño: mediana o gigante"
+      ],
+      "tamano": "mediana / gigante",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/078_CcG6r8CrrOi/01.jpg",
+          "ref": "C/078/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/abejita/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/077_CcG69mjrafZ/02.jpg",
+          "ref": "C/077/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/abejita/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/076_CcG7AbDL8CZ/01.jpg",
+          "ref": "C/076/01",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/abejita/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/089_CbqpO3sLT5i/01.jpg",
+          "ref": "C/089/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/abejita/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/028.jpg",
+          "ref": "H/10/028",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/abejita/05.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/098_CUVWeilL03F/01.jpg",
+          "ref": "C/098/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/abejita/06.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "conejito-gigante",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Conejito gigante",
+      "descripcion": "Súper suavecito, con o sin ropita.",
+      "personalizacion": [
+        "ropita",
+        "colores"
+      ],
+      "tamano": "gigante",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/047_Ck_2BkMLRNW/02.jpg",
+          "ref": "C/047/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/conejito-gigante/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/047_Ck_2BkMLRNW/03.jpg",
+          "ref": "C/047/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/conejito-gigante/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/047_Ck_2BkMLRNW/01.jpg",
+          "ref": "C/047/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/conejito-gigante/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/019_C9nQseExKL3/05.jpg",
+          "ref": "C/019/05",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/conejito-gigante/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/019_C9nQseExKL3/04.jpg",
+          "ref": "C/019/04",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/conejito-gigante/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "oso-panda",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Oso panda",
+      "descripcion": "Oso panda súper suave.",
+      "personalizacion": [
+        "tamaño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/097_CUVWx0Qr_i2/01.jpg",
+          "ref": "C/097/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/oso-panda/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/095_CUVXDK-Lg6q/01.jpg",
+          "ref": "C/095/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/oso-panda/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/099_CUVWX89LULf/01.jpg",
+          "ref": "C/099/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/oso-panda/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ranita",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Ranita",
+      "descripcion": "Ranita tejida a mano, súper suave.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/123_CRH-qQ-j-3I/01.jpg",
+          "ref": "C/123/01",
+          "ancho": 1156,
+          "alto": 867,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/ranita/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/121_CRH-2CejK_i/01.jpg",
+          "ref": "C/121/01",
+          "ancho": 1156,
+          "alto": 829,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/ranita/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/034.jpg",
+          "ref": "H/10/034",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/ranita/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "patico",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Patico",
+      "descripcion": "Con ropita o sin ropita.",
+      "personalizacion": [
+        "ropita"
+      ],
+      "tamano": "11–15 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/037_CnS36KxrOfW/01.jpg",
+          "ref": "C/037/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/patico/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/037_CnS36KxrOfW/03.jpg",
+          "ref": "C/037/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/patico/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/037_CnS36KxrOfW/02.jpg",
+          "ref": "C/037/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/patico/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/040.jpg",
+          "ref": "H/10/040",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/patico/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "colibri",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Colibrí",
+      "descripcion": "En lana suavecita, varios colores.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/036_CrRkYBEr067/02.jpg",
+          "ref": "C/036/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/colibri/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/036_CrRkYBEr067/01.jpg",
+          "ref": "C/036/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/colibri/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/011.jpg",
+          "ref": "H/10/011",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/colibri/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "oso-pera",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Osito pera",
+      "descripcion": "La combinación perfecta entre un osito y una pera.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/106_CSnc7R3DRA-/01.jpg",
+          "ref": "C/106/01",
+          "ancho": 1440,
+          "alto": 1063,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/oso-pera/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/106_CSnc7R3DRA-/02.jpg",
+          "ref": "C/106/02",
+          "ancho": 1440,
+          "alto": 1079,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/oso-pera/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/106_CSnc7R3DRA-/04.jpg",
+          "ref": "C/106/04",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/oso-pera/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "perrito",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Perrito",
+      "descripcion": "Perrito tejido súper tierno.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/031_CrWkhbjLq-o/01.jpg",
+          "ref": "C/031/01",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/perrito/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/031_CrWkhbjLq-o/02.jpg",
+          "ref": "C/031/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/perrito/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tiburon-sushi",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Tiburón sushi",
+      "descripcion": "Un tiburón convertido en sushi.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/033_CrWjwxGLWhB/02.jpg",
+          "ref": "C/033/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/tiburon-sushi/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/033_CrWjwxGLWhB/01.jpg",
+          "ref": "C/033/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/tiburon-sushi/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/033_CrWjwxGLWhB/03.jpg",
+          "ref": "C/033/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/tiburon-sushi/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "fantasma",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Fantasmita",
+      "descripcion": "Un fantasmita suave y tierno.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/083_Cbqs0r2rolG/01.jpg",
+          "ref": "C/083/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/fantasma/01-principal.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pesebre",
+      "categoria": "amigurumis",
+      "categoria_nombre": "Amigurumis",
+      "nombre": "Pesebre / Nacimiento",
+      "descripcion": "María, José y el Niño Dios, en caja de regalo.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "María y José 17 cm · Niño Dios 12 cm",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/015_DDiX4Y1yy8D/03.jpg",
+          "ref": "C/015/03",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/pesebre/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/015_DDiX4Y1yy8D/04.jpg",
+          "ref": "C/015/04",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/pesebre/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/013_DDibYumMwFu/01.jpg",
+          "ref": "C/013/01",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/pesebre/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/015_DDiX4Y1yy8D/08.jpg",
+          "ref": "C/015/08",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/pesebre/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/007.jpg",
+          "ref": "H/10/007",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/amigurumis/pesebre/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tulipan",
+      "categoria": "flores",
+      "categoria_nombre": "Flores y ramos",
+      "nombre": "Tulipán individual",
+      "descripcion": "Una flor que no se marchita, con tarjeta y dulce.",
+      "personalizacion": [
+        "color"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": {
+        "valor": 12000,
+        "texto": "$12.000",
+        "producto": "Tulipán con tarjeta y dulce",
+        "fuente": "C/067",
+        "anio": "2023"
+      },
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/067_Cc3P7nsLZGN/01.jpg",
+          "ref": "C/067/01",
+          "ancho": 1440,
+          "alto": 1079,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/tulipan/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/069_Cc3OeV9ra9F/01.jpg",
+          "ref": "C/069/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/tulipan/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/070_Cc3OZOuLCIO/01.jpg",
+          "ref": "C/070/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/tulipan/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/067_Cc3P7nsLZGN/02.jpg",
+          "ref": "C/067/02",
+          "ancho": 1440,
+          "alto": 1079,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/tulipan/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ramo-de-tulipanes",
+      "categoria": "flores",
+      "categoria_nombre": "Flores y ramos",
+      "nombre": "Ramo de tulipanes",
+      "descripcion": "Ramos de 5 o 6 tulipanes en los colores que quieras.",
+      "personalizacion": [
+        "número de flores",
+        "colores"
+      ],
+      "tamano": "5–6 flores",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/058_ChYKafqLm43/01.jpg",
+          "ref": "C/058/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-tulipanes/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/001.jpg",
+          "ref": "H/08/001",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-tulipanes/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/071_Cc3OOvartI6/01.jpg",
+          "ref": "C/071/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-tulipanes/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/060_ChYKMeNLn-o/01.jpg",
+          "ref": "C/060/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-tulipanes/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/012.jpg",
+          "ref": "H/08/012",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-tulipanes/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ramo-de-rosas",
+      "categoria": "flores",
+      "categoria_nombre": "Flores y ramos",
+      "nombre": "Ramo de rosas",
+      "descripcion": "Rosas tejidas, solas o combinadas con tulipanes.",
+      "personalizacion": [
+        "número de flores",
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": {
+        "valor": 45000,
+        "texto": "$45.000",
+        "producto": "Ramito de 2 rosas y 3 tulipanes (día de la madre)",
+        "fuente": "C/035",
+        "anio": "2023"
+      },
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/002.jpg",
+          "ref": "H/08/002",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-rosas/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/flores/ramo-de-rosas/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/carruseles/035_CrRk9a6rDkp/01.jpg",
+          "ref": "C/035/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-rosas/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/003.jpg",
+          "ref": "H/08/003",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-rosas/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ramo-de-girasoles",
+      "categoria": "flores",
+      "categoria_nombre": "Flores y ramos",
+      "nombre": "Ramo de girasoles",
+      "descripcion": "Girasoles solos o con tulipanes y lavandas.",
+      "personalizacion": [
+        "combinación de flores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/016.jpg",
+          "ref": "H/08/016",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-girasoles/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/flores/ramo-de-girasoles/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/carruseles/046_Ck_2XtaLwCS/01.jpg",
+          "ref": "C/046/01",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-girasoles/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/004.jpg",
+          "ref": "H/08/004",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-girasoles/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/048_Ck_1ghXrUdk/01.jpg",
+          "ref": "C/048/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-girasoles/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/014.jpg",
+          "ref": "H/08/014",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-de-girasoles/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ramo-personalizado",
+      "categoria": "flores",
+      "categoria_nombre": "Flores y ramos",
+      "nombre": "Ramo personalizado",
+      "descripcion": "Hasta 16 flores: ramitas, lavandas, girasoles, rosas… tú lo diseñas.",
+      "personalizacion": [
+        "flores",
+        "colores",
+        "tamaño"
+      ],
+      "tamano": "hasta 16 flores",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/005.jpg",
+          "ref": "H/08/005",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-personalizado/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/flores/ramo-personalizado/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/carruseles/008_DKz8XR7SBxV/02.jpg",
+          "ref": "C/008/02",
+          "ancho": 1440,
+          "alto": 1920,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-personalizado/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/059_ChYKXTXL0Z1/01.jpg",
+          "ref": "C/059/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-personalizado/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/008_DKz8XR7SBxV/01.jpg",
+          "ref": "C/008/01",
+          "ancho": 1440,
+          "alto": 1920,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/flores/ramo-personalizado/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "maceta-de-tulipanes",
+      "categoria": "flores",
+      "categoria_nombre": "Flores y ramos",
+      "nombre": "Maceta de tulipanes",
+      "descripcion": "Tulipanes en su propia matera tejida.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/08_ramos-y-flores/013.jpg",
+          "ref": "H/08/013",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/flores/maceta-de-tulipanes/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/flores/maceta-de-tulipanes/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "blusa-orquidea",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Blusa Orquídea",
+      "descripcion": "Inspirada en las orquídeas colombianas. Edición limitada.",
+      "personalizacion": [
+        "talla"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/reels/fotogramas_blusa-orquidea/f_028.jpg",
+          "ref": "R/028",
+          "ancho": 720,
+          "alto": 1280,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-orquidea/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/ropa/blusa-orquidea/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/reels/fotogramas_blusa-orquidea/f_013.jpg",
+          "ref": "R/013",
+          "ancho": 720,
+          "alto": 1280,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-orquidea/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/reels/fotogramas_blusa-orquidea/f_024.jpg",
+          "ref": "R/024",
+          "ancho": 720,
+          "alto": 1280,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-orquidea/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/003_DXXPYXQjE4q/01_video-portada.jpg",
+          "ref": "C/003/01",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "escalar",
+            "portada-de-video"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-orquidea/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "camisa-tejida-unisex",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Camisa tejida unisex",
+      "descripcion": "Pieza artesanal única, suave y fresca.",
+      "personalizacion": [
+        "talla",
+        "colores"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/011_DHMkhjXyL-I/03.jpg",
+          "ref": "C/011/03",
+          "ancho": 1440,
+          "alto": 1801,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/camisa-tejida-unisex/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/010_DHOsH_3up02/01.jpg",
+          "ref": "C/010/01",
+          "ancho": 1440,
+          "alto": 1799,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/camisa-tejida-unisex/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/011_DHMkhjXyL-I/01.jpg",
+          "ref": "C/011/01",
+          "ancho": 1440,
+          "alto": 1800,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/camisa-tejida-unisex/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/012_DHJzuENSZ0O/01.jpg",
+          "ref": "C/012/01",
+          "ancho": 1440,
+          "alto": 1800,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/camisa-tejida-unisex/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/011_DHMkhjXyL-I/02.jpg",
+          "ref": "C/011/02",
+          "ancho": 1440,
+          "alto": 1801,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/camisa-tejida-unisex/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "top-mariposa",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Top mariposa",
+      "descripcion": "Top en forma de mariposa, en todas las tallas y colores.",
+      "personalizacion": [
+        "talla",
+        "colores"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/117_CRKAHwxj-pm/01.jpg",
+          "ref": "C/117/01",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/top-mariposa/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/040_CnNI43NptwB/01.jpg",
+          "ref": "C/040/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/top-mariposa/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/115_CRKARIpj4Hs/01.jpg",
+          "ref": "C/115/01",
+          "ancho": 1440,
+          "alto": 1038,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/top-mariposa/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/116_CRKAN3RjJkO/01.jpg",
+          "ref": "C/116/01",
+          "ancho": 867,
+          "alto": 1027,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/top-mariposa/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "blusa-grannys",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Blusa grannys",
+      "descripcion": "Hecha 100 % a mano con cuadros granny en los colores que elijas.",
+      "personalizacion": [
+        "talla",
+        "colores"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/023_C8NIdtfxBbI/02.jpg",
+          "ref": "C/023/02",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-grannys/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/09_tops-grannys/012.jpg",
+          "ref": "H/09/012",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-grannys/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/09_tops-grannys/002.jpg",
+          "ref": "H/09/002",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-grannys/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/023_C8NIdtfxBbI/01.jpg",
+          "ref": "C/023/01",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-grannys/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/027_C6HKBHTrk2e/01.jpg",
+          "ref": "C/027/01",
+          "ancho": 1440,
+          "alto": 1077,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-grannys/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "top-pentagrama",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Top pentagrama",
+      "descripcion": "Top con cruce de tiras frontal.",
+      "personalizacion": [
+        "talla",
+        "colores"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/100_CTLV7Y_LGnr/01.jpg",
+          "ref": "C/100/01",
+          "ancho": 1440,
+          "alto": 1115,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/top-pentagrama/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/102_CTLVXGqreV6/01.jpg",
+          "ref": "C/102/01",
+          "ancho": 1440,
+          "alto": 1106,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/ropa/top-pentagrama/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tops-sencillos",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Tops tejidos",
+      "descripcion": "Tops sencillos para combinar con todo; tú eliges el largo.",
+      "personalizacion": [
+        "talla",
+        "colores",
+        "largo"
+      ],
+      "tamano": "XS–XL",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": {
+        "valor": 26000,
+        "texto": "$26.000",
+        "producto": "Top tejido talla S-M ajustable + clip de cabello (promoción)",
+        "fuente": "H/03/008",
+        "anio": "2025"
+      },
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/126_CRH7rW7DpKk/01.jpg",
+          "ref": "C/126/01",
+          "ancho": 1156,
+          "alto": 783,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-sencillos/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/130_CQxCBSzNVXE/01.jpg",
+          "ref": "C/130/01",
+          "ancho": 1156,
+          "alto": 868,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-sencillos/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/09_tops-grannys/013.jpg",
+          "ref": "H/09/013",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-sencillos/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/09_tops-grannys/014.jpg",
+          "ref": "H/09/014",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-sencillos/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/03_tops/008.jpg",
+          "ref": "H/03/008",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-sencillos/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tops-con-flecos",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Tops con flecos",
+      "descripcion": "Diseños únicos con cuadros y flecos.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/03_tops/001.jpg",
+          "ref": "H/03/001",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-con-flecos/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/ropa/tops-con-flecos/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/03_tops/004.jpg",
+          "ref": "H/03/004",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-con-flecos/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/03_tops/003.jpg",
+          "ref": "H/03/003",
+          "ancho": 1440,
+          "alto": 2560,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/tops-con-flecos/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "blusa-de-flor",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Blusa de flor",
+      "descripcion": "Una de nuestras blusas más hermosas.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/historias-destacadas/03_tops/007.jpg",
+          "ref": "H/03/007",
+          "ancho": 828,
+          "alto": 1472,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-de-flor/01-principal.jpg",
+          "archivo_ia": "recursos/catalogo/mejoradas-ia/ropa/blusa-de-flor/01-principal.jpg",
+          "mejoras_hechas": [
+            "quitar-texto (Gemini)"
+          ]
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/03_tops/006.jpg",
+          "ref": "H/03/006",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/blusa-de-flor/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "gorro",
+      "categoria": "ropa",
+      "categoria_nombre": "Ropa tejida",
+      "nombre": "Gorro",
+      "descripcion": "Súper suave y calientico, en cualquier color y tamaño.",
+      "personalizacion": [
+        "color",
+        "tamaño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/029_C57Krk6Lp92/03.jpg",
+          "ref": "C/029/03",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/gorro/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/029_C57Krk6Lp92/01.jpg",
+          "ref": "C/029/01",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/ropa/gorro/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "vestido-de-bano-girasoles",
+      "categoria": "vestidos-de-bano",
+      "categoria_nombre": "Vestidos de baño",
+      "nombre": "Vestido de baño girasoles",
+      "descripcion": "Con apliques de girasol.",
+      "personalizacion": [
+        "talla",
+        "colores"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/044_CnDZm9qLk96/01.jpg",
+          "ref": "C/044/01",
+          "ancho": 1440,
+          "alto": 1079,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestido-de-bano-girasoles/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/14_tops-y-bikinis-2021/015.jpg",
+          "ref": "H/14/015",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestido-de-bano-girasoles/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "conjunto-fresas",
+      "categoria": "vestidos-de-bano",
+      "categoria_nombre": "Vestidos de baño",
+      "nombre": "Conjunto fresas",
+      "descripcion": "Falda, vestido de baño y bucket hat.",
+      "personalizacion": [
+        "talla",
+        "colores",
+        "motivo"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/042_CnNIg-oJBzD/01.jpg",
+          "ref": "C/042/01",
+          "ancho": 1440,
+          "alto": 1030,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/conjunto-fresas/01-principal.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "vestido-de-bano-patricio",
+      "categoria": "vestidos-de-bano",
+      "categoria_nombre": "Vestidos de baño",
+      "nombre": "Vestido de baño Patricio",
+      "descripcion": "Inspirado en Patricio Estrella.",
+      "personalizacion": [
+        "talla"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/054_Ci5Wly6LQcg/01.jpg",
+          "ref": "C/054/01",
+          "ancho": 1440,
+          "alto": 1053,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestido-de-bano-patricio/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/09_tops-grannys/015.jpg",
+          "ref": "H/09/015",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestido-de-bano-patricio/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/14_tops-y-bikinis-2021/013.jpg",
+          "ref": "H/14/013",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestido-de-bano-patricio/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "vestidos-de-bano",
+      "categoria": "vestidos-de-bano",
+      "categoria_nombre": "Vestidos de baño",
+      "nombre": "Vestidos de baño",
+      "descripcion": "Sencillos o de bronceado, en todas las tallas y colores.",
+      "personalizacion": [
+        "talla",
+        "colores",
+        "motivo"
+      ],
+      "tamano": "todas las tallas",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/107_CRsY9gMDsW0/01.jpg",
+          "ref": "C/107/01",
+          "ancho": 1440,
+          "alto": 1035,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestidos-de-bano/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/052_Ci5W5dori8Z/01.jpg",
+          "ref": "C/052/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestidos-de-bano/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/053_Ci5Wsllrm0y/01.jpg",
+          "ref": "C/053/01",
+          "ancho": 1440,
+          "alto": 1066,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestidos-de-bano/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/108_CRsYylJDB7Y/01.jpg",
+          "ref": "C/108/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/vestidos-de-bano/vestidos-de-bano/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bolso-veleno",
+      "categoria": "bolsos",
+      "categoria_nombre": "Bolsos y accesorios",
+      "nombre": "Bolso veleño",
+      "descripcion": "Hecho con orgullo veleño para las ferias y el Festival de la Guabina y el Tiple.",
+      "personalizacion": [
+        "motivo",
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": true,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/007_DM0ohyyAFIZ/01.jpg",
+          "ref": "C/007/01",
+          "ancho": 1440,
+          "alto": 1920,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/bolso-veleno/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/005_DM0rLTTO1Iz/03.jpg",
+          "ref": "C/005/03",
+          "ancho": 1440,
+          "alto": 1920,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/bolso-veleno/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/006_DM0pseTA6AW/01.jpg",
+          "ref": "C/006/01",
+          "ancho": 1440,
+          "alto": 1920,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/bolso-veleno/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/007_DM0ohyyAFIZ/03.jpg",
+          "ref": "C/007/03",
+          "ancho": 1440,
+          "alto": 1910,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/bolso-veleno/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/005_DM0rLTTO1Iz/05.jpg",
+          "ref": "C/005/05",
+          "ancho": 1440,
+          "alto": 1910,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/bolso-veleno/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "canguro",
+      "categoria": "bolsos",
+      "categoria_nombre": "Bolsos y accesorios",
+      "nombre": "Canguro / riñonera",
+      "descripcion": "Con forro interno de tela y cremallera.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/009_DH_7P7myamB/01.jpg",
+          "ref": "C/009/01",
+          "ancho": 1440,
+          "alto": 1800,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/canguro/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/009_DH_7P7myamB/03.jpg",
+          "ref": "C/009/03",
+          "ancho": 1440,
+          "alto": 1801,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/canguro/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/025_C67E8JARUnF/01.jpg",
+          "ref": "C/025/01",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/bolsos/canguro/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/025_C67E8JARUnF/02.jpg",
+          "ref": "C/025/02",
+          "ancho": 1440,
+          "alto": 960,
+          "mejoras": [
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/bolsos/canguro/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bolsito-lavanda",
+      "categoria": "bolsos",
+      "categoria_nombre": "Bolsos y accesorios",
+      "nombre": "Bolsito lavanda",
+      "descripcion": "Incluye llaverito.",
+      "personalizacion": [
+        "colores",
+        "diseño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/056_Chf_er4rCgB/01.jpg",
+          "ref": "C/056/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/bolsito-lavanda/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/056_Chf_er4rCgB/02.jpg",
+          "ref": "C/056/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/bolsito-lavanda/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "carga-botellas",
+      "categoria": "bolsos",
+      "categoria_nombre": "Bolsos y accesorios",
+      "nombre": "Carga botellas",
+      "descripcion": "Para llevar tu botella a todas partes.",
+      "personalizacion": [
+        "colores",
+        "diseño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/057_Chf_ZLcrzf0/03.jpg",
+          "ref": "C/057/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/carga-botellas/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/057_Chf_ZLcrzf0/01.jpg",
+          "ref": "C/057/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/carga-botellas/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tote-bags-bordadas",
+      "categoria": "bolsos",
+      "categoria_nombre": "Bolsos y accesorios",
+      "nombre": "Bolsas de tela bordadas",
+      "descripcion": "Tú eliges el diseño.",
+      "personalizacion": [
+        "diseño"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/091_CU8iasdrLQn/01.jpg",
+          "ref": "C/091/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/tote-bags-bordadas/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/092_CU8h8gPraNs/01.jpg",
+          "ref": "C/092/01",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/tote-bags-bordadas/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/093_CU8h11tLBp6/01.jpg",
+          "ref": "C/093/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/tote-bags-bordadas/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/094_CU8hq2mrZWn/01.jpg",
+          "ref": "C/094/01",
+          "ancho": 1440,
+          "alto": 1080,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/bolsos/tote-bags-bordadas/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "panoletas",
+      "categoria": "accesorios-mascotas",
+      "categoria_nombre": "Accesorios para mascotas",
+      "nombre": "Pañoletas para mascotas",
+      "descripcion": "Colores únicos, patrones a tu gusto.",
+      "personalizacion": [
+        "colores",
+        "talla"
+      ],
+      "tamano": "por talla",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/018_DCxSr55xnEc/04.jpg",
+          "ref": "C/018/04",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/panoletas/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/016_DCxU7vWRZ_c/02.jpg",
+          "ref": "C/016/02",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/panoletas/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/017_DCxUIo9RgN4/04.jpg",
+          "ref": "C/017/04",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/panoletas/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/018_DCxSr55xnEc/02.jpg",
+          "ref": "C/018/02",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/panoletas/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/016_DCxU7vWRZ_c/06.jpg",
+          "ref": "C/016/06",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/panoletas/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "collar-navideno",
+      "categoria": "accesorios-mascotas",
+      "categoria_nombre": "Accesorios para mascotas",
+      "nombre": "Collar navideño",
+      "descripcion": "Para que tu peludito también celebre la Navidad.",
+      "personalizacion": [
+        "talla"
+      ],
+      "tamano": "por talla",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/004_DRXQ_wpgAXg/04.jpg",
+          "ref": "C/004/04",
+          "ancho": 1440,
+          "alto": 1910,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/collar-navideno/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/004_DRXQ_wpgAXg/02.jpg",
+          "ref": "C/004/02",
+          "ancho": 1440,
+          "alto": 1910,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/collar-navideno/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/004_DRXQ_wpgAXg/07.jpg",
+          "ref": "C/004/07",
+          "ancho": 1440,
+          "alto": 1920,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/collar-navideno/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "gorro-ranita-mascotas",
+      "categoria": "accesorios-mascotas",
+      "categoria_nombre": "Accesorios para mascotas",
+      "nombre": "Gorro de ranita",
+      "descripcion": "Para gatos y perros.",
+      "personalizacion": [
+        "talla"
+      ],
+      "tamano": "por talla",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/120_CRIDR1xDriV/01.jpg",
+          "ref": "C/120/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/gorro-ranita-mascotas/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/118_CRIDqz8j9sR/01.jpg",
+          "ref": "C/118/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/gorro-ranita-mascotas/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/118_CRIDqz8j9sR/02.jpg",
+          "ref": "C/118/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/accesorios-mascotas/gorro-ranita-mascotas/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "llaveros-frutas-y-flores",
+      "categoria": "llaveros",
+      "categoria_nombre": "Llaveros",
+      "nombre": "Llaveros de frutas y flores",
+      "descripcion": "Fresas, cerezas, girasoles y cactus, con cadena y argolla.",
+      "personalizacion": [
+        "motivo"
+      ],
+      "tamano": "mini",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/041_CnNIqJep6Ny/01.jpg",
+          "ref": "C/041/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/llaveros/llaveros-frutas-y-flores/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/105_CSnduSHDmAA/01.jpg",
+          "ref": "C/105/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/llaveros/llaveros-frutas-y-flores/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/12_llaveros/016.jpg",
+          "ref": "H/12/016",
+          "ancho": 640,
+          "alto": 1136,
+          "mejoras": [
+            "revisar-texto",
+            "escalar"
+          ],
+          "archivo": "recursos/catalogo/seleccion/llaveros/llaveros-frutas-y-flores/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/12_llaveros/017.jpg",
+          "ref": "H/12/017",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/llaveros/llaveros-frutas-y-flores/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/12_llaveros/008.jpg",
+          "ref": "H/12/008",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/llaveros/llaveros-frutas-y-flores/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mini-amigurumis-llavero",
+      "categoria": "llaveros",
+      "categoria_nombre": "Llaveros",
+      "nombre": "Mini amigurumis llavero",
+      "descripcion": "Dinosaurio, pingüino, totoro, conejito y más.",
+      "personalizacion": [
+        "motivo"
+      ],
+      "tamano": "mini",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/110_CRXP_Ksjn0_/01.jpg",
+          "ref": "C/110/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/llaveros/mini-amigurumis-llavero/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/12_llaveros/014.jpg",
+          "ref": "H/12/014",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/llaveros/mini-amigurumis-llavero/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/historias-destacadas/12_llaveros/005.jpg",
+          "ref": "H/12/005",
+          "ancho": 1080,
+          "alto": 1920,
+          "mejoras": [
+            "revisar-texto"
+          ],
+          "archivo": "recursos/catalogo/seleccion/llaveros/mini-amigurumis-llavero/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/112_CRXPc2BjTfN/01.jpg",
+          "ref": "C/112/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/llaveros/mini-amigurumis-llavero/04.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/113_CRXPWCKj7t4/01.jpg",
+          "ref": "C/113/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/llaveros/mini-amigurumis-llavero/05.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "luces-de-flores",
+      "categoria": "hogar",
+      "categoria_nombre": "Hogar y navidad",
+      "nombre": "Luces de flores",
+      "descripcion": "De 1 o 2 metros; el color de las flores se personaliza.",
+      "personalizacion": [
+        "largo",
+        "color de las flores"
+      ],
+      "tamano": "1–2 m",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/032_CrWkQRCLa1w/01.jpg",
+          "ref": "C/032/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/luces-de-flores/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/032_CrWkQRCLa1w/02.jpg",
+          "ref": "C/032/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/luces-de-flores/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/032_CrWkQRCLa1w/03.jpg",
+          "ref": "C/032/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/luces-de-flores/03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "portavasos",
+      "categoria": "hogar",
+      "categoria_nombre": "Hogar y navidad",
+      "nombre": "Portavasos",
+      "descripcion": "Girasol o corazón, por unidad o en combo de 4.",
+      "personalizacion": [
+        "diseño",
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/050_Ck4G-ujr2gZ/02.jpg",
+          "ref": "C/050/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/portavasos/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/051_Ck4G013Lx65/01.jpg",
+          "ref": "C/051/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/portavasos/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/050_Ck4G-ujr2gZ/01.jpg",
+          "ref": "C/050/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/portavasos/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/051_Ck4G013Lx65/02.jpg",
+          "ref": "C/051/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/portavasos/04.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "joyero-tulipan",
+      "categoria": "hogar",
+      "categoria_nombre": "Hogar y navidad",
+      "nombre": "Joyero tulipán",
+      "descripcion": "También funciona como portavasos.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/049_Ck4HLujrG9z/02.jpg",
+          "ref": "C/049/02",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/joyero-tulipan/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/049_Ck4HLujrG9z/01.jpg",
+          "ref": "C/049/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/joyero-tulipan/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "planta-colgante",
+      "categoria": "hogar",
+      "categoria_nombre": "Hogar y navidad",
+      "nombre": "Plantica colgante",
+      "descripcion": "Para decorar tus espacios.",
+      "personalizacion": [
+        "—"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/055_Chf_z9JLDuD/01.jpg",
+          "ref": "C/055/01",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/planta-colgante/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/055_Chf_z9JLDuD/03.jpg",
+          "ref": "C/055/03",
+          "ancho": 1440,
+          "alto": 1081,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/planta-colgante/02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "arbolitos-de-navidad",
+      "categoria": "hogar",
+      "categoria_nombre": "Hogar y navidad",
+      "nombre": "Arbolitos de navidad",
+      "descripcion": "Para colgar en tu árbol o regalar como recordatorio.",
+      "personalizacion": [
+        "colores"
+      ],
+      "tamano": "—",
+      "plazo": "15 a 20 días hábiles",
+      "destacado": false,
+      "precio_publicado": null,
+      "fotos": [
+        {
+          "origen": "recursos/instagram/carruseles/014_DDiY8ePMv4p/03.jpg",
+          "ref": "C/014/03",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/arbolitos-de-navidad/01-principal.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/014_DDiY8ePMv4p/05.jpg",
+          "ref": "C/014/05",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/arbolitos-de-navidad/02.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/014_DDiY8ePMv4p/06.jpg",
+          "ref": "C/014/06",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/arbolitos-de-navidad/03.jpg"
+        },
+        {
+          "origen": "recursos/instagram/carruseles/014_DDiY8ePMv4p/08.jpg",
+          "ref": "C/014/08",
+          "ancho": 1440,
+          "alto": 1440,
+          "mejoras": [],
+          "archivo": "recursos/catalogo/seleccion/hogar/arbolitos-de-navidad/04.jpg"
+        }
+      ]
+    }
+  ],
+  "marca": {
+    "hecho-en-velez": [
+      {
+        "origen": "recursos/instagram/carruseles/005_DM0rLTTO1Iz/02.jpg",
+        "ref": "C/005/02",
+        "ancho": 1440,
+        "alto": 1920,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/hecho-en-velez/01.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/006_DM0pseTA6AW/01.jpg",
+        "ref": "C/006/01",
+        "ancho": 1440,
+        "alto": 1920,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/hecho-en-velez/02.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/007_DM0ohyyAFIZ/02.jpg",
+        "ref": "C/007/02",
+        "ancho": 1440,
+        "alto": 1920,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/hecho-en-velez/03.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/064_Cg2mOwJJJZY/01.jpg",
+        "ref": "C/064/01",
+        "ancho": 1440,
+        "alto": 1081,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/hecho-en-velez/04.jpg"
+      },
+      {
+        "origen": "recursos/instagram/historias-destacadas/10_amigurumis-2022-2024/001.jpg",
+        "ref": "H/10/001",
+        "ancho": 640,
+        "alto": 1136,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/hecho-en-velez/05.jpg"
+      }
+    ],
+    "lifestyle-ropa": [
+      {
+        "origen": "recursos/instagram/carruseles/010_DHOsH_3up02/02.jpg",
+        "ref": "C/010/02",
+        "ancho": 1440,
+        "alto": 1800,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/lifestyle-ropa/01.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/012_DHJzuENSZ0O/02.jpg",
+        "ref": "C/012/02",
+        "ancho": 1440,
+        "alto": 1799,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/lifestyle-ropa/02.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/009_DH_7P7myamB/02.jpg",
+        "ref": "C/009/02",
+        "ancho": 1440,
+        "alto": 1800,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/lifestyle-ropa/03.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/003_DXXPYXQjE4q/01_video-portada.jpg",
+        "ref": "C/003/01",
+        "ancho": 640,
+        "alto": 1136,
+        "mejoras": [
+          "escalar",
+          "portada-de-video"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/lifestyle-ropa/04.jpg"
+      }
+    ],
+    "cielo-de-velez": [
+      {
+        "origen": "recursos/instagram/carruseles/036_CrRkYBEr067/02.jpg",
+        "ref": "C/036/02",
+        "ancho": 1440,
+        "alto": 1081,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/cielo-de-velez/01.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/047_Ck_2BkMLRNW/03.jpg",
+        "ref": "C/047/03",
+        "ancho": 1440,
+        "alto": 1081,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/cielo-de-velez/02.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/030_C567YBErtjM/01.jpg",
+        "ref": "C/030/01",
+        "ancho": 1440,
+        "alto": 1051,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/cielo-de-velez/03.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/066_Cg2k29OJPzn/01.jpg",
+        "ref": "C/066/01",
+        "ancho": 1440,
+        "alto": 1081,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/cielo-de-velez/04.jpg"
+      },
+      {
+        "origen": "recursos/instagram/carruseles/078_CcG6r8CrrOi/01.jpg",
+        "ref": "C/078/01",
+        "ancho": 1440,
+        "alto": 1081,
+        "mejoras": [],
+        "archivo": "recursos/catalogo/seleccion/_marca/cielo-de-velez/05.jpg"
+      }
+    ],
+    "base-grabada": [
+      {
+        "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/024.jpg",
+        "ref": "H/04/024",
+        "ancho": 828,
+        "alto": 1472,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/base-grabada/01.jpg"
+      },
+      {
+        "origen": "recursos/instagram/historias-destacadas/04_funkos-personalizados/014.jpg",
+        "ref": "H/04/014",
+        "ancho": 828,
+        "alto": 1472,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/base-grabada/02.jpg"
+      },
+      {
+        "origen": "recursos/instagram/historias-destacadas/01_amigurumis/042.jpg",
+        "ref": "H/01/042",
+        "ancho": 828,
+        "alto": 1472,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/base-grabada/03.jpg"
+      },
+      {
+        "origen": "recursos/instagram/historias-destacadas/02_mascotas/007.jpg",
+        "ref": "H/02/007",
+        "ancho": 1170,
+        "alto": 2080,
+        "mejoras": [
+          "revisar-texto"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/base-grabada/04.jpg"
+      }
+    ],
+    "proceso-tejiendo": [
+      {
+        "origen": "recursos/instagram/reels/fotogramas_blusa-orquidea/f_005.jpg",
+        "ref": "R/005",
+        "ancho": 720,
+        "alto": 1280,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/proceso-tejiendo/01.jpg"
+      },
+      {
+        "origen": "recursos/instagram/reels/fotogramas_blusa-orquidea/f_009.jpg",
+        "ref": "R/009",
+        "ancho": 720,
+        "alto": 1280,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/proceso-tejiendo/02.jpg"
+      },
+      {
+        "origen": "recursos/instagram/reels/fotogramas_blusa-orquidea/f_018.jpg",
+        "ref": "R/018",
+        "ancho": 720,
+        "alto": 1280,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/proceso-tejiendo/03.jpg"
+      },
+      {
+        "origen": "recursos/instagram/reels/fotogramas_blusa-orquidea/f_013.jpg",
+        "ref": "R/013",
+        "ancho": 720,
+        "alto": 1280,
+        "mejoras": [
+          "revisar-texto",
+          "escalar"
+        ],
+        "archivo": "recursos/catalogo/seleccion/_marca/proceso-tejiendo/04.jpg"
+      }
+    ]
+  },
+  "nota_precios": "Los precios los fija ella. precio_publicado es solo lo que ya publicó; confirmar antes de mostrarlo."
+}

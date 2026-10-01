@@ -1,0 +1,30 @@
+.pasos {
+  list-style: none;
+  counter-reset: paso;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+}
+
+.pasos li {
+  counter-increment: paso;
+  border-top: 2px solid var(--cacao);
+  padding-top: 1rem;
+}
+
+.pasos li::before {
+  content: counter(paso);
+  display: block;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--t-5);
+  line-height: 1;
+  color: var(--rosa-profundo);
+  margin-bottom: 0.75rem;
+}
+
+.pasos h3 {
+  font-size: var(--t-3);
+  margin-bottom: 0.4rem;
+}

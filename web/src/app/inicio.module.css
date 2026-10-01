@@ -1,0 +1,111 @@
+.seccion {
+  margin-top: 5rem;
+}
+.seccion h2 {
+  font-size: var(--t-5);
+}
+
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Categorías como lista tipográfica, no como tarjetas */
+.categorias {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr));
+  column-gap: 3rem;
+}
+.categoria {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--linea);
+  color: inherit;
+  text-decoration: none;
+}
+.categoria img {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.catTexto {
+  display: grid;
+}
+.catNombre {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--t-3);
+  line-height: 1.15;
+}
+.catDesc {
+  color: var(--canela);
+  font-size: 0.92rem;
+}
+.catTotal {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--t-3);
+  color: var(--rosa-profundo);
+}
+.categoria:hover .catNombre {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.pasosFondo {
+  margin-top: 6rem;
+  background: var(--crema);
+  padding: 4.5rem 0;
+}
+.pasosFondo h2 {
+  font-size: var(--t-5);
+}
+.masInfo {
+  margin-top: 2.5rem;
+  font-weight: 600;
+}
+
+.velez {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.velezFotos {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75rem;
+}
+.velezFotos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radio);
+}
+.velezFotos img:first-child {
+  grid-row: 1 / -1;
+  aspect-ratio: 3 / 4;
+}
+.velezTexto {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  max-width: 34rem;
+}
+
+@media (max-width: 48rem) {
+  .velez {
+    grid-template-columns: 1fr;
+  }
+}

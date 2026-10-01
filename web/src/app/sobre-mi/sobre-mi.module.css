@@ -1,0 +1,65 @@
+.pagina {
+  padding-top: 3rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.texto {
+  display: grid;
+  gap: 1rem;
+  max-width: 36rem;
+}
+.texto h1 {
+  font-size: var(--t-6);
+}
+.texto p {
+  font-size: var(--t-2);
+  line-height: 1.5;
+}
+.principal {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radio);
+}
+
+.bloque {
+  margin-top: 5rem;
+}
+.bloque h2 {
+  font-size: var(--t-5);
+  margin-bottom: 1rem;
+}
+.parrafo {
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+}
+
+.fotos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 44vw), 1fr));
+  gap: 0.75rem;
+}
+.fotos img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radio);
+}
+
+.cierre {
+  margin-top: 4rem;
+  font-size: var(--t-2);
+}
+
+@media (max-width: 48rem) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+}
