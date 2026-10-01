@@ -3,8 +3,9 @@
 Estamos usando fotos y textos de un negocio real sin su permiso todavía. Eso es razonable para
 preparar una propuesta privada, pero marca unas reglas:
 
-1. **La demo no se publica abiertamente** antes de que ella acepte: despliegue en una URL de preview
-   con `noindex` (y, si se puede, protegida con contraseña). No se comparte con terceros.
+1. **La demo es pública pero no indexable** (decisión del 1 de octubre de 2026): se ve sin contraseña en
+   `magichands.axchisan.com`, con `noindex` y un aviso en el pie de que es una versión de muestra con
+   fotos y textos suyos. Se comparte solo con ella.
 2. **Clientes**: las destacadas "Clientes" muestran personas reales y sus mascotas. En la demo se usan
    como mucho de forma anónima o no se usan; en la versión final solo con su autorización.
 3. **Personajes con licencia** (Harry Potter, Star Wars, Naruto, Messi, Coraline…): muy vendidos,

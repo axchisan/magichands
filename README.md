@@ -6,14 +6,21 @@ a la dueña sin compromiso. Si le gusta, se acuerda un precio y se pule a su gus
 
 ## Estado
 
+- **Demo publicada**: https://magichands.axchisan.com (Vercel; se actualiza con cada `push` a `main`).
+  Mientras el DNS propaga: https://magichands-iota.vercel.app
+- **Repositorio**: https://github.com/axchisan/magichands (privado).
+- **Precio interno**: $300.000 COP por el paquete base (catálogo + panel); extras aparte. No se le
+  comunica de entrada (ver `docs/04-modelo-de-negocio.md`).
+
 | Fase | Qué | Estado |
 |---|---|---|
 | 1 | Investigación y recopilación de recursos | Hecho |
-| 2 | Selección y curaduría del catálogo (mejores fotos, mejora con IA) e identidad | Hecho: 73 productos, 21 fotos limpiadas con IA, logo vectorial, paleta y tipografía |
-| 3 | Definición: modelo de negocio, arquitectura, infraestructura, costes | Hecho (`docs/04`–`07`) |
-| 4 | Maqueta / demo funcional para el pitch | **Siguiente**: plan en `docs/07-plan-demo.md` |
-| 5 | Contacto y presentación | Pendiente |
-| 6 | Ajustes a su gusto y entrega | Si acepta |
+| 2 | Catálogo curado, fotos con IA e identidad de marca | Hecho |
+| 3 | Modelo de negocio, arquitectura, infraestructura | Hecho (actualizado 1 oct 2026) |
+| 4 | Web pública y publicación en Vercel | Hecho |
+| F5–F8 | Base de datos, login (Google + código por correo), panel, avisos | **Siguiente**: `docs/08-plan-de-desarrollo.md` |
+| F9 | Presentación a ella | Pendiente |
+| F10 | Traspaso a su dominio si acepta | Pendiente (`docs/09-dominio-portable.md`) |
 
 ## Estructura
 
@@ -25,9 +32,12 @@ docs/
   03-identidad-de-marca.md      Logo, paleta, tipografía y tono
   04-modelo-de-negocio.md       Cómo vende ella, qué hace la web y opciones de cobro tuyas
   05-arquitectura.md            Stack, páginas, panel, modelo de datos, seguridad
-  06-infraestructura-y-costes.md  Servicios, costes (≈ 6 USD/mes), cuentas demo y producción
-  07-plan-demo.md               Alcance de la demo, protección, orden de construcción, mensaje de contacto
+  06-infraestructura-y-costes.md  Vercel (demo), costes, opciones de producción y cuentas
+  07-plan-demo.md               Alcance de la demo, visibilidad, mensaje de contacto
+  08-plan-de-desarrollo.md      Qué está hecho y qué falta (F5–F10), con criterios de terminado
+  09-dominio-portable.md        Cómo pasar del subdominio al dominio de ella
 scripts/
+  exportar_web.py               Exporta el catálogo y las fotos WebP a web/
   seleccion_catalogo.py         Especificación del catálogo; copia las fotos y genera catalogo.json
   galeria_revision.py           Genera recursos/catalogo/revision.html
 investigacion/
@@ -37,6 +47,7 @@ investigacion/
   04-competencia.md             Tiendas colombianas con web: precios y flujos de pedido
   inventario_posts.csv / .json  Las 133 publicaciones categorizadas
   evidencias/                   Capturas que respaldan el diagnóstico (p. ej. enlace roto)
+web/                            La web (Next.js 16): ver web/README.md
 recursos/
   README.md                     Inventario de recursos y cómo se obtuvieron
   instagram/
