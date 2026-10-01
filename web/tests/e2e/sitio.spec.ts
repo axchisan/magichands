@@ -63,7 +63,18 @@ test("catálogo: filtros por ocasión, categoría y búsqueda sin tildes", async
   await abrir(page, "/catalogo");
   const estado = page.getByRole("status");
   await expect(estado).toHaveText("73 productos");
+  // Paginación: 12 por página
+  const tarjetas = page.locator("main article");
+  await expect(tarjetas).toHaveCount(12);
+  await expect(page.getByText("1–12 de 73")).toBeVisible();
+  await page.getByRole("button", { name: "Página 7" }).click();
+  await expect(page.getByText("73–73 de 73")).toBeVisible();
+  await expect(tarjetas).toHaveCount(1);
+  await page.getByRole("button", { name: /Anterior/ }).click();
+  await expect(page.getByText("61–72 de 73")).toBeVisible();
   await page.getByRole("button", { name: "Navidad", exact: true }).click();
+  // Cambiar el filtro vuelve a la página 1 y, con pocos resultados, no hay paginador
+  await expect(page.getByRole("navigation", { name: "Páginas del catálogo" })).toHaveCount(0);
   await expect(estado).toHaveText("5 productos");
   await page.getByRole("button", { name: "Cualquiera" }).click();
   await page.getByRole("button", { name: "Flores y ramos" }).click();

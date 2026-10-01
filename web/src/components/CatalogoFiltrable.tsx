@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Categoria, Ocasion, Producto } from "@/lib/catalogo";
 import { filtrar } from "@/lib/filtros";
-import { RejillaProductos } from "./TarjetaProducto";
+import { RejillaPaginada } from "./RejillaPaginada";
 import estilos from "./CatalogoFiltrable.module.css";
 
 export function CatalogoFiltrable({
@@ -75,7 +75,7 @@ export function CatalogoFiltrable({
 
       <h2 className="visualmente-oculto">Productos</h2>
       {lista.length > 0 ? (
-        <RejillaProductos productos={lista} prioridad={4} />
+        <RejillaPaginada key={`${categoria}|${ocasion}|${texto}`} productos={lista} />
       ) : (
         <div className={estilos.vacio}>
           <p>No encontramos productos con esos filtros.</p>
