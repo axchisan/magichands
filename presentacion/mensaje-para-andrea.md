@@ -26,19 +26,19 @@ Está hecha con tus fotos y tus textos de Instagram. Te paso unas capturas de c�
 ```
 Lo que tiene:
 
-Tu catálogo completo ordenado por categorías (personalizados, mascotas, flores, ropa…), con buscador, filtros por ocasión y una ficha para cada producto.
+- Tu catálogo completo ordenado por categorías (personalizados, mascotas, flores, ropa…), con buscador, filtros por ocasión y una ficha para cada producto.
 
-Los encargos te llegan por WhatsApp ya organizados: qué quiere, colores, tamaño, para cuándo y desde qué ciudad, cada uno con un código de pedido.
+- Los encargos te llegan por WhatsApp ya organizados: qué quiere, colores, tamaño, para cuándo y desde qué ciudad, cada uno con un código de pedido.
 
-Tus clientes pueden ver en la web en qué va su pedido (cotizado, tejiendo, enviado…) y, si entran con su correo, les llega un aviso cada vez que avanza.
+- Tus clientes pueden ver en la web en qué va su pedido (cotizado, tejiendo, enviado…) y, si entran con su correo, les llega un aviso cada vez que avanza.
 
-Un panel para ti, desde el celular, donde manejas los pedidos, subes fotos, agregas o editas productos y abres o cierras la agenda cuando estás llena.
+- Un panel para ti, desde el celular, donde manejas los pedidos, subes fotos, agregas o editas productos y abres o cierras la agenda cuando estás llena.
 
 Puedes entrar al panel con el botón "Panel" de arriba y recorrerlo como si fuera tuyo. Por ahora es una vista previa: puedes mirarlo todo, pero los cambios del catálogo no se guardan.
 
 Los precios no aparecen: los pones tú cuando quieras y decides si mostrarlos o no.
 
-Mírala con calma y me cuentas qué te parece. Cualquier cosa que quieras cambiar (textos, fotos, colores) se ajusta
+Mírala con calma y me cuentas qué te parece. Cualquier cosa que quieras cambiar (textos, fotos, colores) se ajusta.
 ```
 
 ---
