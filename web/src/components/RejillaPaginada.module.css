@@ -1,0 +1,79 @@
+.contenedor {
+  scroll-margin-top: calc(var(--alto-cabecera) + 1rem);
+}
+
+.paginador {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--linea);
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+}
+
+.rango {
+  color: var(--canela);
+  font-size: 0.92rem;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.controles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.numero,
+.flecha {
+  font: 600 1rem var(--font-texto), system-ui, sans-serif;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in srgb, var(--cacao) 22%, transparent);
+  background: transparent;
+  color: var(--cacao);
+  cursor: pointer;
+}
+.flecha {
+  padding: 0 1rem;
+}
+.numero:hover,
+.flecha:hover:not(:disabled) {
+  border-color: var(--cacao);
+}
+.numero[aria-current="page"] {
+  background: var(--cacao);
+  border-color: var(--cacao);
+  color: var(--lino);
+}
+.flecha:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.salto {
+  align-self: center;
+  color: var(--canela);
+}
+
+/* Celular: las flechas quedan solo con su símbolo para que todo quepa en una fila */
+@media (max-width: 30rem) {
+  .flecha {
+    font-size: 0;
+    padding: 0;
+  }
+  .flecha span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+}

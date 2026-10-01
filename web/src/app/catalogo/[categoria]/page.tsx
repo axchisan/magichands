@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { RejillaProductos } from "@/components/TarjetaProducto";
+import { RejillaPaginada } from "@/components/RejillaPaginada";
 import { categoria, categorias, productosDe } from "@/lib/catalogo";
 import estilos from "../catalogo.module.css";
 
@@ -32,7 +32,7 @@ export default async function PaginaCategoria({ params }: PageProps<"/catalogo/[
       <p className={estilos.intro}>{c.descripcion}</p>
       <div style={{ marginTop: "2.5rem" }}>
         <h2 className="visualmente-oculto">Productos de {c.nombre}</h2>
-        <RejillaProductos productos={lista} prioridad={4} />
+        <RejillaPaginada productos={lista} />
       </div>
       <div className={estilos.cta}>
         <p>¿No ves lo que buscas? Casi todo se puede tejer por encargo.</p>

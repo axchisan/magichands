@@ -39,7 +39,7 @@ export default function SobreMi() {
         <Image
           className={estilos.retrato}
           src={retrato.src}
-          alt="La tejedora de Magic H4nds sonriendo, con traje típico veleño y un bolso tejido"
+          alt="Sonriendo con traje típico veleño y un bolso tejido de Magic H4nds"
           width={retrato.ancho}
           height={retrato.alto}
           sizes="(max-width: 48rem) 100vw, 26rem"
@@ -123,7 +123,7 @@ export default function SobreMi() {
         <Image
           className={estilos.cierreFoto}
           src={conPieza.src}
-          alt="La tejedora sonriendo mientras muestra un pétalo tejido"
+          alt="Sonriendo mientras muestra un pétalo de la blusa Orquídea"
           width={conPieza.ancho}
           height={conPieza.alto}
           sizes="8rem"
