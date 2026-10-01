@@ -30,38 +30,50 @@ Lo que **no** cambia, para no romper lo que le funciona:
 
 ## 2. La propuesta comercial (tú → ella)
 
-Planteamiento ya decidido: se le presenta una demo funcional **sin pago anticipado**; si le gusta, se
-acuerda precio y se pule a su gusto.
+> **Documento interno.** El precio no se le comunica de entrada: primero se le muestra la demo y
+> puede haber negociación. Este repositorio es privado por esto.
 
-### Qué incluye la entrega
+Contexto: es una conocida a la que le has comprado, no una amiga cercana. La relación pesa más que
+maximizar el cobro: precio bajo y claro, sin mensualidades obligatorias.
 
-- Web pública: catálogo, fichas, encargos personalizados, cómo comprar, sobre ella, clientes felices.
-- Panel para ella (desde el móvil): productos y fotos, pedidos y estados, clientes, agenda, textos.
-- Dominio propio (`magich4nds.com` está libre) y correo de avisos.
-- Carga inicial del catálogo (los 73 productos ya preparados) y capacitación corta.
-- SEO local básico ("amigurumis personalizados Vélez / Santander / Colombia") y ficha en Google.
+### Precio decidido (1 de octubre de 2026)
 
-### Opciones de cobro
+| Paquete | Qué incluye | Precio |
+|---|---|---|
+| **Base: catálogo + panel** | Todo lo que tiene la demo (catálogo, fichas, encargo por WhatsApp, seguimiento, cómo comprar, quién teje) **más** el login y el panel de administración (productos, fotos, pedidos, clientes, agenda) | **$300.000 COP, pago único** |
+| Extras (se cotizan aparte, suben el precio) | Carrito de compras, pasarela de pagos (Wompi/Nequi), cuentas de cliente con historial ampliado, nuevas secciones, campañas | A convenir |
 
 Referencia del mercado colombiano en 2026: una web de catálogo para emprendimiento la cobran
-freelancers entre **$800.000 y $2.500.000 COP**, y el mantenimiento mensual entre
-**$150.000 y $500.000 COP** ([macgraficas](https://macgraficas.com/cuanto-vale-hacer-una-pagina-web-en-colombia/),
-[cangrejodigital](https://cangrejodigital.com/diseno-web/cuanto-cuesta-pagina-web-colombia/)).
-Esta web trae panel y gestión de pedidos, algo más que un catálogo informativo.
+freelancers entre **$800.000 y $2.500.000 COP** ([macgraficas](https://macgraficas.com/cuanto-vale-hacer-una-pagina-web-en-colombia/),
+[cangrejodigital](https://cangrejodigital.com/diseno-web/cuanto-cuesta-pagina-web-colombia/)). $300.000 está muy por
+debajo: es un precio de conocida, y conviene que ella lo perciba así (sin decirlo con esas palabras).
 
-| Opción | Cómo funciona | A favor | En contra |
-|---|---|---|---|
-| **A. Pago único + mantenimiento opcional** | Un pago por la web; mensualidad baja solo si quiere soporte | Fácil de explicar; ella es dueña de todo | Ingreso puntual |
-| **B. Mensualidad todo incluido** | Sin pago inicial grande; cuota mensual con hosting, dominio, cambios menores | Barrera de entrada mínima para un emprendimiento pequeño | Hay que definir permanencia mínima y qué pasa si se va |
-| **C. Mixta** | Pago inicial reducido + mensualidad | Equilibra las dos | Más condiciones que explicar |
+### Margen para negociar
 
-Recomendación para el pitch: **B o C**. Su negocio factura por pedidos pequeños; una cuota baja que
-incluya dominio y hosting (≈ 5–7 USD/mes reales, ver `06-infraestructura-y-costes.md`) es más fácil
-de aceptar que un pago grande. Las cifras concretas las fijas tú.
+- Si pide bajar: quitar del paquete base el login de clientes (dejar solo el panel de ella) antes que
+  bajar la cifra.
+- Si pide más cosas: todo lo de la columna "Extras" se cotiza aparte.
+- Forma de pago sugerida: 50 % al empezar los ajustes y 50 % al entregar (el mismo esquema que ella
+  usa con sus clientes, le resultará natural).
 
-### Condiciones a dejar por escrito
+### Costes que quedan después de la entrega
 
-- **Propiedad**: el dominio y las cuentas a su nombre (o transferibles), el contenido es suyo.
-- Qué cubre el mantenimiento (cambios de texto y fotos, nuevas categorías) y qué se cotiza aparte
-  (pasarela de pagos, tienda con carrito, nuevas secciones).
-- Uso de las fotos de clientes y de personas en la web solo con su autorización.
+Con un pago único, los costes recurrentes deben ser casi cero o de ella:
+
+| Concepto | Quién lo paga | Coste |
+|---|---|---|
+| Dominio propio (si lo quiere, ej. `magich4nds.com`) | Ella, a su nombre | ≈ 10–15 USD/año |
+| Hosting | Planes gratuitos (ver `06-infraestructura-y-costes.md`) | 0 |
+| Base de datos, correo de avisos, fotos | Planes gratuitos de Neon, Resend y R2 | 0 |
+| Mantenimiento | Opcional: cambios puntuales que te pida, cotizados aparte | — |
+
+**Ojo con Vercel:** el plan Hobby no permite uso comercial. Mientras sea demo no hay venta; si ella la
+compra, la web de producción pasa a una opción gratuita que sí lo permite (Cloudflare Workers) o a
+Vercel Pro (20 USD/mes, que no encaja con un pago único). Detalle en `06-infraestructura-y-costes.md`.
+
+### Condiciones a dejar por escrito (mensaje o documento corto)
+
+- **Propiedad**: el dominio y las cuentas a su nombre (o transferibles); el contenido y las fotos son suyos.
+- Qué incluye el precio base y que los extras se cotizan aparte.
+- Una ronda de ajustes de diseño y textos incluida; cambios posteriores, a convenir.
+- Uso de fotos de clientes y de personas en la web solo con su autorización.

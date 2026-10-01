@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Magic H4nds — web
 
-## Getting Started
+Catálogo y encargos de Magic H4nds (crochet hecho a mano en Vélez, Santander). Next.js 16 (App Router).
 
-First, run the development server:
+- Producción (demo): https://magichands.axchisan.com — Vercel, proyecto `magichands`, se publica con cada `push` a `main`.
+- Documentación del proyecto: `../docs/` (arquitectura en `05`, plan en `08`, cambio de dominio en `09`).
+
+## Empezar
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd web
+npm ci
+npm run dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requiere Node 24. La configuración pública está en `.env` (WhatsApp, URL del sitio, modo demo); los
+secretos irán en `.env.local` (ignorado por git) y en las variables de Vercel.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando | Qué hace |
+|---|---|
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Build de producción (genera las ~95 páginas estáticas) |
+| `npm run lint` | ESLint |
+| `npm run typecheck` | Tipos de rutas + TypeScript |
+| `npm test` | Pruebas unitarias (Vitest): lógica de WhatsApp, pedidos, filtros e integridad del catálogo |
+| `npm run test:e2e` | Build + pruebas de extremo a extremo (Playwright, escritorio y móvil) contra `next start` |
+| `npm run check` | Todo lo anterior: lo que debe pasar antes de fusionar a `main` |
+| `npm run deploy:cloudflare` | Alternativa: compila con OpenNext y despliega en Cloudflare Workers |
 
-## Learn More
+Pruebas de extremo a extremo contra un sitio publicado:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+E2E_URL=https://magichands.axchisan.com npx playwright test --grep-invert capturas
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Las capturas de revisión visual quedan en `test-results/capturas/` y el informe en `playwright-report/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estructura
 
-## Deploy on Vercel
+```
+src/
+  app/                 Rutas: / catalogo catalogo/[categoria] p/[slug] encargo pedido como-comprar sobre-mi
+  components/          Cabecera, Pie, CirculoManos (portada), TarjetaProducto, Galeria,
+                       CatalogoFiltrable, FormularioEncargo, Seguimiento, PasosPedido…
+  lib/
+    catalogo.ts        Lectura tipada de src/data/catalogo.json
+    config.ts          Datos del negocio: WhatsApp, plazo, agenda, mostrarPrecios
+    whatsapp.ts        Código de pedido, mensaje del encargo, enlace wa.me
+    pedidos.ts         Estados, pedidos de ejemplo y búsqueda del seguimiento
+    filtros.ts         Búsqueda sin tildes y filtros del catálogo
+    image-loader.ts    Cargador de next/image para las variantes WebP pregeneradas
+  data/catalogo.json   Generado por ../scripts/exportar_web.py (no editar a mano)
+public/img/            Fotos en WebP a 480/960/1440 px (generadas por el mismo script)
+tests/unit/            Vitest
+tests/e2e/             Playwright
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Catálogo e imágenes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+El catálogo se mantiene fuera de la web y se exporta:
+
+```bash
+# desde la raíz del repositorio
+python3 scripts/seleccion_catalogo.py   # especificación del catálogo -> recursos/catalogo/catalogo.json
+python3 scripts/exportar_web.py         # -> web/src/data/catalogo.json y web/public/img/
+```
+
+`seleccion_catalogo.py` necesita las descargas originales de Instagram (`recursos/instagram/`), que no
+están en el repositorio (pesan 270 MB y contienen datos de terceros). Con el panel (fase F7 del plan),
+los productos y fotos nuevos se gestionarán desde la web y estos scripts quedarán solo para la carga inicial.
+
+Imágenes: `next/image` usa un cargador propio (`src/lib/image-loader.ts`) que elige entre las variantes
+pregeneradas; no hay optimización en tiempo de ejecución (sin coste en Vercel ni en Cloudflare).
+
+## Configuración del negocio
+
+`src/lib/config.ts`:
+
+- `whatsapp`: de `NEXT_PUBLIC_WHATSAPP` (hoy `573115685168`, su número).
+- `agenda.abierta` / `agenda.mensaje`: aviso en toda la web cuando cierra la agenda.
+- `mostrarPrecios`: `false` hasta que ella confirme precios (los guardados son de 2021–2025).
+- `NEXT_PUBLIC_DEMO=1`: `noindex` y aviso de demo en el pie.
+
+En la fase F7 estos ajustes pasan a la tabla `ajustes` y se editan desde `/admin/ajustes`.
+
+## Despliegue
+
+- **Vercel**: automático. Directorio raíz `web`, Node 24, framework Next.js. Variables por entorno
+  con `vercel env` (desde la raíz del repo, que es donde está enlazado el proyecto).
+- **Cloudflare (alternativa)**: `npm run deploy:cloudflare` (worker `magich4nds-demo`). Ver
+  `../docs/06-infraestructura-y-costes.md` para cuándo conviene.
+
+## Calidad comprobada (1 de octubre de 2026)
+
+- Lint y tipos sin errores; 21 pruebas unitarias; 32 de extremo a extremo en local y 30 contra Vercel.
+- Lighthouse móvil: rendimiento 88–98, accesibilidad 98–100, buenas prácticas 100
+  (SEO 66 por el `noindex` intencionado de la demo).
