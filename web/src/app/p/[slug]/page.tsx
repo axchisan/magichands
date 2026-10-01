@@ -100,6 +100,15 @@ export default async function Ficha({ params }: PageProps<"/p/[slug]">) {
             </Link>
             <BotonWhatsApp texto={mensajeProducto(p.nombre)}>Preguntar por WhatsApp</BotonWhatsApp>
           </div>
+          {/* En celular, las mismas acciones quedan fijas abajo mientras se ve la ficha */}
+          <div className={estilos.barra}>
+            <Link href={`/encargo?producto=${p.slug}`} className="boton boton-principal">
+              Encargar
+            </Link>
+            <BotonWhatsApp texto={mensajeProducto(p.nombre)} className={estilos.barraWa}>
+              <span className="visualmente-oculto">WhatsApp</span>
+            </BotonWhatsApp>
+          </div>
           <p className={estilos.pagos}>
             Separas con el 50 % y pagas el resto cuando esté listo, o en 3 cuotas.{" "}
             <Link href="/como-comprar">Cómo comprar</Link>

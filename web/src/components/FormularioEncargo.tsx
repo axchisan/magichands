@@ -92,7 +92,14 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
       ref={formulario}
       className={estilos.form}
       onSubmit={enviar}
-      onInvalidCapture={(e) => (e.target as HTMLElement).setAttribute("aria-invalid", "true")}
+      onInvalidCapture={(e) => {
+        // Sin el globo nativo del navegador (duplica nuestro mensaje y sale en su idioma):
+        // se marca el campo y se lleva el foco al primero con error.
+        e.preventDefault();
+        const campo = e.target as HTMLElement;
+        campo.setAttribute("aria-invalid", "true");
+        if (!formulario.current?.querySelector(":focus:invalid")) campo.focus();
+      }}
     >
       <fieldset className={estilos.bloque}>
         <legend>Qué quieres</legend>
@@ -132,11 +139,11 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
         <div className={estilos.dos}>
           <div className="campo">
             <label htmlFor="colores">Colores</label>
-            <input id="colores" name="colores" placeholder="Rosado y blanco" />
+            <input id="colores" name="colores" placeholder="Rosado y blanco" enterKeyHint="next" />
           </div>
           <div className="campo">
             <label htmlFor="tamano">Tamaño o talla</label>
-            <input id="tamano" name="tamano" placeholder="20 cm, talla S…" />
+            <input id="tamano" name="tamano" placeholder="20 cm, talla S…" enterKeyHint="next" />
           </div>
         </div>
         <div className={estilos.dos}>
@@ -164,7 +171,7 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
             <label htmlFor="nombre">
               Nombre <span className="requerido" aria-hidden="true">*</span>
             </label>
-            <input id="nombre" name="nombre" required autoComplete="name" aria-errormessage="nombre-error" />
+            <input id="nombre" name="nombre" required autoComplete="name" enterKeyHint="next" aria-errormessage="nombre-error" />
             <span className="error" id="nombre-error">
               Escribe tu nombre.
             </span>
@@ -178,6 +185,7 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
               name="ciudad"
               required
               autoComplete="address-level2"
+              enterKeyHint="next"
               aria-errormessage="ciudad-error"
             />
             <span className="error" id="ciudad-error">
@@ -200,6 +208,8 @@ export function FormularioEncargo({ productos }: { productos: Opcion[] }) {
             required
             pattern="3[0-9]{9}"
             autoComplete="tel-national"
+            enterKeyHint="send"
+            maxLength={10}
             aria-describedby="telefono-pista"
             aria-errormessage="telefono-error"
           />

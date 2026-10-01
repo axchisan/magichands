@@ -3296,6 +3296,23 @@
   }
  ],
  "marca": {
+  "quien-teje": [
+   {
+    "src": "/img/marca/quien-teje/01",
+    "ancho": 1440,
+    "alto": 1920
+   },
+   {
+    "src": "/img/marca/quien-teje/02",
+    "ancho": 720,
+    "alto": 922
+   },
+   {
+    "src": "/img/marca/quien-teje/03",
+    "ancho": 720,
+    "alto": 1024
+   }
+  ],
   "hecho-en-velez": [
    {
     "src": "/img/marca/hecho-en-velez/01",
@@ -3321,6 +3338,16 @@
     "src": "/img/marca/hecho-en-velez/05",
     "ancho": 640,
     "alto": 1136
+   },
+   {
+    "src": "/img/marca/hecho-en-velez/06",
+    "ancho": 1440,
+    "alto": 1910
+   },
+   {
+    "src": "/img/marca/hecho-en-velez/07",
+    "ancho": 1440,
+    "alto": 1920
    }
   ],
   "lifestyle-ropa": [
@@ -3375,45 +3402,40 @@
   "base-grabada": [
    {
     "src": "/img/marca/base-grabada/01",
-    "ancho": 828,
-    "alto": 1472
+    "ancho": 768,
+    "alto": 1365
    },
    {
     "src": "/img/marca/base-grabada/02",
-    "ancho": 828,
-    "alto": 1472
+    "ancho": 768,
+    "alto": 1365
    },
    {
     "src": "/img/marca/base-grabada/03",
-    "ancho": 828,
-    "alto": 1472
+    "ancho": 768,
+    "alto": 1365
    },
    {
     "src": "/img/marca/base-grabada/04",
-    "ancho": 1170,
-    "alto": 2080
+    "ancho": 768,
+    "alto": 1365
    }
   ],
   "proceso-tejiendo": [
    {
     "src": "/img/marca/proceso-tejiendo/01",
     "ancho": 720,
-    "alto": 1280
+    "alto": 742
    },
    {
     "src": "/img/marca/proceso-tejiendo/02",
     "ancho": 720,
-    "alto": 1280
+    "alto": 896
    },
    {
     "src": "/img/marca/proceso-tejiendo/03",
     "ancho": 720,
-    "alto": 1280
-   },
-   {
-    "src": "/img/marca/proceso-tejiendo/04",
-    "ancho": 720,
-    "alto": 1280
+    "alto": 742
    }
   ]
  }

@@ -48,8 +48,8 @@
 .chip {
   font: inherit;
   font-size: 0.95rem;
-  min-height: 40px;
-  padding: 0.4rem 0.95rem;
+  min-height: 44px;
+  padding: 0.4rem 1rem;
   border-radius: 999px;
   border: 1.5px solid color-mix(in srgb, var(--cacao) 25%, transparent);
   background: transparent;

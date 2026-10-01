@@ -28,3 +28,27 @@
   font-size: var(--t-3);
   margin-bottom: 0.4rem;
 }
+
+/* Celular: número al lado del texto, en vez de encima */
+@media (max-width: 40rem) {
+  .pasos {
+    gap: 0;
+    margin-top: 1.25rem;
+  }
+  .pasos li {
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    column-gap: 0.75rem;
+    padding: 1rem 0;
+    border-top-width: 1px;
+  }
+  .pasos li::before {
+    grid-row: 1 / span 2;
+    font-size: 2rem;
+    margin: 0;
+  }
+  .pasos h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+  }
+}

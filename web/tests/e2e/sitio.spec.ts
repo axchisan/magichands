@@ -20,7 +20,11 @@ async function imagenesRotas(page: Page) {
   });
   await page.waitForLoadState("networkidle");
   return page.evaluate(() =>
-    [...document.images].filter((i) => !i.complete || i.naturalWidth === 0).map((i) => i.currentSrc || i.src),
+    // Rota = terminó de cargar sin contenido, o una imagen no diferida que no cargó.
+    // (Las diferidas fuera de la vista, como las fotos siguientes de un carrusel, aún no se piden.)
+    [...document.images]
+      .filter((i) => (i.complete && i.naturalWidth === 0) || (!i.complete && i.loading !== "lazy"))
+      .map((i) => i.currentSrc || i.src),
   );
 }
 
@@ -73,18 +77,38 @@ test("catálogo: filtros por ocasión, categoría y búsqueda sin tildes", async
   await expect(estado).toHaveText("73 productos");
 });
 
-test("ficha: la galería cambia de foto y el encargo llega con el producto elegido", async ({ page }) => {
+test("ficha: la galería cambia de foto y el encargo llega con el producto elegido", async ({ page, isMobile }) => {
   await abrir(page, "/p/abejita");
-  const principal = page.locator("main img").first();
-  const antes = await principal.getAttribute("src");
-  await page.getByRole("button", { name: "Ver foto 2 de 6" }).click();
-  await expect(page.getByRole("button", { name: "Ver foto 2 de 6" })).toHaveAttribute("aria-current", "true");
-  await expect(principal).not.toHaveAttribute("src", antes!);
+  const contador = page.getByText("1 / 6");
+  await expect(contador).toBeVisible();
+  if (isMobile) {
+    // En celular se desliza: se simula moviendo la tira una foto a la derecha.
+    await page.getByRole("list", { name: "Fotos de Abejita" }).evaluate((ul) => ul.scrollBy({ left: ul.clientWidth }));
+  } else {
+    await page.getByRole("button", { name: "Ver foto 2 de 6" }).click();
+    await expect(page.getByRole("button", { name: "Ver foto 2 de 6" })).toHaveAttribute("aria-current", "true");
+  }
+  await expect(page.getByText("2 / 6")).toBeVisible();
   // Los precios antiguos no se muestran en la demo.
   await expect(page.getByText("Se cotiza según tu diseño")).toBeVisible();
-  await page.getByRole("link", { name: "Encargar este producto" }).click();
+  await page.getByRole("link", { name: isMobile ? "Encargar" : "Encargar este producto", exact: true }).first().click();
   await expect(page).toHaveURL(/\/encargo\?producto=abejita/);
   await expect(page.getByLabel("Producto")).toHaveValue("abejita");
+});
+
+test("celular: menú lateral abre, navega y se cierra", async ({ page, isMobile }) => {
+  test.skip(!isMobile, "solo en celular");
+  await abrir(page, "/");
+  await expect(page.getByRole("navigation", { name: "Principal", exact: true })).toBeHidden();
+  await page.getByRole("button", { name: "Menú" }).click();
+  const panel = page.getByRole("dialog", { name: "Menú" });
+  await expect(panel).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(panel).toBeHidden();
+  await page.getByRole("button", { name: "Menú" }).click();
+  await panel.getByRole("link", { name: "Quién teje" }).click();
+  await expect(page).toHaveURL(/\/sobre-mi/);
+  await expect(panel).toBeHidden();
 });
 
 test("encargo: valida, arma el mensaje de WhatsApp y permite seguir el pedido", async ({ page }) => {
@@ -139,9 +163,10 @@ test("seguimiento: pedido de ejemplo y error de teléfono", async ({ page }) => 
   await expect(page.getByText(/no coinciden/)).toBeVisible();
 });
 
-test("navegación: el enlace activo se marca y la página 404 orienta", async ({ page }) => {
+test("navegación: el enlace activo se marca y la página 404 orienta", async ({ page, isMobile }) => {
   await page.goto("/catalogo/personalizados");
-  await expect(page.getByRole("navigation", { name: "Principal" }).getByRole("link", { name: "Personalizados" })).toHaveAttribute(
+  if (isMobile) await page.getByRole("button", { name: "Menú" }).click();
+  await expect(page.getByRole("navigation", { name: /^Principal/ }).first().getByRole("link", { name: "Personalizados" })).toHaveAttribute(
     "aria-current",
     "page",
   );

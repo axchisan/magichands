@@ -37,6 +37,14 @@ E2E_URL=https://magichands.axchisan.com npx playwright test --grep-invert captur
 
 Las capturas de revisión visual quedan en `test-results/capturas/` y el informe en `playwright-report/`.
 
+Revisión visual pantalla a pantalla (iPhone, Android y escritorio) y recorrido de una clienta en celular:
+
+```bash
+npx next start -p 3311 &
+node tests/visual/auditoria.mjs http://localhost:3311 test-results/auditoria
+node tests/visual/interaccion-movil.mjs http://localhost:3311 test-results/interaccion
+```
+
 ## Estructura
 
 ```
