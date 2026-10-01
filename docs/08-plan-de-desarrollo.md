@@ -11,6 +11,8 @@ y de extremo a extremo).
 | 1–3 | Investigación, catálogo curado (73 productos, 21 fotos limpiadas con IA), kit de marca, arquitectura |
 | 4. Web pública | Portada, catálogo con filtros y búsqueda, fichas, encargo por WhatsApp, seguimiento con pedidos de ejemplo, cómo comprar, quién teje, 404. 21 pruebas unitarias + 32 de extremo a extremo. Lighthouse móvil: rendimiento 88–98, accesibilidad 98–100 |
 | 4b. Publicación | Repositorio privado `axchisan/magichands`; Vercel con despliegue automático; sin contraseña; WhatsApp real (`573115685168`); `noindex` mientras sea demo |
+| 4c. Google OAuth (1 oct 2026) | Proyecto de Google Cloud `magic-h4nds` (sin organización, transferible). App "Magic H4nds" **publicada en producción** (público externo, solo permisos básicos: sin verificación). Cliente web "Web Magic H4nds" con orígenes `https://magichands.axchisan.com` y `http://localhost:3000` y retorno `/api/auth/callback/google` en ambos. Verificado: la URL registrada abre el selector de cuentas y una no registrada da `redirect_uri_mismatch`. Credenciales en Vercel (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`, `ADMIN_EMAILS`) y en `web/.env.local` |
+| 4d. Legal | `/privacidad` y `/terminos` (Ley 1581 de 2012); en demo, el responsable declarado es el desarrollador |
 
 ## Pendiente, en orden
 
@@ -37,8 +39,13 @@ Terminado cuando: la web pública se ve igual leyendo de la base de datos y las 
 - Encargo con sesión: se guarda en la base de datos además de abrir WhatsApp; sin sesión, todo funciona
   como hoy.
 
-Lo que necesito de ti: crear el cliente OAuth en Google Cloud (o darme acceso para hacerlo con Chrome)
-y confirmar qué correos son admin.
+Ya listo: cliente OAuth y variables en Vercel (ver "Hecho"). Falta confirmar el correo de ella para
+`ADMIN_EMAILS` (hoy solo el tuyo).
+
+Nota: en la pantalla de Google aparece "Ir a axchisan.com" (el dominio) en lugar de "Magic H4nds", porque
+la marca no está verificada. Para que salgan el nombre y el logo hay que pasar la verificación de marca de
+Google (subir logo + verificar el dominio en Search Console); conviene hacerlo con el dominio de ella.
+Las vistas previas de Vercel (`*.vercel.app`) no pueden usar Google: solo están registrados el subdominio y localhost.
 
 Terminado cuando: se puede entrar con Google y con código, `/admin` responde 403 a un cliente, y hay
 pruebas de extremo a extremo del acceso (con una cuenta de prueba local, nunca la real).
