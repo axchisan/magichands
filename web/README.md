@@ -27,6 +27,9 @@ secretos irán en `.env.local` (ignorado por git) y en las variables de Vercel.
 | `npm test` | Pruebas unitarias (Vitest): lógica de WhatsApp, pedidos, filtros e integridad del catálogo |
 | `npm run test:e2e` | Build + pruebas de extremo a extremo (Playwright, escritorio y móvil) contra `next start` |
 | `npm run check` | Todo lo anterior: lo que debe pasar antes de fusionar a `main` |
+| `npm run db:generate` | Genera una migración de Drizzle a partir de `src/db/schema.ts` |
+| `npm run db:migrate` | Aplica las migraciones (rama `dev`, o la de `DATABASE_URL` si se pasa) |
+| `npm run db:semilla` | Carga o actualiza el catálogo en la base de datos (idempotente) |
 | `npm run deploy:cloudflare` | Alternativa: compila con OpenNext y despliega en Cloudflare Workers |
 
 Pruebas de extremo a extremo contra un sitio publicado:
@@ -82,6 +85,18 @@ los productos y fotos nuevos se gestionarán desde la web y estos scripts quedar
 Imágenes: `next/image` usa un cargador propio (`src/lib/image-loader.ts`) que elige entre las variantes
 pregeneradas; no hay optimización en tiempo de ejecución (sin coste en Vercel ni en Cloudflare).
 
+## Base de datos, login y panel
+
+- **Neon** `magichands`: rama `main` = producción; rama `dev` = `web/.env.local`, vistas previas y pruebas.
+  Producción a mano: `DATABASE_URL=<cadena de main> npx drizzle-kit migrate` (y `npm run db:semilla`).
+- **Better Auth** (`src/lib/auth.ts`): Google y código por correo. Secretos en `web/.env.local` (local) y
+  en Vercel: `DATABASE_URL`, `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`, `GOOGLE_CLIENT_ID`,
+  `GOOGLE_CLIENT_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `ADMIN_EMAILS`.
+- **Acceso al panel**: una sola regla en `src/lib/acceso.ts`. Con `NEXT_PUBLIC_PANEL_ABIERTO=1`
+  (presentación) cualquiera ve el panel en vista previa, con celulares ocultos; con `0`, solo los
+  correos de `ADMIN_EMAILS`.
+- Las pruebas e2e escriben en la rama `dev` y no envían correos (`CORREO_SIMULADO=1`).
+
 ## Configuración del negocio
 
 `src/lib/config.ts`:
@@ -102,6 +117,7 @@ En la fase F7 estos ajustes pasan a la tabla `ajustes` y se editan desde `/admin
 
 ## Calidad comprobada (1 de octubre de 2026)
 
-- Lint y tipos sin errores; 21 pruebas unitarias; 32 de extremo a extremo en local y 30 contra Vercel.
+- Lint y tipos sin errores; 36 pruebas unitarias; 45 de extremo a extremo en local (encargo guardado y
+  seguido, campo trampa, login, panel en vista previa).
 - Lighthouse móvil: rendimiento 88–98, accesibilidad 98–100, buenas prácticas 100
   (SEO 66 por el `noindex` intencionado de la demo).

@@ -1,7 +1,5 @@
-// Pedidos y su seguimiento. En la demo: pedidos de ejemplo + los encargos hechos en este navegador
-// (localStorage). Con el panel, todo esto sale de las tablas `pedido` y `pedido_evento`
-// (docs/05-arquitectura.md).
-import type { Encargo } from "./whatsapp";
+// Estados del pedido y pedidos de ejemplo de la demo. Los pedidos reales están en la base de datos
+// (tablas pedido y pedido_evento) y se consultan con app/acciones/pedidos.ts.
 
 export const ESTADOS = [
   { id: "solicitud", nombre: "Solicitud recibida", texto: "Recibimos tu encargo y lo estamos revisando." },
@@ -13,7 +11,7 @@ export const ESTADOS = [
   { id: "entregado", nombre: "Entregado", texto: "¡Ya está contigo! Gracias por confiar en Magic H4nds." },
 ] as const;
 
-export type Estado = (typeof ESTADOS)[number]["id"];
+export type Estado = (typeof ESTADOS)[number]["id"] | "cancelado";
 
 export type Pedido = {
   codigo: string;
@@ -62,40 +60,11 @@ export const pedidosEjemplo: Pedido[] = [
   },
 ];
 
-const CLAVE = "mh4:encargos";
-
-export function guardarEncargoLocal(e: Encargo, telefono: string, hoy = new Date()) {
-  // Fecha local (no UTC): en Colombia, de noche, UTC ya es el día siguiente.
-  const fecha = [hoy.getFullYear(), hoy.getMonth() + 1, hoy.getDate()].map((n) => String(n).padStart(2, "0")).join("-");
-  const pedido: Pedido = {
-    codigo: e.codigo,
-    producto: e.producto ?? "Diseño personalizado",
-    telefonoFinal: telefono.replace(/\D/g, "").slice(-4),
-    estado: "solicitud",
-    creado: fecha,
-    historial: [{ estado: "solicitud", fecha }],
-  };
-  try {
-    const lista = JSON.parse(localStorage.getItem(CLAVE) ?? "[]") as Pedido[];
-    localStorage.setItem(CLAVE, JSON.stringify([pedido, ...lista].slice(0, 20)));
-  } catch {
-    // Sin almacenamiento (modo privado, bloqueado): el seguimiento solo mostrará los ejemplos.
-  }
-}
-
-function pedidosLocales(): Pedido[] {
-  try {
-    return JSON.parse(localStorage.getItem(CLAVE) ?? "[]") as Pedido[];
-  } catch {
-    return [];
-  }
-}
-
 export type ResultadoBusqueda =
   | { ok: true; pedido: Pedido }
   | { ok: false; motivo: "no-existe" | "telefono" };
 
-export function buscarPedido(codigo: string, telefonoFinal: string, extra: Pedido[] = pedidosLocales()): ResultadoBusqueda {
+export function buscarPedido(codigo: string, telefonoFinal: string, extra: Pedido[] = []): ResultadoBusqueda {
   const c = codigo.trim().toUpperCase().replace(/^MH4(?!-)/, "MH4-");
   const p = [...extra, ...pedidosEjemplo].find((x) => x.codigo === c);
   if (!p) return { ok: false, motivo: "no-existe" };

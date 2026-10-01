@@ -40,6 +40,20 @@
   color: var(--cacao);
   cursor: pointer;
 }
+/* Versión con enlaces (PaginadorEnlaces) */
+a.numero,
+a.flecha,
+span.flecha {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  text-decoration: none;
+}
+.flecha[aria-disabled="true"] {
+  opacity: 0.35;
+  cursor: default;
+}
 .flecha {
   padding: 0 1rem;
 }

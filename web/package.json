@@ -13,22 +13,33 @@
     "test:e2e": "next build && playwright test",
     "check": "npm run lint && npm run typecheck && npm test && npm run test:e2e",
     "deploy:cloudflare": "opennextjs-cloudflare build && wrangler deploy",
-    "preview:cloudflare": "opennextjs-cloudflare build && wrangler dev"
+    "preview:cloudflare": "opennextjs-cloudflare build && wrangler dev",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:semilla": "tsx scripts/semilla.ts",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@opennextjs/cloudflare": "^1.20.7",
+    "better-auth": "^1.7.7",
+    "drizzle-orm": "^0.45.3",
     "next": "16.3.8",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@types/node": "^24.19.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^18.0.5",
+    "drizzle-kit": "^0.31.11",
     "esbuild": "^0.28.2",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
+    "tsx": "^4.23.15",
     "typescript": "^5",
     "vitest": "^5.0.3",
     "wrangler": "^4.145.0"

@@ -1,0 +1,104 @@
+.pagina {
+  padding-top: 2.5rem;
+  display: grid;
+  gap: 2.5rem;
+  max-width: 48rem;
+}
+
+.cabeza {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.cabeza h1 {
+  font-size: var(--t-5);
+}
+.correo {
+  color: var(--canela);
+}
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pagina h2 {
+  font-size: var(--t-4);
+  margin-bottom: 1rem;
+}
+
+.vacio {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+  padding: 1.5rem;
+  border-radius: var(--radio);
+  background: var(--crema);
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.pedido {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2rem 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+.pedido:hover {
+  border-color: var(--cacao);
+}
+.codigo {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.producto {
+  grid-column: 1;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--t-2);
+}
+.estado {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--crema);
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.estado[data-estado="entregado"] {
+  background: #e3f2e8;
+  color: #0b5a2e;
+}
+.estado[data-estado="cancelado"] {
+  background: #f2e3e3;
+  color: var(--error);
+}
+.fecha {
+  grid-column: 1 / -1;
+  font-size: 0.88rem;
+  color: var(--canela);
+}
+
+@media (max-width: 40rem) {
+  .pagina {
+    padding-top: 1.75rem;
+  }
+  .acciones,
+  .acciones :global(.boton) {
+    width: 100%;
+  }
+}

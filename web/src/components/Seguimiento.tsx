@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ESTADOS, buscarPedido, type ResultadoBusqueda } from "@/lib/pedidos";
+import { ESTADOS, type ResultadoBusqueda } from "@/lib/pedidos";
+import { buscarPedido } from "@/app/acciones/pedidos";
 import estilos from "./Seguimiento.module.css";
 
 const fecha = (iso: string) =>
@@ -17,10 +18,16 @@ export function Seguimiento() {
     if (codigo && codigoRef.current) codigoRef.current.value = codigo;
   }, []);
 
-  function consultar(e: React.FormEvent<HTMLFormElement>) {
+  const [buscando, setBuscando] = useState(false);
+  async function consultar(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const d = new FormData(e.currentTarget);
-    setResultado(buscarPedido(String(d.get("codigo")), String(d.get("telefono"))));
+    setBuscando(true);
+    try {
+      setResultado(await buscarPedido(String(d.get("codigo")), String(d.get("telefono"))));
+    } finally {
+      setBuscando(false);
+    }
   }
 
   return (
@@ -57,8 +64,8 @@ export function Seguimiento() {
             Escribe 4 números.
           </span>
         </div>
-        <button type="submit" className="boton boton-principal">
-          Ver mi pedido
+        <button type="submit" className="boton boton-principal" disabled={buscando} aria-busy={buscando}>
+          {buscando ? "Buscando…" : "Ver mi pedido"}
         </button>
       </form>
 
@@ -86,6 +93,7 @@ function Linea({ pedido }: { pedido: Extract<ResultadoBusqueda, { ok: true }>["p
       </h2>
       {pedido.fechaEstimada && <p>Entrega estimada: {fecha(pedido.fechaEstimada)}</p>}
       {pedido.ejemplo && <p className={estilos.ejemplo}>Pedido de ejemplo para la demostración.</p>}
+      {pedido.estado === "cancelado" && <p className={estilos.ejemplo}>Este pedido fue cancelado. Escríbenos si tienes dudas.</p>}
       <ol className={estilos.linea}>
         {ESTADOS.map((e, i) => (
           <li

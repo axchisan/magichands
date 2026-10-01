@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { negocio } from "@/lib/config";
+import { negocio, panelAbierto } from "@/lib/config";
 import { enlaceWhatsApp } from "@/lib/whatsapp";
 import { IconoInstagram, IconoWhatsApp } from "./Iconos";
+import { EnlaceCuenta } from "./EnlaceCuenta";
 import estilos from "./Cabecera.module.css";
 
 export const enlaces = [
@@ -99,6 +100,12 @@ export function MenuMovil() {
             </ul>
           </nav>
           <div className={estilos.panelPie}>
+            {panelAbierto && (
+              <Link href="/admin/pedidos" className={estilos.menuCuenta}>
+                Panel de pedidos
+              </Link>
+            )}
+            <EnlaceCuenta variante="menu" />
             <a
               className="boton boton-whatsapp"
               href={enlaceWhatsApp("Hola Magic H4nds 💗 Tengo una pregunta.", negocio.whatsapp)}

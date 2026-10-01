@@ -19,3 +19,6 @@ export const negocio = {
 } as const;
 
 export const esDemo = process.env.NEXT_PUBLIC_DEMO !== "0";
+
+/** Panel sin login para la presentación (NEXT_PUBLIC_PANEL_ABIERTO en web/.env). Ver lib/acceso.ts. */
+export const panelAbierto = process.env.NEXT_PUBLIC_PANEL_ABIERTO === "1";

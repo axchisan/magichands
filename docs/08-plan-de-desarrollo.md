@@ -1,6 +1,6 @@
 # Plan de desarrollo
 
-Actualizado el 1 de octubre de 2026. Cada fase se publica sola en `magichands.axchisan.com` al hacer
+Actualizado el 1 de octubre de 2026 (base de datos, login y panel de pedidos publicados). Cada fase se publica sola en `magichands.axchisan.com` al hacer
 `push` a `main` (Vercel). Nada pasa a `main` sin `npm run check` en verde (lint, tipos, pruebas unitarias
 y de extremo a extremo).
 
@@ -15,48 +15,18 @@ y de extremo a extremo).
 | 4e. Pulido móvil (1 oct 2026) | Auditoría pantalla a pantalla en iPhone 13, Android 360 px y escritorio (`web/tests/visual/`). Cambios: menú lateral en celular, rejillas a 2 columnas (el catálogo bajó de 40.900 a 12.800 px), ficha con carrusel deslizable y barra fija "Encargar / WhatsApp", pasos y pie compactos, formulario con teclas "Siguiente", sin globos nativos de error y zonas táctiles ≥ 44 px, y `/sobre-mi` rehecha (fotos de ella sin texto encima, retrato con traje típico, proceso de la blusa Orquídea). Causa del desorden de `/sobre-mi`: faltaba `img { height: auto }` |
 | 4d. Legal | `/privacidad` y `/terminos` (Ley 1581 de 2012); en demo, el responsable declarado es el desarrollador |
 
+| F5. Base de datos (1 oct 2026) | Neon `magichands` (ramas `main` = producción y `dev` = local, vistas previas y pruebas). Drizzle con migraciones en `web/drizzle/`, aplicadas en las dos ramas. Semilla `npm run db:semilla` cargada en ambas: 11 categorías, 73 productos, 263 fotos. El catálogo público sigue leyendo el JSON estático hasta que el panel edite productos (F7.3) |
+| F6. Login (1 oct 2026) | Better Auth: Google y código de 6 números por correo (Resend, `magichands@axchisan.com`), límites de intentos guardados en la base de datos, `/entrar` (Google primero; el correo, detrás de "No uso Gmail"), `/mi-cuenta`, avatar en la cabecera. Administradores: `ADMIN_EMAILS` |
+| F7.1 Pedidos (1 oct 2026) | Los encargos se guardan (cliente + pedido + historial) y avisan por correo a los administradores; campo trampa contra robots y máximo 5 encargos por celular en una hora. Panel `/admin/pedidos`: pestañas por estado, 20 por página, ficha con WhatsApp al cliente, estado, total, anticipo, fecha estimada, notas internas e historial |
+| Panel para la presentación | `NEXT_PUBLIC_PANEL_ABIERTO=1` (en `web/.env`): botón "Panel" en la cabecera y panel sin login en modo vista previa (celulares de clientes ocultos). Regla única en `web/src/lib/acceso.ts`. **Al traspaso: poner `0`** y queda solo para `ADMIN_EMAILS` |
+
 ## Pendiente, en orden
-
-### F5. Base de datos y datos semilla
-
-- Proyecto Neon nuevo `magichands` (ramas `main` y `dev`); `DATABASE_URL` en Vercel por entorno.
-- Drizzle ORM: esquema de `05-arquitectura.md`, migraciones versionadas en `web/drizzle/`.
-- Script de semilla que carga `web/src/data/catalogo.json` (categorías, productos, fotos) y los ajustes.
-- El catálogo público sigue siendo estático: se regenera al publicar cambios desde el panel
-  (`revalidateTag`), así no se pierde velocidad.
-
-Terminado cuando: la web pública se ve igual leyendo de la base de datos y las pruebas siguen en verde.
-
-### F6. Login (Better Auth + Google + código por correo)
-
-- Better Auth con adaptador Drizzle; ruta `/api/auth/[...all]`.
-- Google: crear cliente OAuth en Google Cloud con estas URLs de redirección:
-  - `https://magichands.axchisan.com/api/auth/callback/google`
-  - `http://localhost:3000/api/auth/callback/google`
-  - (más adelante) la de su dominio.
-- Código de un solo uso por correo (plugin `emailOTP`) enviado con Resend desde `magichands@axchisan.com`.
-- Rol `admin` para los correos de `ADMIN_EMAILS`; el resto, `cliente`.
-- Páginas: `/entrar` y `/mi-cuenta` (sus pedidos). En la cabecera, "Entrar" / su nombre.
-- Encargo con sesión: se guarda en la base de datos además de abrir WhatsApp; sin sesión, todo funciona
-  como hoy.
-
-Ya listo: cliente OAuth y variables en Vercel (ver "Hecho"). Falta confirmar el correo de ella para
-`ADMIN_EMAILS` (hoy solo el tuyo).
-
-Nota: en la pantalla de Google aparece "Ir a axchisan.com" (el dominio) en lugar de "Magic H4nds", porque
-la marca no está verificada. Para que salgan el nombre y el logo hay que pasar la verificación de marca de
-Google (subir logo + verificar el dominio en Search Console); conviene hacerlo con el dominio de ella.
-Las vistas previas de Vercel (`*.vercel.app`) no pueden usar Google: solo están registrados el subdominio y localhost.
-
-Terminado cuando: se puede entrar con Google y con código, `/admin` responde 403 a un cliente, y hay
-pruebas de extremo a extremo del acceso (con una cuenta de prueba local, nunca la real).
 
 ### F7. Panel de administración (`/admin`)
 
 Diseñado para el celular de ella, en este orden (lo que más le ahorra trabajo primero):
 
-1. **Pedidos**: lista por estado, ficha del pedido, cambiar estado (queda en el historial), registrar
-   cotización, anticipo, saldo y fecha estimada, botón para abrir el chat de WhatsApp del cliente.
+1. ~~**Pedidos**~~: hecho (ver arriba).
 2. **Ajustes**: agenda abierta/cerrada y su mensaje, mostrar u ocultar precios, textos de "Cómo comprar",
    datos de pago privados.
 3. **Productos**: crear, editar, ocultar, ordenar, marcar destacado, precio confirmado.
@@ -69,8 +39,8 @@ sin ayuda, y hay pruebas de extremo a extremo de esos dos recorridos.
 
 ### F8. Avisos y detalles
 
-- Correo a ella (Resend) cuando entra un encargo; opcional al cliente cuando cambia el estado.
-- Límite de envíos del formulario por IP; Turnstile si aparece spam.
+- Hecho: correo a los administradores cuando entra un encargo y límite por celular. Falta: aviso opcional
+  al cliente cuando cambia el estado; Turnstile si aparece spam.
 - Vercel Analytics.
 - Lote 2 de fotos con IA (fotos de galería con texto incrustado), con la receta de Gemini ya documentada.
 
@@ -86,6 +56,7 @@ sin ayuda, y hay pruebas de extremo a extremo de esos dos recorridos.
 - Confirmar precios con ella y activar `mostrarPrecios`.
 - Dominio propio (si lo quiere) y paso a producción según `06` (recomendado Cloudflare Workers).
 - Cambio de dominio con la lista de `09-dominio-portable.md`.
+- `NEXT_PUBLIC_PANEL_ABIERTO=0` y su correo en `ADMIN_EMAILS` (Vercel): el panel queda solo para ella.
 - `NEXT_PUBLIC_DEMO=0` (se indexa y desaparece el aviso de demo); SEO local y ficha de Google.
 - Cuentas a su nombre y capacitación corta (15 minutos por videollamada).
 
