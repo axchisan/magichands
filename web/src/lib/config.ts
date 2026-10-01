@@ -1,5 +1,5 @@
-// Ajustes del negocio. En la versión con panel vienen de la base de datos (tabla `ajustes`);
-// en la demo son constantes.
+// Datos fijos del negocio. Lo que ella cambia desde el panel (agenda, mostrar precios) está en la
+// base de datos: ver lib/ajustes.ts.
 
 export const negocio = {
   nombre: "Magic H4nds",
@@ -9,13 +9,8 @@ export const negocio = {
   // Si faltara, wa.me abre WhatsApp para elegir el chat.
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "",
   plazo: "15 a 20 días hábiles",
-  // Los únicos precios conocidos son los que ella publicó en 2021–2025 (precioReferencia en el catálogo).
-  // No se muestran hasta que ella los confirme: un precio viejo junto a una foto reciente confunde.
-  mostrarPrecios: false,
-  agenda: {
-    abierta: true,
-    mensaje: "Agenda cerrada por ahora: los pedidos ya agendados siguen en proceso.",
-  },
+  // Mensaje por defecto cuando ella cierra la agenda (lo puede cambiar en el panel).
+  agenda: { mensaje: "Agenda cerrada por ahora: los pedidos ya agendados siguen en proceso." },
 } as const;
 
 export const esDemo = process.env.NEXT_PUBLIC_DEMO !== "0";

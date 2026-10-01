@@ -64,7 +64,7 @@ Con un pago único, los costes recurrentes deben ser casi cero o de ella:
 |---|---|---|
 | Dominio propio (si lo quiere, ej. `magich4nds.com`) | Ella, a su nombre | ≈ 10–15 USD/año |
 | Hosting | Planes gratuitos (ver `06-infraestructura-y-costes.md`) | 0 |
-| Base de datos, correo de avisos, fotos | Planes gratuitos de Neon, Resend y R2 | 0 |
+| Base de datos, correo de avisos, fotos | Planes gratuitos de Neon, Resend y Vercel Blob (o R2 en producción) | 0 |
 | Mantenimiento | Opcional: cambios puntuales que te pida, cotizados aparte | — |
 
 **Ojo con Vercel:** el plan Hobby no permite uso comercial. Mientras sea demo no hay venta; si ella la

@@ -11,6 +11,14 @@ export const accesoActual = cache(async () => {
   return { sesion, acceso };
 });
 
+/** Para cambios que se ven en la web pública (catálogo, precios, agenda): solo administradores.
+ *  En la vista previa abierta no se guardan, para que nadie altere la web publicada. */
+export async function exigirAdminCompleto() {
+  const { sesion, acceso } = await accesoActual();
+  if (acceso !== "completo") throw new Error("Solo lectura");
+  return sesion;
+}
+
 /** Corta la acción si quien la llama no puede usar el panel (verificación en el servidor, siempre). */
 export async function exigirAdmin() {
   const { sesion, acceso } = await accesoActual();

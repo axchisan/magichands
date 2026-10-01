@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CatalogoFiltrable } from "@/components/CatalogoFiltrable";
-import { categorias, ocasiones, productos } from "@/lib/catalogo";
+import { ocasiones } from "@/lib/catalogo";
+import { catalogo } from "@/lib/catalogo-db";
 import estilos from "./catalogo.module.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
   description: "Amigurumis, personalizados, flores, ropa, bolsos y más, tejidos a mano bajo pedido.",
 };
 
-export default function Catalogo() {
+export default async function Catalogo() {
+  const { categorias, productos } = await catalogo();
   return (
     <div className={`envoltura ${estilos.pagina}`}>
       <h1 className={estilos.titulo}>Catálogo</h1>

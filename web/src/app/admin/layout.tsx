@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { accesoActual } from "@/lib/admin";
+import { MenuPanel } from "@/components/MenuPanel";
 import estilos from "./admin.module.css";
 
 export const metadata: Metadata = { title: "Panel", robots: { index: false, follow: false } };
@@ -21,14 +22,15 @@ export default async function AdminLayout({ children }: LayoutProps<"/admin">) {
     );
   return (
     <div className={`envoltura ${estilos.panel}`}>
-      <nav aria-label="Panel" className={estilos.menu}>
+      <div className={estilos.menu}>
         <span className={estilos.titulo}>Panel</span>
-        <Link href="/admin/pedidos">Pedidos</Link>
-      </nav>
+        <MenuPanel />
+      </div>
       {acceso === "vista-previa" && (
         <p className={estilos.vistaPrevia} role="note">
-          <strong>Vista previa del panel.</strong> Así llegan y se gestionan los encargos. Cuando la página sea tuya, solo
-          tú entras aquí con tu cuenta; por ahora los celulares de los clientes se ven ocultos.
+          <strong>Vista previa del panel.</strong> Así se gestionan los encargos, el catálogo y los ajustes. Cuando la
+          página sea tuya, solo tú entras aquí con tu cuenta. Por ahora los celulares de los clientes se ven ocultos y
+          los cambios del catálogo y los ajustes no se guardan, para no alterar la web publicada.
         </p>
       )}
       {children}

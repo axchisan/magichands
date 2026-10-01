@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { destinoSeguro } from "@/lib/destino";
-import { validarEncargo } from "@/lib/validacion";
+import { aSlug, validarEncargo, validarProducto } from "@/lib/validacion";
 
 function formulario(campos: Record<string, string>) {
   const f = new FormData();
@@ -42,5 +42,43 @@ describe("destinoSeguro", () => {
   it("deja pasar rutas internas y descarta las externas", () => {
     expect(destinoSeguro("/admin/pedidos")).toBe("/admin/pedidos");
     for (const v of [null, "", "https://evil.example", "//evil.example", "/\\evil.example"]) expect(destinoSeguro(v)).toBe("/mi-cuenta");
+  });
+});
+
+describe("validarProducto", () => {
+  const validos = { categorias: ["flores", "personajes"], ocasiones: ["cumpleanos", "amor"] };
+  const base = { nombre: "Ramo de tulipanes", categoria: "flores", descripcion: "Ramo tejido que no se marchita.", activo: "si" };
+
+  it("acepta un producto y separa la personalización por líneas", () => {
+    const f = formulario({ ...base, personalizacion: "- colores\n• cantidad de flores\n\n", precio: "$ 85.000" });
+    f.append("ocasiones", "amor");
+    f.append("ocasiones", "inventada");
+    const r = validarProducto(f, validos);
+    expect(r.ok).toBe(true);
+    if (r.ok) {
+      expect(r.datos.personalizacion).toEqual(["colores", "cantidad de flores"]);
+      expect(r.datos.precio).toBe(85000);
+      expect(r.datos.ocasiones).toEqual(["amor"]);
+      expect(r.datos.activo).toBe(true);
+      expect(r.datos.destacado).toBe(false);
+    }
+  });
+
+  it("el precio vacío queda sin precio (se cotiza)", () => {
+    const r = validarProducto(formulario(base), validos);
+    expect(r.ok && r.datos.precio).toBeNull();
+  });
+
+  it("rechaza categoría desconocida, nombre vacío y precios absurdos", () => {
+    const r = validarProducto(formulario({ ...base, nombre: "", categoria: "otra", precio: "12" }), validos);
+    expect(r.ok).toBe(false);
+    if (!r.ok) expect(Object.keys(r.errores).sort()).toEqual(["categoria", "nombre", "precio"]);
+  });
+});
+
+describe("aSlug", () => {
+  it("quita tildes, signos y espacios", () => {
+    expect(aSlug("Pingüino Navideño (grande)!")).toBe("pinguino-navideno-grande");
+    expect(aSlug("  Ramo   de Tulipanes ")).toBe("ramo-de-tulipanes");
   });
 });

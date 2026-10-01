@@ -37,3 +37,59 @@ export function validarEncargo(f: FormData): ResultadoValidacion {
   if (datos.producto && !/^[a-z0-9-]+$/.test(datos.producto)) errores.producto = "Producto no válido.";
   return Object.keys(errores).length ? { ok: false, errores } : { ok: true, datos };
 }
+
+// ---------------------------------------------------------------- Productos (panel)
+
+export type DatosProducto = {
+  nombre: string;
+  categoria: string;
+  descripcion: string;
+  personalizacion: string[];
+  tamano: string | null;
+  plazo: string;
+  ocasiones: string[];
+  precio: number | null;
+  destacado: boolean;
+  activo: boolean;
+};
+
+export type ResultadoProducto = { ok: true; datos: DatosProducto } | { ok: false; errores: Partial<Record<keyof DatosProducto, string>> };
+
+export function validarProducto(f: FormData, validos: { categorias: string[]; ocasiones: string[] }): ResultadoProducto {
+  const precioCrudo = limpiar(f.get("precio"), 20).replace(/\D/g, "");
+  const datos: DatosProducto = {
+    nombre: limpiar(f.get("nombre"), 80),
+    categoria: limpiar(f.get("categoria"), 60),
+    descripcion: limpiar(f.get("descripcion"), 1500),
+    personalizacion: String(f.get("personalizacion") ?? "")
+      .split("\n")
+      .map((l) => l.trim().replace(/^[-•·]\s*/, ""))
+      .filter(Boolean)
+      .slice(0, 12)
+      .map((l) => l.slice(0, 80)),
+    tamano: limpiar(f.get("tamano"), 120) || null,
+    plazo: limpiar(f.get("plazo"), 60) || "15 a 20 días hábiles",
+    ocasiones: f.getAll("ocasiones").map(String).filter((o) => validos.ocasiones.includes(o)),
+    precio: precioCrudo ? Number(precioCrudo) : null,
+    destacado: f.get("destacado") === "si",
+    activo: f.get("activo") === "si",
+  };
+  const errores: Partial<Record<keyof DatosProducto, string>> = {};
+  if (datos.nombre.length < 3) errores.nombre = "Escribe el nombre del producto.";
+  if (!validos.categorias.includes(datos.categoria)) errores.categoria = "Elige una categoría.";
+  if (datos.descripcion.length < 10) errores.descripcion = "Escribe una descripción corta (10 letras o más).";
+  if (datos.precio !== null && (datos.precio < 1000 || datos.precio > 50_000_000)) errores.precio = "Escribe el precio en pesos, sin puntos (ej.: 85000).";
+  return Object.keys(errores).length ? { ok: false, errores } : { ok: true, datos };
+}
+
+/** "Ramo de Tulipanes Rosados" -> "ramo-de-tulipanes-rosados" */
+export function aSlug(t: string): string {
+  return t
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 60)
+    .replace(/-+$/, "");
+}
