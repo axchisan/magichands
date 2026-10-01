@@ -21,7 +21,7 @@ flowchart LR
     SA[Server Actions<br/>encargos, panel]
   end
   DB[(Neon Postgres<br/>Drizzle ORM)]
-  R2[(Cloudflare R2<br/>fotos subidas)]
+  R2[(Vercel Blob<br/>fotos subidas)]
   MAIL[Resend<br/>códigos de acceso y avisos]
   G[Google OAuth]
   WA[WhatsApp wa.me]
@@ -49,8 +49,8 @@ flowchart LR
 | Métodos de acceso | **Google** y **código de un solo uso por correo** (sin contraseñas) | Lo más fácil para clientas en el celular; nada que recordar ni filtrar |
 | Roles | `admin` (ella y tú) y `cliente` | El panel solo para `admin`; los admin se definen por correo en `ADMIN_EMAILS` |
 | Base de datos | **Neon Postgres** + **Drizzle ORM** | Ya tienes cuenta; plan gratuito suficiente; ramas para probar migraciones |
-| Fotos subidas | **Cloudflare R2** (API S3, URL firmada) | 10 GB gratis, sin coste de salida, funciona igual en Vercel o Cloudflare |
-| Fotos del catálogo actual | Estáticas en `web/public/img` (WebP 480/960/1440) | Ya existen; al crear productos desde el panel, las nuevas van a R2 con las mismas 3 variantes |
+| Fotos subidas | **Vercel Blob** (almacén público `magichands-fotos`, subida directa desde el navegador con token de corta duración) | Se crea y conecta desde la CLI sin manejar llaves; 1 GB gratis basta para la demo. Si la web pasa a Cloudflare, se migran a R2 (las URL están en la tabla `foto`) |
+| Fotos del catálogo actual | Estáticas en `web/public/img` (WebP 480/960/1440) | Ya existen; al subir desde el panel, el navegador genera las mismas 3 variantes (WebP, o JPEG en Safari) y van a Blob |
 | Correos | **Resend** (códigos de acceso y aviso de encargo nuevo) | Dominio `axchisan.com` ya verificado; remitente configurable por variable |
 | WhatsApp | Enlace `wa.me/573115685168` con mensaje prellenado | Sigue siendo el canal de cierre; no hace falta la API de Meta |
 | Pagos | Transferencia (como hoy). Pasarela = extra cotizado aparte | Fuera del paquete base de $300.000 |
@@ -118,7 +118,7 @@ Estados del pedido: `solicitud → cotizado → anticipo_recibido → en_proceso
 - Panel y acciones de escritura: comprobación de sesión y rol en el servidor en **cada** acción.
 - Datos bancarios solo en `ajustes`, visibles para el cliente únicamente en su pedido ya cotizado.
 - Seguimiento sin login: código + 4 últimos dígitos del celular (como ahora).
-- Subidas a R2 con URL firmada de corta duración, solo imágenes y con tamaño máximo.
+- Subidas a Blob con token de corta duración emitido por `/api/fotos` solo a administradores: solo WebP/JPEG, máximo 4 MB, solo en `productos/<slug>/`.
 - Formulario de encargo con límite de envíos por IP y Turnstile si aparece spam.
 - Secretos solo en variables de entorno de Vercel; nunca en el repositorio.
 - Mientras sea demo: `noindex` y aviso en el pie (`NEXT_PUBLIC_DEMO=1`).

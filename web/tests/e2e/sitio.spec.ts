@@ -241,6 +241,33 @@ test("panel de presentación: botón visible, sin login y con los celulares ocul
   }
 });
 
+test("panel: productos, clientes y ajustes en vista previa (se ven, no se guardan)", async ({ page, request }) => {
+  test.skip(!PANEL_ABIERTO, "el panel está cerrado (solo administradores)");
+  await abrir(page, "/admin/productos");
+  await expect(page.getByRole("heading", { name: "Productos", level: 1 })).toBeVisible();
+  await expect(page.locator("a[href^='/admin/productos/'] img").first()).toBeVisible();
+  await page.getByRole("searchbox").fill("cupula");
+  await page.getByRole("searchbox").press("Enter");
+  await expect(page.getByText("Funko en cúpula de vidrio")).toBeVisible();
+  await page.getByText("Funko en cúpula de vidrio").click();
+  await expect(page.getByLabel("Nombre", { exact: true })).toHaveValue("Funko en cúpula de vidrio");
+  await expect(page.getByRole("button", { name: "Guardar cambios" })).toBeDisabled();
+  await expect(page.locator("input[type=file]")).toBeDisabled();
+
+  await page.getByRole("navigation", { name: "Secciones del panel" }).getByRole("link", { name: "Ajustes" }).click();
+  await expect(page.getByLabel(/Estoy recibiendo encargos/)).toBeVisible();
+  await expect(page.getByRole("button", { name: "Guardar cambios" })).toBeDisabled();
+
+  await page.getByRole("navigation", { name: "Secciones del panel" }).getByRole("link", { name: "Clientes" }).click();
+  await expect(page.getByRole("heading", { name: "Clientes", level: 1 })).toBeVisible();
+
+  // La subida de fotos rechaza a quien no es administrador.
+  const r = await request.post("/api/fotos", {
+    data: { type: "blob.generate-client-token", payload: { pathname: "productos/ramo/abcdefghijkl-960.webp", clientPayload: null, multipart: false } },
+  });
+  expect(r.status()).toBe(400);
+});
+
 test("seguimiento: pedido de ejemplo y error de teléfono", async ({ page }) => {
   await abrir(page, "/pedido");
   await page.getByLabel("Código de pedido").fill("MH4-3RQT");

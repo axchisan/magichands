@@ -2,24 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RejillaPaginada } from "@/components/RejillaPaginada";
-import { categoria, categorias, productosDe } from "@/lib/catalogo";
+import { catalogo, categoriaPorSlug, productosDe } from "@/lib/catalogo-db";
 import estilos from "../catalogo.module.css";
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return categorias.map((c) => ({ categoria: c.slug }));
+export async function generateStaticParams() {
+  return (await catalogo()).categorias.map((c) => ({ categoria: c.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/catalogo/[categoria]">): Promise<Metadata> {
-  const c = categoria((await params).categoria);
+  const c = await categoriaPorSlug((await params).categoria);
   return c ? { title: c.nombre, description: c.descripcion } : {};
 }
 
 export default async function PaginaCategoria({ params }: PageProps<"/catalogo/[categoria]">) {
-  const c = categoria((await params).categoria);
+  const c = await categoriaPorSlug((await params).categoria);
   if (!c) notFound();
-  const lista = productosDe(c.slug);
+  const lista = await productosDe(c.slug);
+  const { categorias } = await catalogo();
   return (
     <div className={`envoltura ${estilos.pagina}`}>
       <nav aria-label="Ruta" className={estilos.migas}>

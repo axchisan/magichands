@@ -2,7 +2,8 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { ANCHOS } from "@/lib/image-loader";
-import { categorias, fotosHero, fotosMarca, ocasiones, productos } from "@/lib/catalogo";
+import { fotosHero, fotosMarca, ocasiones } from "@/lib/catalogo";
+import { categoriasSemilla as categorias, productosSemilla as productos } from "@/lib/catalogo-semilla";
 
 const PUBLIC = path.resolve(__dirname, "../../public");
 const existe = (src: string, ancho: number) => existsSync(path.join(PUBLIC, `${src}-${ancho}.webp`));

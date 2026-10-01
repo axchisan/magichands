@@ -9,7 +9,7 @@
 | Despliegue | Automático: cada `push` a `main` → producción; cada rama o PR → vista previa | Sin pasos manuales |
 | Dominio | `magichands.axchisan.com` (CNAME en Hostinger → `cname.vercel-dns.com`) | También responde en `magichands-iota.vercel.app` |
 | Google OAuth | Google Cloud, proyecto `magic-h4nds` (sin organización), app publicada | Cliente "Web Magic H4nds" |
-| Base de datos, login, fotos subidas, correos | Pendientes (ver `08-plan-de-desarrollo.md`) | Neon, Better Auth, R2, Resend |
+| Base de datos, login, fotos subidas, correos | En uso (1 oct 2026) | Neon `magichands`, Better Auth, Vercel Blob `magichands-fotos`, Resend |
 
 Las URLs de vista previa de ramas (`magichands-git-…vercel.app`) quedan protegidas por la protección de
 despliegues de Vercel (solo tu cuenta); la de producción y el subdominio son públicas.
@@ -25,7 +25,7 @@ Recursos en uso que **no** se tocan: `axchisan.com` y su proyecto `axchisan-com`
 | Neon Postgres | Free | 0 | Suficiente para miles de pedidos; se suspende sin uso (arranque en frío ~1 s) |
 | Better Auth | Librería (dentro de la app) | 0 | — |
 | Google OAuth | Google Cloud (pantalla de consentimiento) | 0 | Requiere publicar la app OAuth para usuarios externos |
-| Cloudflare R2 | Gratis | 0 | 10 GB, sin coste de salida |
+| Vercel Blob (`magichands-fotos`) | Hobby | 0 | 1 GB; en producción se puede pasar a Cloudflare R2 (10 GB gratis) |
 | Resend | Free | 0 | 3.000 correos/mes, 100/día |
 | Dominio de ella (opcional) | Cloudflare Registrar | ≈ 10–11 USD/año | `magich4nds.com`, `.co` y `.com.co` libres al 30 sep 2026 |
 
@@ -48,8 +48,8 @@ para no depender de Vercel.
 
 | Etapa | Dónde |
 |---|---|
-| **Demo** | Tus cuentas: GitHub, Vercel, Neon (`leftyrancuentabot@gmail.com`, proyecto **nuevo** `magichands`), R2 (bucket **nuevo** `magichands-media`), Resend (dominio `axchisan.com`) y Google Cloud (proyecto OAuth nuevo) |
-| **Producción** | Dominio y Cloudflare a nombre de ella, con tu usuario como miembro. Neon y R2 en proyectos transferibles. Resend con su dominio. El cliente OAuth de Google se puede quedar en tu proyecto añadiendo su dominio, o pasar a uno suyo |
+| **Demo** | Tus cuentas: GitHub, Vercel, Neon (`leftyrancuentabot@gmail.com`, proyecto **nuevo** `magichands`), Vercel Blob (almacén **nuevo** `magichands-fotos`), Resend (dominio `axchisan.com`) y Google Cloud (proyecto OAuth nuevo) |
+| **Producción** | Dominio y Cloudflare a nombre de ella, con tu usuario como miembro. Neon y las fotos (Blob o R2) en proyectos transferibles. Resend con su dominio. El cliente OAuth de Google se puede quedar en tu proyecto añadiendo su dominio, o pasar a uno suyo |
 
 ## Entornos
 

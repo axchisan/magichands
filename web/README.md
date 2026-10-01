@@ -97,6 +97,11 @@ pregeneradas; no hay optimización en tiempo de ejecución (sin coste en Vercel 
   (presentación) cualquiera ve el panel en vista previa, con celulares ocultos; con `0`, solo los
   correos de `ADMIN_EMAILS`.
 - Las pruebas e2e escriben en la rama `dev` y no envían correos (`CORREO_SIMULADO=1`).
+- **Catálogo**: la web lee productos, categorías y ajustes de la base (`src/lib/catalogo-db.ts`,
+  `src/lib/ajustes.ts`) con caché; el panel invalida con `src/lib/revalidar.ts`. `src/data/catalogo.json`
+  queda solo como carga inicial (`npm run db:semilla`, que no pisa lo editado; `--forzar` sí).
+- **Fotos subidas**: Vercel Blob `magichands-fotos` (`BLOB_READ_WRITE_TOKEN`). `/api/fotos` autoriza
+  subidas solo a administradores; ver `src/lib/fotos.ts` y `src/components/FotosProducto.tsx`.
 - **Correos** (`src/lib/correos/`, plantilla común con la marca en `plantilla.ts`): código de acceso;
   encargo nuevo (a `ADMIN_EMAILS`); encargo recibido y cambios de estado (al cliente, solo si hizo el
   encargo con su cuenta: sin cuenta no tenemos su correo). Logos en `public/img/correo/` (PNG).
@@ -121,7 +126,7 @@ En la fase F7 estos ajustes pasan a la tabla `ajustes` y se editan desde `/admin
 
 ## Calidad comprobada (1 de octubre de 2026)
 
-- Lint y tipos sin errores; 36 pruebas unitarias; 45 de extremo a extremo en local (encargo guardado y
+- Lint y tipos sin errores; 47 pruebas unitarias; 47 de extremo a extremo en local (encargo guardado y
   seguido, campo trampa, login, panel en vista previa).
 - Lighthouse móvil: rendimiento 88–98, accesibilidad 98–100, buenas prácticas 100
   (SEO 66 por el `noindex` intencionado de la demo).

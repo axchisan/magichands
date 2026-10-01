@@ -1,9 +1,12 @@
 import { describe, expect, it } from "vitest";
 import imageLoader, { elegirAncho } from "@/lib/image-loader";
+import { archivosDeFoto, esClaveDeBlob, RUTA_FOTO } from "@/lib/fotos";
 import { enlaceWhatsApp, mensajeEncargo, mensajeProducto, nuevoCodigo } from "@/lib/whatsapp";
 import { buscarPedido, ESTADOS, pedidosEjemplo, type Pedido } from "@/lib/pedidos";
 import { filtrar, normalizar } from "@/lib/filtros";
-import { productos } from "@/lib/catalogo";
+import { productosSemilla } from "@/lib/catalogo-semilla";
+
+const productos = productosSemilla.map((p) => ({ ...p, precio: null }));
 
 describe("cargador de imágenes", () => {
   it("elige la variante más pequeña que cubre el ancho pedido", () => {
@@ -112,3 +115,26 @@ describe("filtros del catálogo", () => {
   });
 });
 
+
+describe("fotos subidas desde el panel", () => {
+  it("el cargador elige WebP o JPEG (iPhone) según la clave", () => {
+    const base = "https://abc.public.blob.vercel-storage.com/productos/ramo/abcdefghijkl";
+    expect(imageLoader({ src: base, width: 700 })).toBe(`${base}-960.webp`);
+    expect(imageLoader({ src: `${base}~jpg`, width: 300 })).toBe(`${base}-480.jpg`);
+  });
+
+  it("solo acepta rutas y URLs de la carpeta del producto", () => {
+    expect(RUTA_FOTO.test("productos/ramo/abcdefghijkl-960.webp")).toBe(true);
+    expect(RUTA_FOTO.test("productos/ramo/abcdefghijkl-960.jpg")).toBe(true);
+    expect(RUTA_FOTO.test("otra/ramo/abcdefghijkl-960.webp")).toBe(false);
+    expect(RUTA_FOTO.test("productos/ramo/../x-960.webp")).toBe(false);
+    expect(esClaveDeBlob("https://abc.public.blob.vercel-storage.com/productos/ramo/abcdefghijkl~jpg", "ramo")).toBe(true);
+    expect(esClaveDeBlob("https://evil.example/productos/ramo/abcdefghijkl", "ramo")).toBe(false);
+    expect(esClaveDeBlob("https://abc.public.blob.vercel-storage.com/productos/otro/abcdefghijkl", "ramo")).toBe(false);
+    expect(archivosDeFoto("https://x/productos/ramo/abcdefghijkl~jpg")).toEqual([
+      "https://x/productos/ramo/abcdefghijkl-480.jpg",
+      "https://x/productos/ramo/abcdefghijkl-960.jpg",
+      "https://x/productos/ramo/abcdefghijkl-1440.jpg",
+    ]);
+  });
+});

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { FormularioEncargo } from "@/components/FormularioEncargo";
-import { productos } from "@/lib/catalogo";
+import { catalogo } from "@/lib/catalogo-db";
 import { negocio } from "@/lib/config";
 import estilos from "./encargo.module.css";
 
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: "Cuéntanos qué quieres tejer: personaje, persona, mascota, colores y tamaño. Te cotizamos por WhatsApp.",
 };
 
-export default function Encargo() {
-  const opciones = productos.map(({ slug, nombre, categoria }) => ({ slug, nombre, categoria }));
+export default async function Encargo() {
+  const opciones = (await catalogo()).productos.map(({ slug, nombre, categoria }) => ({ slug, nombre, categoria }));
   return (
     <div className={`envoltura ${estilos.pagina}`}>
       <div className={estilos.texto}>

@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { categorias } from "@/lib/catalogo";
+import { catalogo } from "@/lib/catalogo-db";
 import { negocio, esDemo } from "@/lib/config";
 import { IconoInstagram } from "./Iconos";
 import estilos from "./Pie.module.css";
 
-export function Pie() {
+export async function Pie() {
+  const { categorias } = await catalogo();
   return (
     <footer className={estilos.pie}>
       <div className={`envoltura ${estilos.rejilla}`}>

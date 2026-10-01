@@ -18,24 +18,35 @@ y de extremo a extremo).
 | F5. Base de datos (1 oct 2026) | Neon `magichands` (ramas `main` = producción y `dev` = local, vistas previas y pruebas). Drizzle con migraciones en `web/drizzle/`, aplicadas en las dos ramas. Semilla `npm run db:semilla` cargada en ambas: 11 categorías, 73 productos, 263 fotos. El catálogo público sigue leyendo el JSON estático hasta que el panel edite productos (F7.3) |
 | F6. Login (1 oct 2026) | Better Auth: Google y código de 6 números por correo (Resend, `magichands@axchisan.com`), límites de intentos guardados en la base de datos, `/entrar` (Google primero; el correo, detrás de "No uso Gmail"), `/mi-cuenta`, avatar en la cabecera. Administradores: `ADMIN_EMAILS` |
 | F7.1 Pedidos (1 oct 2026) | Los encargos se guardan (cliente + pedido + historial) y avisan por correo a los administradores; campo trampa contra robots y máximo 5 encargos por celular en una hora. Panel `/admin/pedidos`: pestañas por estado, 20 por página, ficha con WhatsApp al cliente, estado, total, anticipo, fecha estimada, notas internas e historial |
+| F7 Panel completo (1 oct 2026) | Productos, fotos (Vercel Blob), clientes y ajustes; catálogo público desde la base de datos con caché. Ver F7 abajo |
 | Panel para la presentación | `NEXT_PUBLIC_PANEL_ABIERTO=1` (en `web/.env`): botón "Panel" en la cabecera y panel sin login en modo vista previa (celulares de clientes ocultos). Regla única en `web/src/lib/acceso.ts`. **Al traspaso: poner `0`** y queda solo para `ADMIN_EMAILS` |
 
 ## Pendiente, en orden
 
-### F7. Panel de administración (`/admin`)
+### F7. Panel de administración (`/admin`) — hecho (1 oct 2026)
 
-Diseñado para el celular de ella, en este orden (lo que más le ahorra trabajo primero):
+Diseñado para el celular de ella. Secciones:
 
-1. ~~**Pedidos**~~: hecho (ver arriba).
-2. **Ajustes**: agenda abierta/cerrada y su mensaje, mostrar u ocultar precios, textos de "Cómo comprar",
-   datos de pago privados.
-3. **Productos**: crear, editar, ocultar, ordenar, marcar destacado, precio confirmado.
-4. **Fotos**: subir desde el celular a R2 (bucket nuevo `magichands-media`); el navegador genera las
-   variantes 480/960/1440 en WebP antes de subir.
-5. **Clientes**: historial de pedidos por cliente.
+1. **Pedidos**: lista por estado, ficha, estado (con correo al cliente con cuenta), cotización, anticipo,
+   fecha estimada, notas internas, historial, WhatsApp al cliente.
+2. **Productos**: lista con búsqueda (sin tildes), filtro por categoría y ocultos; crear (el slug sale del
+   nombre y no cambia), editar, ocultar, destacar, precio confirmado (con el precio viejo publicado como
+   referencia), ocasiones.
+3. **Fotos**: subir varias desde el celular (el navegador genera 480/960/1440 en WebP, o JPEG en Safari) a
+   Vercel Blob; ordenar, elegir portada, borrar (borra también los archivos).
+4. **Clientes**: lista con búsqueda por nombre, ciudad o celular; ficha con sus pedidos, notas y WhatsApp.
+5. **Ajustes**: agenda abierta/cerrada con su aviso; mostrar precios (solo los confirmados).
 
-Terminado cuando: ella puede gestionar un pedido de punta a punta y publicar un producto nuevo con foto
-sin ayuda, y hay pruebas de extremo a extremo de esos dos recorridos.
+La web pública lee el catálogo y los ajustes de la base de datos con caché (`unstable_cache`, etiquetas
+`catalogo` y `ajustes`); al guardar en el panel se invalida y las páginas estáticas se regeneran en la
+siguiente visita. Los productos nuevos se generan en su primera visita.
+
+En la **vista previa** (panel abierto) los cambios del catálogo, fotos, ajustes y notas de clientes no se
+guardan: se ven los formularios con un aviso. Los pedidos sí se pueden mover para probar el flujo.
+
+`npm run db:semilla` ya no pisa lo que ella edite: solo agrega lo que falta (`--forzar` reescribe).
+
+Pendiente menor: datos de pago privados en Ajustes y textos de "Cómo comprar" editables (si ella los pide).
 
 ### F8. Avisos y detalles
 

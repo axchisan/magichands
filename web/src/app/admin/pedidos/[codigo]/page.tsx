@@ -80,7 +80,9 @@ export default async function DetallePedido({ params }: PageProps<"/admin/pedido
           <h2 id="cliente">Cliente</h2>
           <dl className={estilos.datos}>
             <dt>Nombre</dt>
-            <dd>{p.cliente.nombre}</dd>
+            <dd>
+              <Link href={`/admin/clientes/${p.cliente.id}`}>{p.cliente.nombre}</Link>
+            </dd>
             <dt>Ciudad</dt>
             <dd>{p.cliente.ciudad}</dd>
             <dt>Celular</dt>

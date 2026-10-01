@@ -3,10 +3,13 @@ import Link from "next/link";
 import { CirculoManos } from "@/components/CirculoManos";
 import { RejillaProductos } from "@/components/TarjetaProducto";
 import { PasosPedido } from "@/components/PasosPedido";
-import { categorias, destacados, productosDe, fotosMarca } from "@/lib/catalogo";
+import { fotosMarca } from "@/lib/catalogo";
+import { catalogo } from "@/lib/catalogo-db";
 import estilos from "./inicio.module.css";
 
-export default function Inicio() {
+export default async function Inicio() {
+  const { categorias, productos } = await catalogo();
+  const destacados = productos.filter((p) => p.destacado);
   const velez = fotosMarca["hecho-en-velez"];
   return (
     <>
@@ -24,7 +27,7 @@ export default function Inicio() {
         <h2 id="categorias">Busca por lo que quieres tejer</h2>
         <ul className={estilos.categorias} role="list">
           {categorias.map((c) => {
-            const portada = productosDe(c.slug)[0]?.fotos[0];
+            const portada = productos.find((p) => p.categoria === c.slug)?.fotos[0];
             return (
               <li key={c.slug}>
                 <Link href={`/catalogo/${c.slug}`} className={estilos.categoria}>

@@ -4,19 +4,18 @@ import { notFound } from "next/navigation";
 import { Galeria } from "@/components/Galeria";
 import { BotonWhatsApp } from "@/components/BotonWhatsApp";
 import { RejillaProductos } from "@/components/TarjetaProducto";
-import { categoria, producto, productos, relacionados } from "@/lib/catalogo";
+import { catalogo, categoriaPorSlug, productoPorSlug, relacionados } from "@/lib/catalogo-db";
+import { ajustes } from "@/lib/ajustes";
 import { mensajeProducto } from "@/lib/whatsapp";
-import { negocio } from "@/lib/config";
 import estilos from "./ficha.module.css";
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return productos.map((p) => ({ slug: p.slug }));
+// Los productos nuevos del panel se generan en su primera visita.
+export async function generateStaticParams() {
+  return (await catalogo()).productos.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/p/[slug]">): Promise<Metadata> {
-  const p = producto((await params).slug);
+  const p = await productoPorSlug((await params).slug);
   if (!p) return {};
   return {
     title: p.nombre,
@@ -28,10 +27,11 @@ export async function generateMetadata({ params }: PageProps<"/p/[slug]">): Prom
 const precio = new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 });
 
 export default async function Ficha({ params }: PageProps<"/p/[slug]">) {
-  const p = producto((await params).slug);
+  const p = await productoPorSlug((await params).slug);
   if (!p) notFound();
-  const cat = categoria(p.categoria)!;
-  const otros = relacionados(p);
+  const cat = (await categoriaPorSlug(p.categoria))!;
+  const otros = await relacionados(p);
+  const { mostrarPrecios } = await ajustes();
 
   return (
     <div className="envoltura">
@@ -68,13 +68,10 @@ export default async function Ficha({ params }: PageProps<"/p/[slug]">) {
             <div>
               <dt>Precio</dt>
               <dd>
-                {negocio.mostrarPrecios && p.precioReferencia ? (
+                {mostrarPrecios && p.precio ? (
                   <>
-                    {precio.format(p.precioReferencia.valor)}
-                    <span className={estilos.nota}>
-                      Precio publicado en {p.precioReferencia.anio} para: {p.precioReferencia.producto}. Se confirma
-                      al cotizar.
-                    </span>
+                    Desde {precio.format(p.precio)}
+                    <span className={estilos.nota}>El precio final depende de tu diseño y se confirma al cotizar.</span>
                   </>
                 ) : (
                   "Se cotiza según tu diseño"
