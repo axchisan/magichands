@@ -9,7 +9,7 @@ import { accesoActual } from "@/lib/admin";
 import { ocultarCelular } from "@/lib/acceso";
 import { actualizarPedido } from "@/app/acciones/admin";
 import { IconoWhatsApp } from "@/components/Iconos";
-import { BotonGuardar } from "@/components/BotonGuardar";
+import { FormularioGestion } from "@/components/FormularioGestion";
 import estilos from "../../admin.module.css";
 
 const { pedido, cliente, pedidoEvento } = schema;
@@ -97,7 +97,11 @@ export default async function DetallePedido({ params }: PageProps<"/admin/pedido
 
         <section className={`${estilos.tarjeta} ${estilos.ancho}`} aria-labelledby="gestion">
           <h2 id="gestion">Gestionar</h2>
-          <form action={guardar} className={estilos.form}>
+          <FormularioGestion
+            version={[p.pedido.estado, p.pedido.total, p.pedido.anticipo, p.pedido.fechaEstimada, p.pedido.notasInternas, eventos.length].join("|")}
+            accion={guardar}
+            className={estilos.form}
+          >
             <div className="campo">
               <label htmlFor="estado">Estado</label>
               <select id="estado" name="estado" defaultValue={p.pedido.estado}>
@@ -107,7 +111,7 @@ export default async function DetallePedido({ params }: PageProps<"/admin/pedido
                   </option>
                 ))}
               </select>
-              <span className="pista">El cliente ve cada cambio de estado en “Seguir mi pedido”.</span>
+              <span className="pista">El cliente ve cada cambio en “Seguir mi pedido” y, si hizo el encargo con su cuenta, le llega un correo.</span>
             </div>
             <div className="campo">
               <label htmlFor="nota">Nota del cambio (opcional, interna)</label>
@@ -131,8 +135,7 @@ export default async function DetallePedido({ params }: PageProps<"/admin/pedido
               <label htmlFor="notasInternas">Notas internas</label>
               <textarea id="notasInternas" name="notasInternas" defaultValue={p.pedido.notasInternas} />
             </div>
-            <BotonGuardar />
-          </form>
+          </FormularioGestion>
         </section>
 
         <section className={`${estilos.tarjeta} ${estilos.ancho}`} aria-labelledby="historial">
