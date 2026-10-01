@@ -12,7 +12,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1.5rem;
-  min-height: 4.25rem;
+  min-height: var(--alto-cabecera);
 }
 
 .logo {
@@ -47,32 +47,146 @@
   background: var(--crema);
 }
 
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .wa {
-  min-height: 42px;
+  min-height: 44px;
   padding-block: 0.5rem;
 }
 
-/* Móvil: logo y WhatsApp arriba; la navegación pasa a una fila desplazable */
-@media (max-width: 62rem) {
-  .fila {
-    grid-template-columns: 1fr auto;
-    gap: 0.25rem 1rem;
-    padding-top: 0.5rem;
+/* Botón y panel del menú: solo en pantallas estrechas */
+.botonMenu {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0 0.95rem;
+  border: 1.5px solid color-mix(in srgb, var(--cacao) 22%, transparent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cacao);
+  font: 600 0.95rem var(--font-texto), system-ui, sans-serif;
+  cursor: pointer;
+}
+.botonMenu svg,
+.cerrar svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.panel {
+  /* Panel lateral derecho a toda la altura */
+  margin: 0 0 0 auto;
+  height: 100dvh;
+  max-height: 100dvh;
+  width: min(22rem, 86vw);
+  max-width: none;
+  padding: 0;
+  border: 0;
+  background: var(--lino);
+  color: var(--cacao);
+  box-shadow: -20px 0 50px rgb(0 0 0 / 0.25);
+}
+.panel::backdrop {
+  background: rgb(14 12 11 / 0.55);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .panel[open] {
+    animation: entrar 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
-  .nav {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    overflow-x: auto;
-    scrollbar-width: none;
-    margin-inline: calc(-1 * var(--gutter));
-    padding: 0 var(--gutter) 0.5rem;
-  }
-  .nav::-webkit-scrollbar {
-    display: none;
+}
+@keyframes entrar {
+  from {
+    translate: 100% 0;
   }
 }
 
-@media (max-width: 26rem) {
+.panelContenido {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+.panelCabeza {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--linea);
+}
+.panelMarca {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--t-3);
+}
+.cerrar {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--cacao);
+  cursor: pointer;
+}
+.cerrar:hover {
+  background: color-mix(in srgb, var(--crema) 70%, transparent);
+}
+
+.panelLista {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0;
+  overflow-y: auto;
+}
+.panelLista a {
+  display: block;
+  padding: 0.85rem 1.5rem;
+  color: var(--cacao);
+  text-decoration: none;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: var(--t-3);
+  line-height: 1.2;
+}
+.panelLista a[aria-current="page"] {
+  background: var(--crema);
+}
+
+.panelPie {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem calc(1.25rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--linea);
+}
+.panelIg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--cacao);
+}
+.panelIg svg {
+  width: 1.2rem;
+}
+
+@media (max-width: 62rem) {
+  .nav {
+    display: none;
+  }
+  .botonMenu {
+    display: inline-flex;
+  }
+  .fila {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+  /* En celular el botón de WhatsApp queda solo con el icono */
   .waTexto {
     position: absolute;
     width: 1px;
@@ -81,6 +195,10 @@
     clip-path: inset(50%);
   }
   .wa {
-    padding-inline: 0.85rem;
+    padding-inline: 0;
+    width: 44px;
+  }
+  .logo img {
+    height: 2.1rem;
   }
 }

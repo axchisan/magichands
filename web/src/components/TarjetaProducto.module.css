@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(15rem, 44vw), 1fr));
+  /* Siempre al menos 2 columnas en celular: una tarjeta por pantalla cansa */
+  grid-template-columns: repeat(auto-fill, minmax(min(15rem, calc(50% - 0.5rem)), 1fr));
   gap: 2.25rem 1.25rem;
 }
 
@@ -48,9 +49,18 @@
 
 @media (max-width: 40rem) {
   .rejilla {
-    gap: 1.75rem 0.85rem;
+    gap: 1.5rem 0.75rem;
+  }
+  .foto {
+    border-radius: 12px;
   }
   .nombre {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.15;
+    margin-top: 0.5rem;
+  }
+  .detalle {
+    font-size: 0.82rem;
+    line-height: 1.35;
   }
 }

@@ -104,9 +104,56 @@
   margin-bottom: 1.5rem;
 }
 
+.barra {
+  display: none;
+}
+
 @media (max-width: 52rem) {
   .ficha {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .nombre {
+    font-size: 2.1rem;
+  }
+  .descripcion {
+    font-size: 1.05rem;
+  }
+  /* Ruta compacta: solo "‹ Categoría" */
+  .migas {
+    padding-top: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+  .migas li:first-child,
+  .migas li:last-child {
+    display: none;
+  }
+  .migas li + li::before {
+    content: "‹";
+    font-size: 1.3em;
+    line-height: 1;
+  }
+  /* Reserva espacio para la barra fija, para que no tape el final de la página */
+  :global(body):has(.barra) {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+  .barra {
+    display: flex;
+    gap: 0.6rem;
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 15;
+    padding: 0.7rem var(--gutter) calc(0.7rem + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--lino) 96%, transparent);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--linea);
+  }
+  .barra :global(.boton-principal) {
+    flex: 1;
+  }
+  .barraWa {
+    width: 52px;
+    padding-inline: 0;
   }
   .info {
     position: static;

@@ -24,17 +24,35 @@
   gap: 1.25rem;
 }
 
+/* La casilla "Es urgente" como una tarjeta: toda la fila se puede tocar */
 .check {
+  position: relative;
   grid-template-columns: auto 1fr;
   align-items: center;
   align-content: center;
-  column-gap: 0.6rem;
+  column-gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid color-mix(in srgb, var(--cacao) 22%, transparent);
+  border-radius: 12px;
+  background: #fff;
+  align-self: end;
+}
+.check:has(input:checked) {
+  border-color: var(--rosa-profundo);
+  background: color-mix(in srgb, var(--rosa) 10%, #fff);
 }
 .check input {
   width: 1.4rem;
   height: 1.4rem;
   min-height: 0;
+  margin: 0;
   accent-color: var(--rosa-profundo);
+}
+.check label::after {
+  /* Amplía el área táctil de la etiqueta a toda la tarjeta */
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 .check .pista,
 .check :global(.pista) {

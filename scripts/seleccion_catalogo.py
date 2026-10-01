@@ -257,11 +257,16 @@ CATALOGO = [
 
 # Fotos de ambiente para la marca (portada, "Hecho en Vélez", "sobre mí").
 MARCA = {
-    "hecho-en-velez": ["C/005/02", "C/006/01", "C/007/02", "C/064/01", "H/10/001"],
+    # Página "Quién teje": su cara es la marca. Solo fotos donde se la ve bien y sin texto encima.
+    # Un elemento puede ser "ref" o ("ref", (x0, y0, x1, y1)) para recortar (fracciones de la imagen);
+    # "IA:<categoria>/<producto>" usa la foto principal mejorada con IA (sin texto).
+    "quien-teje": ["C/005/02", ("R/013", (0, 0.28, 1, 1)), ("R/031", (0, 0.2, 1, 1))],
+    "hecho-en-velez": ["C/005/02", "C/006/01", "C/007/02", "C/064/01", "H/10/001", "C/007/03", "C/005/04"],
     "lifestyle-ropa": ["C/010/02", "C/012/02", "C/009/02", "C/003/01"],
     "cielo-de-velez": ["C/036/02", "C/047/03", "C/030/01", "C/066/01", "C/078/01"],
-    "base-grabada": ["H/04/024", "H/04/014", "H/01/042", "H/02/007"],
-    "proceso-tejiendo": ["R/005", "R/009", "R/018", "R/013"],
+    "base-grabada": ["IA:personalizados/funko-personalizado", "IA:personalizados/parejas-y-familias",
+                     "IA:mascotas/tu-mascota-en-amigurumi", "IA:personalizados/graduados"],
+    "proceso-tejiendo": [("R/005", (0, 0.42, 1, 1)), ("R/009", (0, 0.3, 1, 1)), ("R/021", (0, 0.42, 1, 1))],
 }
 
 
@@ -289,12 +294,21 @@ def mejoras(ref, w, h):
 
 
 def copiar(ref, destino):
-    src = ruta(ref)
+    recorte = None
+    if isinstance(ref, tuple):
+        ref, recorte = ref
+    src = os.path.join(MEJORADAS, ref[3:], "01-principal.jpg") if ref.startswith("IA:") else ruta(ref)
     if not os.path.exists(src):
         raise FileNotFoundError(f"{ref} -> {src}")
-    shutil.copy2(src, destino)
-    w, h = Image.open(src).size
-    return dict(origen=os.path.relpath(src, RAIZ), ref=ref, ancho=w, alto=h, mejoras=mejoras(ref, w, h))
+    if recorte:
+        im = Image.open(src).convert("RGB")
+        w, h = im.size
+        im.crop((round(recorte[0] * w), round(recorte[1] * h), round(recorte[2] * w), round(recorte[3] * h))).save(destino, quality=92)
+    else:
+        shutil.copy2(src, destino)
+    w, h = Image.open(destino).size
+    mej = [] if ref.startswith("IA:") or recorte else mejoras(ref, w, h)
+    return dict(origen=os.path.relpath(src, RAIZ), ref=ref, recorte=recorte, ancho=w, alto=h, mejoras=mej)
 
 
 def main():
