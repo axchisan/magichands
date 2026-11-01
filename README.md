@@ -4,6 +4,11 @@ Proyecto *spec* (sin encargo previo): construir una versión funcional de la web
 (`@magic.h4nds`, crochet y amigurumis hechos a mano en Vélez, Santander, Colombia) para presentársela
 a la dueña sin compromiso. Si le gusta, se acuerda un precio y se pule a su gusto.
 
+<p align="center">
+  <img src="docs/capturas/escritorio.jpg" width="74%" alt="Página de inicio de Magic H4nds en escritorio">
+  <img src="docs/capturas/movil.jpg" width="22%" alt="Página de inicio de Magic H4nds en el celular">
+</p>
+
 ## Estado
 
 - **Demo publicada**: https://magichands.axchisan.com (Vercel; se actualiza con cada `push` a `main`).
