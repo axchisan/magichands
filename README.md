@@ -13,9 +13,6 @@ a la dueña sin compromiso. Si le gusta, se acuerda un precio y se pule a su gus
 
 - **Demo publicada**: https://magichands.axchisan.com (Vercel; se actualiza con cada `push` a `main`).
   Mientras el DNS propaga: https://magichands-iota.vercel.app
-- **Repositorio**: https://github.com/axchisan/magichands (privado).
-- **Precio interno**: $300.000 COP por el paquete base (catálogo + panel); extras aparte. No se le
-  comunica de entrada (ver `docs/04-modelo-de-negocio.md`).
 
 | Fase | Qué | Estado |
 |---|---|---|
